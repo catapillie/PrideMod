@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Sprites>
+
+	<!-- Demigirl -->
+
+	<!-- Demigirl Crystal Heart-->
+
+	<PrideMod_crystalheart_demigirl path="PrideMod/crystalheart/demigirl/">
+		<Center />
+
+		<Loop id="idle" path="" frames="0" />
+		<Loop id="spin" path="" frames="0*10,1-13,14*10,15-27" delay="0.1"/>
+		<Loop id="fastspin" path="" delay="0.1"/>
+	</PrideMod_crystalheart_demigirl>
+
+	<!-- Demigirl Strawberry -->
+
+	<PrideMod_strawberry_demigirl path="PrideMod/strawberry/demigirl/" start="idle">
+    	<Center />
+
+    	<Loop id="idle" path="normal" delay=".1" frames="0-13,0-13,0-13,0-13,0-14" />
+    	<Loop id="noFlash" path="normal" delay=".1" frames="0-13"/>
+    	<Anim id="collect" path="normal" delay=".07" frames="14-18"/>
+    	<Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+	  
+    	<Anim id="fade0" path="normal" delay=".08" frames="19-21,21*10,22-26"/>
+    	<Anim id="fade1" path="normal" delay=".07" frames="27-29,29*10,30-33"/>
+   		<Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41"/>
+    	<Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49"/>
+    	<Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57"/>
+	  		<Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66"/>
+	  		<Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66"/>
+  	</PrideMod_strawberry_demigirl>
+
+	<!-- Demigirl Strawberry Seed-->
+
+	<PrideMod_strawberryseed_demigirl path="PrideMod/strawberry/demigirl/">
+    	<Center />
+
+    	<Loop id="idle" path="seed" frames="0*19,1" delay="0.1" />
+    	<Loop id="noFlash" path="seed" frames="0" />
+  	</PrideMod_strawberryseed_demigirl>
+
+	<!-- Demigirl Ghost Strawberry-->
+
+  	<PrideMod_ghostberry_demigirl path="PrideMod/ghostberry/demigirl/" start="idle">
+    	<Center />
+
+    	<Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-14" />
+    	<Anim id="collect" path="idle" delay=".07" frames="14-18"/>
+    	<Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+  	</PrideMod_ghostberry_demigirl>
+
+	<!-- Demigirl Ghost Strawberry Seed-->
+
+	<PrideMod_ghostberryseed_demigirl path="PrideMod/ghostberry/demigirl/">
+    	<Center />
+
+    	<Loop id="idle" path="seed" frames="0*19,1" delay="0.1" />
+    	<Loop id="noFlash" path="seed" frames="0" />
+  	</PrideMod_ghostberryseed_demigirl>
+	
+	<!-- Demigirl Golden Strawberry-->
+
+  	<PrideMod_goldenberry_demigirl path="PrideMod/goldenberry/demigirl/" start="idle">
+    	<Center />
+
+    	<Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
+    	<Anim id="collect" path="idle" delay=".07" frames="15-19"/>
+    	<Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+  	</PrideMod_goldenberry_demigirl>
+
+	<!-- Demigirl Golden Strawberry Seed-->
+
+	<PrideMod_goldenberryseed_demigirl path="PrideMod/goldenberry/demigirl/">
+    	<Center />
+
+    	<Loop id="idle" path="seed" frames="0*19,1" delay="0.1" />
+    	<Loop id="noFlash" path="seed" frames="0" />
+  	</PrideMod_goldenberryseed_demigirl>
+
+	<!-- Demigirl Ghost Golden Strawberry-->
+
+	<PrideMod_ghostgoldenberry_demigirl path="PrideMod/ghostgoldenberry/demigirl/" start="idle">
+		<Center />
+
+		<Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-14" />
+		<Anim id="collect" path="idle" delay=".07" frames="14-18"/>
+		<Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+	</PrideMod_ghostgoldenberry_demigirl>
+
+	<!-- Demigirl Silver Strawberry-->
+	
+  	<PrideMod_silverberry_demigirl path="PrideMod_silverberry/demigirl/" start="idle">
+    	<Center />
+
+    	<Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
+    	<Anim id="collect" path="idle" delay=".07" frames="15-19"/>
+  	</PrideMod_silverberry_demigirl>
+
+	<!-- Demigirl Ghost Silver Strawberry-->
+
+  	<PrideMod_ghostsilverberry_demigirl path="PrideMod/ghostsilverberry/demigirl/" start="idle">
+    	<Center />
+
+    	<Loop id="idle" path="tarnish" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
+    	<Anim id="collect" path="tarnish" delay=".07" frames="15-19"/>
+  	</PrideMod_ghostsilverberry_demigirl>
+
+</Sprites>
