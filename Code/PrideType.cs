@@ -1,4 +1,6 @@
-﻿namespace Celeste.Mod.PrideMod {
+﻿using System;
+
+namespace Celeste.Mod.PrideMod {
     public enum PrideTypes {
 		Default,
 		Agender,
@@ -25,6 +27,8 @@
 	}
 
 	public static class PrideTypesInfo {
+		public static readonly int PrideCount = Enum.GetNames(typeof(PrideTypes)).Length;
+
 		public static string GetCustomSpriteID(this PrideTypes prideType, string spriteType, string originalID)
 			=> prideType == PrideTypes.Default ?
 				originalID :

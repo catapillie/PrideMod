@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Monocle;
+using System;
 
 namespace Celeste.Mod.PrideMod {
     public class PrideModModule : EverestModule {
         public static PrideModModule Instance { get; private set; }
 
         public override Type SettingsType => typeof(PrideModModuleSettings);
-        public static PrideModModuleSettings Settings => (PrideModModuleSettings) Instance._Settings;
+        public static PrideModModuleSettings Settings => (PrideModModuleSettings)Instance._Settings;
 
         public PrideModModule() {
             Instance = this;
