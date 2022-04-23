@@ -25,81 +25,68 @@ namespace Celeste.Mod.PrideMod.UI {
             PrideModModuleSettings settings = PrideModModule.Settings;
 
             menu.Add(Item_ASideCrystalHeart = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_ASideCrystalHeart",
                 settings.ASideCrystalHeart,
                 prideType => settings.ASideCrystalHeart = prideType
             ));
             menu.Add(Item_BSideCrystalHeart = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_BSideCrystalHeart",
                 settings.BSideCrystalHeart,
                 prideType => settings.BSideCrystalHeart = prideType
             ));
             menu.Add(Item_CSideCrystalHeart = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_CSideCrystalHeart",
                 settings.CSideCrystalHeart,
                 prideType => settings.CSideCrystalHeart = prideType
             ));
             menu.Add(Item_EmptyCrystalHeart = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_EmptyCrystalHeart",
                 settings.EmptyCrystalHeart,
                 prideType => settings.EmptyCrystalHeart = prideType
             ));
             menu.Add(Item_GhostCrystalHeart = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_GhostCrystalHeart",
                 settings.GhostCrystalHeart,
                 prideType => settings.GhostCrystalHeart = prideType
             ));
 
             menu.Add(Item_Strawberry = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_Strawberry",
                 settings.Strawberry,
                 prideType => settings.Strawberry = prideType
             ));
             menu.Add(Item_GhostStrawberry = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_GhostStrawberry",
                 settings.GhostStrawberry,
                 prideType => settings.GhostStrawberry = prideType
             ));
             menu.Add(Item_GoldenStrawberry = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_GoldenStrawberry",
                 settings.GoldenStrawberry,
                 prideType => settings.GoldenStrawberry = prideType
             ));
             menu.Add(Item_GhostGoldenStrawberry = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_GhostGoldenStrawberry",
                 settings.GhostGoldenStrawberry,
                 prideType => settings.GhostGoldenStrawberry = prideType
             ));
             menu.Add(Item_SilverStrawberry = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_SilverStrawberry",
                 settings.SilverStrawberry,
                 prideType => settings.SilverStrawberry = prideType
             ));
             menu.Add(Item_GhostSilverStrawberry = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_GhostSilverStrawberry",
                 settings.GhostSilverStrawberry,
                 prideType => settings.GhostSilverStrawberry = prideType
             ));
 
             menu.Add(Item_SummitFlag = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_SummitFlag",
                 settings.SummitFlag,
                 prideType => settings.SummitFlag = prideType
             ));
             menu.Add(Item_FinalFlag = CreatePrideSettingSlider(
-                menu,
                 "modoptions_PrideMod_FinalFlag",
                 settings.FinalFlag,
                 prideType => settings.FinalFlag = prideType
@@ -121,7 +108,7 @@ namespace Celeste.Mod.PrideMod.UI {
         }
 
 
-        private static TextMenu.Item CreatePrideSettingSlider(TextMenu menu, string settingName, PrideTypes value, Action<PrideTypes> action)
+        private static TextMenu.Item CreatePrideSettingSlider(string settingName, PrideTypes value, Action<PrideTypes> action)
             => new TextMenu.Slider(
                 Dialog.Clean(settingName),
                 i => ((PrideTypes)i).ToString(),
