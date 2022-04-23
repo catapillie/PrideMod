@@ -13,15 +13,21 @@ namespace Celeste.Mod.PrideMod.Reskinning {
         private const string collabutils2_ghostsilverberry_sprite   = "CollabUtils2_ghostSilverBerry";
         private const string collabutils2_silverberry_sprite        = "CollabUtils2_silverBerry";
 
+        private const string strawberryseed_sprite                  = "strawberrySeed";
+        private const string goldberryseed_sprite                   = "goldberrySeed";
+        private const string ghostberryseed                         = "ghostberrySeed";
+
         private const string CollabUtils2_Entities_SilverBerry_type = "Celeste.Mod.CollabUtils2.Entities.SilverBerry";
 
         internal static void Hook() {
             IL.Celeste.Strawberry.Added += Mod_Strawberry_Added;
+            IL.Celeste.StrawberrySeed.Awake += Mod_StrawberrySeed_Awake;
             On.Monocle.SpriteBank.Create += Mod_SpriteBank_Create;
         }
 
         internal static void Unhook() {
             IL.Celeste.Strawberry.Added -= Mod_Strawberry_Added;
+            IL.Celeste.StrawberrySeed.Awake -= Mod_StrawberrySeed_Awake;
             On.Monocle.SpriteBank.Create -= Mod_SpriteBank_Create;
         }
 
@@ -80,14 +86,34 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                         }
                     }
 
-                    Console.WriteLine(applyMinimalBloom);
-
                     if (applyMinimalBloom)
                         alpha = 0.05f;
                 }
                 return alpha;
             });
             cursor.Emit(OpCodes.Ldc_R4, 12f);
+        }
+
+        private static void Mod_StrawberrySeed_Awake(ILContext il) {
+            ILCursor cursor = new(il);
+
+            cursor.GotoNext(MoveType.After, instr => instr.MatchLdstr(strawberryseed_sprite));
+            cursor.EmitDelegate<Func<string, string>>(id => {
+                PrideModModuleSettings settings = PrideModModule.Settings;
+                return settings.Enabled ? settings.Strawberry.GetCustomSpriteID("strawberryseed", id) : id;
+            });
+
+            cursor.GotoNext(MoveType.After, instr => instr.MatchLdstr(goldberryseed_sprite));
+            cursor.EmitDelegate<Func<string, string>>(id => {
+                PrideModModuleSettings settings = PrideModModule.Settings;
+                return settings.Enabled ? settings.GoldenStrawberry.GetCustomSpriteID("goldenberryseed", id) : id;
+            });
+
+            cursor.GotoNext(MoveType.After, instr => instr.MatchLdstr(ghostberryseed));
+            cursor.EmitDelegate<Func<string, string>>(id => {
+                PrideModModuleSettings settings = PrideModModule.Settings;
+                return settings.Enabled ? settings.GhostStrawberry.GetCustomSpriteID("ghostberryseed", id) : id;
+            });
         }
 
         private static Sprite Mod_SpriteBank_Create(On.Monocle.SpriteBank.orig_Create orig, SpriteBank self, string id) {
