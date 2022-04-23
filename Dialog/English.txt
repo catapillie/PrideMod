@@ -5,42 +5,41 @@ modoptions_PrideMod=Pride Mod Options
 modoptions_PrideMod_BloomModifier=Bloom Modifier
 modoptions_PrideMod_BloomModifier_sub=Changes the bloom of reskinned entities.
 
-modoptions_PrideMode_ASideCrystalHeart=A-Side Crystal Heart Pride
-modoptions_PrideMode_ASideCrystalHeart_sub=The pride type for the A-Side crystal heart.
+modoptions_PrideMode_ASideCrystalHeart=A-Side Crystal Heart
+modoptions_PrideMode_ASideCrystalHeart_sub=The pride type for the A-Side crystal heart. Default uses the blue heart.
 
-modoptions_PrideMode_BSideCrystalHeart=
-modoptions_PrideMode_BSideCrystalHeart_sub=
+modoptions_PrideMode_BSideCrystalHeart=B-Side Crystal Heart
+modoptions_PrideMode_BSideCrystalHeart_sub=The pride type for the B-Side crystal heart. Default uses the red heart.
 
-modoptions_PrideMode_CSideCrystalHeart=
-modoptions_PrideMode_CSideCrystalHeart_sub=
+modoptions_PrideMode_CSideCrystalHeart=C-Side Crystal Heart
+modoptions_PrideMode_CSideCrystalHeart_sub=The pride type for the C-Side crystal heart. Default uses the yellow heart.
 
-modoptions_PrideMode_EmptyCrystalHeart=
-modoptions_PrideMode_EmptyCrystalHeart_sub=
+modoptions_PrideMode_EmptyCrystalHeart=Empty Crystal Heart
+modoptions_PrideMode_EmptyCrystalHeart_sub=The pride type for the Empty crystal heart. Default uses the white heart.
 
-modoptions_PrideMode_GhostCrystalHeart=
-modoptions_PrideMode_GhostCrystalHeart_sub=
+modoptions_PrideMode_GhostCrystalHeart=Ghost Crystal Heart
+modoptions_PrideMode_GhostCrystalHeart_sub=The pride type for the A-Side crystal heart. Default uses the ghost heart.
 
-modoptions_PrideMode_Strawberry=
-modoptions_PrideMode_Strawberry_sub=
+modoptions_PrideMode_Strawberry=Strawberry
+modoptions_PrideMode_Strawberry_sub=The pride type for the normal strawberry.
 
-modoptions_PrideMode_GhostStrawberry=
-modoptions_PrideMode_GhostStrawberry_sub=
+modoptions_PrideMode_GhostStrawberry=Ghost Strawberry
+modoptions_PrideMode_GhostStrawberry_sub=The pride type for the ghost strawberry.
 
-modoptions_PrideMode_GoldenStrawberry=
-modoptions_PrideMode_GoldenStrawberry_sub=
+modoptions_PrideMode_GoldenStrawberry=Golden Strawberry
+modoptions_PrideMode_GoldenStrawberry_sub=The pride type for the golden strawberry.
 
-modoptions_PrideMode_GhostGoldenStrawberry=
-modoptions_PrideMode_GhostGoldenStrawberry_sub=
+modoptions_PrideMode_GhostGoldenStrawberry=Ghost Golden Strawberry
+modoptions_PrideMode_GhostGoldenStrawberry_sub=The pride type for the ghost golden strawberry.
 
-modoptions_PrideMode_SilverStrawberry=
-modoptions_PrideMode_SilverStrawberry_sub=
+modoptions_PrideMode_SilverStrawberry=Silver Strawberry
+modoptions_PrideMode_SilverStrawberry_sub=The pride type for the silver strawberry.
 
-modoptions_PrideMode_GhostSilverStrawberry=
-modoptions_PrideMode_GhostSilverStrawberry_sub=
+modoptions_PrideMode_GhostSilverStrawberry=Ghost Silver Strawberry
+modoptions_PrideMode_GhostSilverStrawberry_sub=The pride type for the ghost silver strawberry.
 
-modoptions_PrideMode_SummitFlag=
-modoptions_PrideMode_SummitFlag_sub=
+modoptions_PrideMode_SummitFlag=Summit Flag
+modoptions_PrideMode_SummitFlag_sub=The pride type for the summit flag. Default uses the red flag.
 
-modoptions_PrideMode_FinalFlag=
-modoptions_PrideMode_FinalFlag_sub=
-
+modoptions_PrideMode_FinalFlag=Final Flag
+modoptions_PrideMode_FinalFlag_sub=The pride type for the final flag. Default uses the green flag.
