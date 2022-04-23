@@ -1,6 +1,7 @@
 ﻿using Mono.Cecil.Cil;
 using Monocle;
 using MonoMod.Cil;
+using MonoMod.Utils;
 using System;
 
 namespace Celeste.Mod.PrideMod {
@@ -11,6 +12,8 @@ namespace Celeste.Mod.PrideMod {
         private const string strawberry_sprite                      = "strawberry";
         private const string collabutils2_ghostsilverberry_sprite   = "CollabUtils2_ghostSilverBerry";
         private const string collabutils2_silverberry_sprite        = "CollabUtils2_silverBerry";
+
+        private const string CollabUtils2_Entities_SilverBerry_type = "Celeste.Mod.CollabUtils2.Entities.SilverBerry";
 
         internal static void Hook() {
             IL.Celeste.Strawberry.Added += Mod_Strawberry_Added;
@@ -53,9 +56,36 @@ namespace Celeste.Mod.PrideMod {
             cursor.GotoNext(instr => instr.MatchNewobj<BloomPoint>());
             cursor.GotoPrev(MoveType.After, instr => instr.MatchLdcR4(12));
 
-            cursor.EmitDelegate<Func<float, float, float>>((alpha, _) => {
+            cursor.Emit(OpCodes.Ldarg_0);
+            cursor.EmitDelegate<Func<float, float, Strawberry, float>>((alpha, _, strawberry) => {
                 PrideModModuleSettings settings = PrideModModule.Settings;
-                return settings.Enabled && settings.MinimalBloom ? 0.05f : alpha;
+                if (settings.Enabled && settings.MinimalBloom) {
+                    bool isGhostBerry = (bool) new DynData<Strawberry>(strawberry)["isGhostBerry"];
+
+                    bool applyMinimalBloom = false;
+
+                    if (strawberry.Golden) {
+                        bool isSilverBerry = strawberry.GetType().FullName == CollabUtils2_Entities_SilverBerry_type;
+
+                        if (isGhostBerry) {
+                            applyMinimalBloom = (isSilverBerry ? settings.GhostSilverStrawberry : settings.GhostGoldenStrawberry) != PrideTypes.Default;
+                        } else {
+                            applyMinimalBloom = (isSilverBerry ? settings.SilverStrawberry : settings.GoldenStrawberry) != PrideTypes.Default;
+                        }
+                    } else {
+                        if (isGhostBerry) {
+                            applyMinimalBloom = settings.GhostStrawberry != PrideTypes.Default;
+                        } else {
+                            applyMinimalBloom = settings.Strawberry != PrideTypes.Default;
+                        }
+                    }
+
+                    Console.WriteLine(applyMinimalBloom);
+
+                    if (applyMinimalBloom)
+                        alpha = 0.05f;
+                }
+                return alpha;
             });
             cursor.Emit(OpCodes.Ldc_R4, 12f);
         }

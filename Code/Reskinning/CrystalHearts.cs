@@ -48,9 +48,32 @@ namespace Celeste.Mod.PrideMod {
             cursor.GotoNext(instr => instr.MatchNewobj<BloomPoint>());
             cursor.GotoPrev(MoveType.After, instr => instr.MatchLdcR4(0.75f));
 
-            cursor.EmitDelegate<Func<float, float>>(alpha => {
+            cursor.Emit(OpCodes.Ldarg_0);
+            cursor.EmitDelegate<Func<float, HeartGem, float>>((alpha, heartGem) => {
                 PrideModModuleSettings settings = PrideModModule.Settings;
-                return settings.Enabled && settings.MinimalBloom ? 0.05f : alpha;
+
+                if (settings.Enabled && settings.MinimalBloom) {
+                    bool applyMinimalBloom = false;
+
+                    if (heartGem.IsGhost)
+                        applyMinimalBloom = settings.GhostCrystalHeart != PrideTypes.Default;
+                    else if (heartGem.IsFake)
+                        applyMinimalBloom = settings.EmptyCrystalHeart != PrideTypes.Default;
+                    else {
+                        Level level = heartGem.SceneAs<Level>();
+                        applyMinimalBloom = level.Session.Area.Mode switch {
+                            AreaMode.Normal => settings.ASideCrystalHeart != PrideTypes.Default,
+                            AreaMode.BSide => settings.BSideCrystalHeart != PrideTypes.Default,
+                            AreaMode.CSide => settings.CSideCrystalHeart != PrideTypes.Default,
+                            _ => false,
+                        };
+                    }
+
+                    if (applyMinimalBloom)
+                        alpha = 0.05f;
+                }
+
+                return alpha;
             });
         }
     }
