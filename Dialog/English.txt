@@ -10,6 +10,10 @@ modoptions_PrideMod_MinimalBloom_sub=Reduces the bloom level of reskinned hearts
 modoptions_PrideMod_PrideSettings=Pride Settings
 modoptions_PrideMod_PrideSettings_title=PRIDE SETTINGS
 
+modoptions_PrideMod_header_CrystalHearts=Crystal Hearts
+modoptions_PrideMod_header_Strawberries=Strawberries
+modoptions_PrideMod_header_Flags=Flags
+
 modoptions_PrideMod_ASideCrystalHeart=A-Side Crystal Heart
 modoptions_PrideMod_ASideCrystalHeart_sub=The pride type for the A-Side crystal heart. Default uses the blue heart.
 
