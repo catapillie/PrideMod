@@ -29,5 +29,15 @@
 			=> prideType == PrideTypes.Default ?
 				originalID :
 				$"PrideMod_{spriteType}_{prideType.ToString().ToLower()}";
+
+		public static string GetCustomSummitFlagDecalPath(this PrideTypes prideType, string originalPath)
+			=> prideType == PrideTypes.Default ?
+				originalPath :
+				$"PrideMod/summitflag/{prideType.ToString().ToLower()}/SummitFlag";
+
+		public static string GetCustomFinalFlagDecalPath(this PrideTypes prideType, string originalPath)
+			=> prideType == PrideTypes.Default ?
+				originalPath :
+				$"PrideMod/finalflag/{prideType.ToString().ToLower()}/finalflag";
 	}
 }

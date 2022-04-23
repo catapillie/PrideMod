@@ -3,7 +3,7 @@ using MonoMod.Cil;
 using System;
 using System.Reflection;
 
-namespace Celeste.Mod.PrideMod {
+namespace Celeste.Mod.PrideMod.Reskinning {
     public static class CrystalHearts {
         private static readonly FieldInfo f_GFX_SpriteBank
             = typeof(GFX).GetField("SpriteBank", BindingFlags.Static | BindingFlags.Public);

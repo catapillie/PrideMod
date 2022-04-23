@@ -4,7 +4,7 @@ using MonoMod.Cil;
 using MonoMod.Utils;
 using System;
 
-namespace Celeste.Mod.PrideMod {
+namespace Celeste.Mod.PrideMod.Reskinning {
     public static class Strawberries {
         private const string ghostgoldberry_sprite                  = "goldghostberry";
         private const string ghostberry_sprite                      = "ghostberry";
