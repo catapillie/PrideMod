@@ -15,6 +15,12 @@ namespace Celeste.Mod.PrideMod {
 
         }
 
+        public override void LoadContent(bool firstLoad) {
+            base.LoadContent(firstLoad);
+
+            PrideModSpriteBanks.Load();
+        }
+
         public override void Unload() {
 
         }
