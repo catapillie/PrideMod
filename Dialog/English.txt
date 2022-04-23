@@ -2,8 +2,8 @@ modname_PrideMod=Pride Mod
 
 modoptions_PrideMod=Pride Mod Options
 
-modoptions_PrideMod_BloomModifier=Bloom Modifier
-modoptions_PrideMod_BloomModifier_sub=Changes the bloom of reskinned entities.
+modoptions_PrideMod_MinimalBloom=Minimal Bloom
+modoptions_PrideMod_MinimalBloom_sub=Reduces the bloom level of reskinned hearts and strawberries.
 
 modoptions_PrideMode_ASideCrystalHeart=A-Side Crystal Heart
 modoptions_PrideMode_ASideCrystalHeart_sub=The pride type for the A-Side crystal heart. Default uses the blue heart.

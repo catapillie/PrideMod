@@ -1,4 +1,5 @@
-﻿using Monocle;
+﻿using Mono.Cecil.Cil;
+using Monocle;
 using MonoMod.Cil;
 using System;
 
@@ -47,6 +48,16 @@ namespace Celeste.Mod.PrideMod {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 return settings.Enabled ? settings.Strawberry.GetCustomSpriteID("strawberry", id) : id;
             });
+
+
+            cursor.GotoNext(instr => instr.MatchNewobj<BloomPoint>());
+            cursor.GotoPrev(MoveType.After, instr => instr.MatchLdcR4(12));
+
+            cursor.EmitDelegate<Func<float, float, float>>((alpha, _) => {
+                PrideModModuleSettings settings = PrideModModule.Settings;
+                return settings.Enabled && settings.MinimalBloom ? 0.05f : alpha;
+            });
+            cursor.Emit(OpCodes.Ldc_R4, 12f);
         }
 
         private static Sprite Mod_SpriteBank_Create(On.Monocle.SpriteBank.orig_Create orig, SpriteBank self, string id) {

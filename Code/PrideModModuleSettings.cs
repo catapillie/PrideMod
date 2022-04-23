@@ -3,9 +3,9 @@ namespace Celeste.Mod.PrideMod {
     public class PrideModModuleSettings : EverestModuleSettings {
         public bool Enabled { get; set; } = true;
 
-        [SettingName("modoptions_PrideMod_BloomModifier")]
-        [SettingSubText("modoptions_PrideMod_BloomModifier_sub")]
-        public BloomTypes BloomModifier { get; set; } = BloomTypes.Minimal;
+        [SettingName("modoptions_PrideMod_MinimalBloom")]
+        [SettingSubText("modoptions_PrideMod_MinimalBloom_sub")]
+        public bool MinimalBloom { get; set; } = true;
 
 
         [SettingName("modoptions_PrideMode_ASideCrystalHeart")]

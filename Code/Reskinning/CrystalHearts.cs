@@ -26,7 +26,6 @@ namespace Celeste.Mod.PrideMod {
             cursor.EmitDelegate<Func<string, HeartGem, string>>((id, heartGem) => {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 if (settings.Enabled) {
-
                     if (heartGem.IsGhost)
                         id = settings.GhostCrystalHeart.GetCustomSpriteID("crystalheart", id);
                     else if (heartGem.IsFake)
@@ -43,6 +42,15 @@ namespace Celeste.Mod.PrideMod {
                 }
 
                 return id;
+            });
+
+
+            cursor.GotoNext(instr => instr.MatchNewobj<BloomPoint>());
+            cursor.GotoPrev(MoveType.After, instr => instr.MatchLdcR4(0.75f));
+
+            cursor.EmitDelegate<Func<float, float>>(alpha => {
+                PrideModModuleSettings settings = PrideModModule.Settings;
+                return settings.Enabled && settings.MinimalBloom ? 0.05f : alpha;
             });
         }
     }
