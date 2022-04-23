@@ -2,21 +2,6 @@
 
 namespace Celeste.Mod.PrideMod.UI {
     public class OuiPrideSettings : AbstractSubmenu {
-        private TextMenu.Item
-            Item_ASideCrystalHeart,
-            Item_BSideCrystalHeart,
-            Item_CSideCrystalHeart,
-            Item_EmptyCrystalHeart,
-            Item_GhostCrystalHeart,
-            Item_Strawberry,
-            Item_GhostStrawberry,
-            Item_GoldenStrawberry,
-            Item_GhostGoldenStrawberry,
-            Item_SilverStrawberry,
-            Item_GhostSilverStrawberry,
-            Item_SummitFlag,
-            Item_FinalFlag;
-
 
         public OuiPrideSettings()
             : base("modoptions_PrideMod_PrideSettings_title", "modoptions_PrideMod_PrideSettings") { }
@@ -24,73 +9,73 @@ namespace Celeste.Mod.PrideMod.UI {
         protected override void addOptionsToMenu(TextMenu menu, bool inGame, object[] parameters) {
             PrideModModuleSettings settings = PrideModModule.Settings;
 
-            menu.Add(Item_ASideCrystalHeart = CreatePrideSettingSlider(
+            TextMenu.Item Item_ASideCrystalHeart = CreatePrideSettingSlider(
                 "modoptions_PrideMod_ASideCrystalHeart",
                 settings.ASideCrystalHeart,
                 prideType => settings.ASideCrystalHeart = prideType
-            ));
-            menu.Add(Item_BSideCrystalHeart = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_BSideCrystalHeart = CreatePrideSettingSlider(
                 "modoptions_PrideMod_BSideCrystalHeart",
                 settings.BSideCrystalHeart,
                 prideType => settings.BSideCrystalHeart = prideType
-            ));
-            menu.Add(Item_CSideCrystalHeart = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_CSideCrystalHeart = CreatePrideSettingSlider(
                 "modoptions_PrideMod_CSideCrystalHeart",
                 settings.CSideCrystalHeart,
                 prideType => settings.CSideCrystalHeart = prideType
-            ));
-            menu.Add(Item_EmptyCrystalHeart = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_EmptyCrystalHeart = CreatePrideSettingSlider(
                 "modoptions_PrideMod_EmptyCrystalHeart",
                 settings.EmptyCrystalHeart,
                 prideType => settings.EmptyCrystalHeart = prideType
-            ));
-            menu.Add(Item_GhostCrystalHeart = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_GhostCrystalHeart = CreatePrideSettingSlider(
                 "modoptions_PrideMod_GhostCrystalHeart",
                 settings.GhostCrystalHeart,
                 prideType => settings.GhostCrystalHeart = prideType
-            ));
+            );
 
-            menu.Add(Item_Strawberry = CreatePrideSettingSlider(
+            TextMenu.Item Item_Strawberry = CreatePrideSettingSlider(
                 "modoptions_PrideMod_Strawberry",
                 settings.Strawberry,
                 prideType => settings.Strawberry = prideType
-            ));
-            menu.Add(Item_GhostStrawberry = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_GhostStrawberry = CreatePrideSettingSlider(
                 "modoptions_PrideMod_GhostStrawberry",
                 settings.GhostStrawberry,
                 prideType => settings.GhostStrawberry = prideType
-            ));
-            menu.Add(Item_GoldenStrawberry = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_GoldenStrawberry = CreatePrideSettingSlider(
                 "modoptions_PrideMod_GoldenStrawberry",
                 settings.GoldenStrawberry,
                 prideType => settings.GoldenStrawberry = prideType
-            ));
-            menu.Add(Item_GhostGoldenStrawberry = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_GhostGoldenStrawberry = CreatePrideSettingSlider(
                 "modoptions_PrideMod_GhostGoldenStrawberry",
                 settings.GhostGoldenStrawberry,
                 prideType => settings.GhostGoldenStrawberry = prideType
-            ));
-            menu.Add(Item_SilverStrawberry = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_SilverStrawberry = CreatePrideSettingSlider(
                 "modoptions_PrideMod_SilverStrawberry",
                 settings.SilverStrawberry,
                 prideType => settings.SilverStrawberry = prideType
-            ));
-            menu.Add(Item_GhostSilverStrawberry = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_GhostSilverStrawberry = CreatePrideSettingSlider(
                 "modoptions_PrideMod_GhostSilverStrawberry",
                 settings.GhostSilverStrawberry,
                 prideType => settings.GhostSilverStrawberry = prideType
-            ));
+            );
 
-            menu.Add(Item_SummitFlag = CreatePrideSettingSlider(
+            TextMenu.Item Item_SummitFlag = CreatePrideSettingSlider(
                 "modoptions_PrideMod_SummitFlag",
                 settings.SummitFlag,
                 prideType => settings.SummitFlag = prideType
-            ));
-            menu.Add(Item_FinalFlag = CreatePrideSettingSlider(
+            );
+            TextMenu.Item Item_FinalFlag = CreatePrideSettingSlider(
                 "modoptions_PrideMod_FinalFlag",
                 settings.FinalFlag,
                 prideType => settings.FinalFlag = prideType
-            ));
+            );
 
             Item_ASideCrystalHeart      .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_ASideCrystalHeart_sub"));
             Item_BSideCrystalHeart      .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_BSideCrystalHeart_sub"));
@@ -105,6 +90,22 @@ namespace Celeste.Mod.PrideMod.UI {
             Item_GhostSilverStrawberry  .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_GhostSilverStrawberry_sub"));
             Item_SummitFlag             .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_SummitFlag_sub"));
             Item_FinalFlag              .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_FinalFlag_sub"));
+
+            menu.Add(Item_ASideCrystalHeart);
+            menu.Add(Item_BSideCrystalHeart);
+            menu.Add(Item_CSideCrystalHeart);
+            menu.Add(Item_EmptyCrystalHeart);
+            menu.Add(Item_GhostCrystalHeart);
+            menu.Add(Item_Strawberry);
+            menu.Add(Item_GhostStrawberry);
+            menu.Add(Item_GoldenStrawberry);
+            menu.Add(Item_GhostGoldenStrawberry);
+            if (PrideModModule.Instance.Loaded_CollabUtils2) {
+                menu.Add(Item_SilverStrawberry);
+                menu.Add(Item_GhostSilverStrawberry);
+            }
+            menu.Add(Item_SummitFlag);
+            menu.Add(Item_FinalFlag);
         }
 
 
