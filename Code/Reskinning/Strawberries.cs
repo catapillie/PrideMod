@@ -98,21 +98,39 @@ namespace Celeste.Mod.PrideMod.Reskinning {
             ILCursor cursor = new(il);
 
             cursor.GotoNext(MoveType.After, instr => instr.MatchLdstr(strawberryseed_sprite));
-            cursor.EmitDelegate<Func<string, string>>(id => {
+            cursor.Emit(OpCodes.Ldarg_0);
+            cursor.EmitDelegate<Func<string, StrawberrySeed, string>>((id, seed) => {
                 PrideModModuleSettings settings = PrideModModule.Settings;
-                return settings.Enabled ? settings.Strawberry.GetCustomSpriteID("strawberryseed", id) : id;
+                if (settings.Enabled) {
+                    id = settings.Strawberry.GetCustomSpriteID("strawberryseed", id);
+                    if (settings.Strawberry != PrideTypes.Default)
+                        new DynData<StrawberrySeed>(seed).Get<BloomPoint>("bloom").Alpha = 0.05f;
+                }
+                return id;
             });
 
             cursor.GotoNext(MoveType.After, instr => instr.MatchLdstr(goldberryseed_sprite));
-            cursor.EmitDelegate<Func<string, string>>(id => {
+            cursor.Emit(OpCodes.Ldarg_0);
+            cursor.EmitDelegate<Func<string, StrawberrySeed, string>>((id, seed) => {
                 PrideModModuleSettings settings = PrideModModule.Settings;
-                return settings.Enabled ? settings.GoldenStrawberry.GetCustomSpriteID("goldenberryseed", id) : id;
+                if (settings.Enabled) {
+                    id = settings.GoldenStrawberry.GetCustomSpriteID("goldenberryseed", id);
+                    if (settings.GoldenStrawberry != PrideTypes.Default)
+                        new DynData<StrawberrySeed>(seed).Get<BloomPoint>("bloom").Alpha = 0.05f;
+                }
+                return id;
             });
 
             cursor.GotoNext(MoveType.After, instr => instr.MatchLdstr(ghostberryseed));
-            cursor.EmitDelegate<Func<string, string>>(id => {
+            cursor.Emit(OpCodes.Ldarg_0);
+            cursor.EmitDelegate<Func<string, StrawberrySeed, string>>((id, seed) => {
                 PrideModModuleSettings settings = PrideModModule.Settings;
-                return settings.Enabled ? settings.GhostStrawberry.GetCustomSpriteID("ghostberryseed", id) : id;
+                if (settings.Enabled) {
+                    id = settings.GhostStrawberry.GetCustomSpriteID("ghostberryseed", id);
+                    if (settings.GhostStrawberry != PrideTypes.Default)
+                        new DynData<StrawberrySeed>(seed).Get<BloomPoint>("bloom").Alpha = 0.05f;
+                }
+                return id;
             });
         }
 
