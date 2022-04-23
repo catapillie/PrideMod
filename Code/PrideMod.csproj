@@ -30,6 +30,9 @@
         <Reference Include="$(CelestePrefix)\MMHOOK_Celeste.dll">
             <Private>false</Private>
         </Reference>
+		<Reference Include="$(CelestePrefix)\YamlDotNet.dll">
+			<Private>false</Private>
+		</Reference>
     </ItemGroup>
 
     <Choose>

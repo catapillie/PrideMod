@@ -24,7 +24,7 @@
 		Transgender,
 	}
 
-	public static class PrideTypeInfo {
+	public static class PrideTypesInfo {
 
     }
 }
