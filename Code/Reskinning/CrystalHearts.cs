@@ -28,15 +28,15 @@ namespace Celeste.Mod.PrideMod {
                 if (settings.Enabled) {
 
                     if (heartGem.IsGhost)
-                        id = settings.GhostCrystalHeart.GetHeartSpriteID(id);
+                        id = settings.GhostCrystalHeart.GetCustomSpriteID("crystalheart", id);
                     else if (heartGem.IsFake)
-                        id = settings.EmptyCrystalHeart.GetHeartSpriteID(id);
+                        id = settings.EmptyCrystalHeart.GetCustomSpriteID("crystalheart", id);
                     else {
                         Level level = heartGem.SceneAs<Level>();
                         id = level.Session.Area.Mode switch {
-                            AreaMode.Normal => settings.ASideCrystalHeart.GetHeartSpriteID(id),
-                            AreaMode.BSide => settings.BSideCrystalHeart.GetHeartSpriteID(id),
-                            AreaMode.CSide => settings.CSideCrystalHeart.GetHeartSpriteID(id),
+                            AreaMode.Normal => settings.ASideCrystalHeart.GetCustomSpriteID("crystalheart", id),
+                            AreaMode.BSide => settings.BSideCrystalHeart.GetCustomSpriteID("crystalheart", id),
+                            AreaMode.CSide => settings.CSideCrystalHeart.GetCustomSpriteID("crystalheart", id),
                             _ => id,
                         };
                     }

@@ -13,10 +13,12 @@ namespace Celeste.Mod.PrideMod {
 
         public override void Load() {
             CrystalHearts.Hook();
+            Strawberries.Hook();
         }
 
         public override void Unload() {
             CrystalHearts.Unhook();
+            Strawberries.Unhook();
         }
     }
 }
