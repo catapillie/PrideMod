@@ -24,8 +24,24 @@ namespace Celeste.Mod.PrideMod {
 
             cursor.Emit(OpCodes.Ldarg_0);
             cursor.EmitDelegate<Func<string, HeartGem, string>>((id, heartGem) => {
-                Console.WriteLine(id);
-                Console.WriteLine(heartGem.IsGhost);
+                PrideModModuleSettings settings = PrideModModule.Settings;
+                if (settings.Enabled) {
+
+                    if (heartGem.IsGhost)
+                        id = settings.GhostCrystalHeart.GetHeartSpriteID(id);
+                    else if (heartGem.IsFake)
+                        id = settings.EmptyCrystalHeart.GetHeartSpriteID(id);
+                    else {
+                        Level level = heartGem.SceneAs<Level>();
+                        id = level.Session.Area.Mode switch {
+                            AreaMode.Normal => settings.ASideCrystalHeart.GetHeartSpriteID(id),
+                            AreaMode.BSide => settings.BSideCrystalHeart.GetHeartSpriteID(id),
+                            AreaMode.CSide => settings.CSideCrystalHeart.GetHeartSpriteID(id),
+                            _ => id,
+                        };
+                    }
+                }
+
                 return id;
             });
         }

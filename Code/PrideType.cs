@@ -25,6 +25,9 @@
 	}
 
 	public static class PrideTypesInfo {
-
+		public static string GetHeartSpriteID(this PrideTypes prideType, string originalID)
+			=> prideType == PrideTypes.Default ?
+				originalID :
+				$"PrideMod_crystalheart_{prideType.ToString().ToLower()}";
     }
 }
