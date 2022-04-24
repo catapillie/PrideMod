@@ -60,8 +60,6 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                     PrideData.PrideColors[settings.FinalFlag] :
                     colors;
             });
-
-            Console.WriteLine(il);
         }
     }
 }
