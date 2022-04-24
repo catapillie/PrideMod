@@ -29,6 +29,25 @@ namespace Celeste.Mod.PrideMod {
 
 
         [SettingIgnore]
+        public PrideTypes BeginnerMiniHeart { get; set; } = PrideTypes.Default;
+        
+        [SettingIgnore]
+        public PrideTypes IntermediateMiniHeart { get; set; } = PrideTypes.Default;
+        
+        [SettingIgnore]
+        public PrideTypes AdvancedMiniHeart { get; set; } = PrideTypes.Default;
+        
+        [SettingIgnore]
+        public PrideTypes ExpertMiniHeart { get; set; } = PrideTypes.Default;
+        
+        [SettingIgnore]
+        public PrideTypes GrandmasterMiniHeart { get; set; } = PrideTypes.Default;
+        
+        [SettingIgnore]
+        public PrideTypes GhostMiniHeart { get; set; } = PrideTypes.Default;
+
+
+        [SettingIgnore]
         public PrideTypes Strawberry { get; set; } = PrideTypes.Default;
 
         [SettingIgnore]

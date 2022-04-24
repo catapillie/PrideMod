@@ -15,6 +15,7 @@ namespace Celeste.Mod.PrideMod {
 
         public override void Load() {
             Reskinning.CrystalHearts.Hook();
+            Reskinning.MiniHearts.Hook();
             Reskinning.Strawberries.Hook();
             Reskinning.FlagDecals.Hook();
 
@@ -23,6 +24,7 @@ namespace Celeste.Mod.PrideMod {
 
         public override void Unload() {
             Reskinning.CrystalHearts.Unhook();
+            Reskinning.MiniHearts.Unhook();
             Reskinning.Strawberries.Unhook();
             Reskinning.FlagDecals.Unhook();
         }
