@@ -125,7 +125,7 @@ namespace Celeste.Mod.PrideMod.UI {
             => new TextMenu.Slider(
                 Dialog.Clean(settingName),
                 i => ((PrideTypes)i).ToString(),
-                0, PrideTypesInfo.PrideCount - 1,
+                0, PrideData.PrideCount - 1,
                 (int)value
             ).Change(i => action((PrideTypes)i));
 

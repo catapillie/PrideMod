@@ -26,7 +26,7 @@ namespace Celeste.Mod.PrideMod {
 		Transgender,
 	}
 
-	public static class PrideTypesInfo {
+	public static class PrideData {
 		public static readonly int PrideCount = Enum.GetNames(typeof(PrideTypes)).Length;
 
 		public static string GetCustomSpriteID(this PrideTypes prideType, string spriteType, string originalID)
