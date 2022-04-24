@@ -1,0 +1,3 @@
+[submodule "Submodules/CollabUtils2"]
+	path = Submodules/CollabUtils2
+	url = https://github.com/EverestAPI/CelesteCollabUtils2

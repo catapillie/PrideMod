@@ -1,4 +1,5 @@
-﻿using Mono.Cecil.Cil;
+﻿using Celeste.Mod.CollabUtils2.Entities;
+using Mono.Cecil.Cil;
 using Monocle;
 using MonoMod.Cil;
 using MonoMod.Utils;
@@ -16,8 +17,6 @@ namespace Celeste.Mod.PrideMod.Reskinning {
         private const string strawberryseed_sprite                  = "strawberrySeed";
         private const string goldberryseed_sprite                   = "goldberrySeed";
         private const string ghostberryseed                         = "ghostberrySeed";
-
-        private const string CollabUtils2_Entities_SilverBerry_type = "Celeste.Mod.CollabUtils2.Entities.SilverBerry";
 
         internal static void Hook() {
             IL.Celeste.Strawberry.Added += Mod_Strawberry_Added;
@@ -71,7 +70,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                     bool applyMinimalBloom = false;
 
                     if (strawberry.Golden) {
-                        bool isSilverBerry = strawberry.GetType().FullName == CollabUtils2_Entities_SilverBerry_type;
+                        bool isSilverBerry = strawberry is SilverBerry;
 
                         if (isGhostBerry) {
                             applyMinimalBloom = (isSilverBerry ? settings.GhostSilverStrawberry : settings.GhostGoldenStrawberry) != PrideTypes.Default;
