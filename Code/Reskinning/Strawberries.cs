@@ -30,6 +30,9 @@ namespace Celeste.Mod.PrideMod.Reskinning {
             On.Monocle.SpriteBank.Create -= Mod_SpriteBank_Create;
         }
 
+        private static bool CollabUtils2_Loaded_SilverBerryCheck(Strawberry strawberry)
+            => strawberry is SilverBerry;
+
         private static void Mod_Strawberry_Added(ILContext il) {
             ILCursor cursor = new(il);
 
@@ -70,7 +73,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                     bool applyMinimalBloom = false;
 
                     if (strawberry.Golden) {
-                        bool isSilverBerry = strawberry is SilverBerry;
+                        bool isSilverBerry = PrideModModule.Instance.Loaded_CollabUtils2 && CollabUtils2_Loaded_SilverBerryCheck(strawberry);
 
                         if (isGhostBerry) {
                             applyMinimalBloom = (isSilverBerry ? settings.GhostSilverStrawberry : settings.GhostGoldenStrawberry) != PrideTypes.Default;
