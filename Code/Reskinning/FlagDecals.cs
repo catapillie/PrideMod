@@ -1,4 +1,6 @@
-﻿using Monocle;
+﻿using Microsoft.Xna.Framework;
+using Mono.Cecil.Cil;
+using Monocle;
 using MonoMod.Cil;
 using MonoMod.RuntimeDetour;
 using System;
@@ -12,6 +14,9 @@ namespace Celeste.Mod.PrideMod.Reskinning {
         private static readonly FieldInfo f_Decal_Name
             = typeof(Decal).GetField("Name", BindingFlags.Instance | BindingFlags.Public);
 
+        private static readonly FieldInfo f_SummitCheckpoint_ConfettiRenderer_confettiColors
+            = typeof(SummitCheckpoint.ConfettiRenderer).GetField("confettiColors", BindingFlags.Static | BindingFlags.NonPublic);
+
         private const string summitflag_decal   = "decals/7-summit/SummitFlag";
         private const string finalflag_decal    = "decals/10-farewell/finalflag";
 
@@ -19,10 +24,12 @@ namespace Celeste.Mod.PrideMod.Reskinning {
 
         internal static void Hook() {
             IL_Decal_orig_ctor  = new ILHook(m_Decal_orig_ctor, Mod_Decal_orig_ctor);
+            IL.Celeste.SummitCheckpoint.ConfettiRenderer.ctor += Mod_ConfettiRenderer_ctor;
         }
 
         internal static void Unhook() {
             IL_Decal_orig_ctor.Dispose();
+            IL.Celeste.SummitCheckpoint.ConfettiRenderer.ctor -= Mod_ConfettiRenderer_ctor;
         }
 
         private static void Mod_Decal_orig_ctor(ILContext il) {
@@ -41,6 +48,20 @@ namespace Celeste.Mod.PrideMod.Reskinning {
 
                 return name;
             });
+        }
+
+        private static void Mod_ConfettiRenderer_ctor(ILContext il) {
+            ILCursor cursor = new(il);
+
+            cursor.GotoNext(MoveType.After, instr => instr.MatchLdsfld(f_SummitCheckpoint_ConfettiRenderer_confettiColors));
+            cursor.EmitDelegate<Func<Color[], Color[]>>(colors => {
+                PrideModModuleSettings settings = PrideModModule.Settings;
+                return settings.Enabled && settings.FinalFlag != PrideTypes.Default ?
+                    PrideData.PrideColors[settings.FinalFlag] :
+                    colors;
+            });
+
+            Console.WriteLine(il);
         }
     }
 }

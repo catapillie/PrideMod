@@ -52,3 +52,6 @@ modoptions_PrideMod_SummitFlag_sub=The pride type for the summit flag. Default u
 
 modoptions_PrideMod_FinalFlag=Final Flag
 modoptions_PrideMod_FinalFlag_sub=The pride type for the final flag. Default uses the green flag.
+
+modoptions_PrideMod_Confetti=Confetti
+modoptions_PrideMod_Confetti_sub=The pride type for the confetti from summit checkpoints and final flag.

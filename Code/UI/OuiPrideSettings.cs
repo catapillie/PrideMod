@@ -82,6 +82,11 @@ namespace Celeste.Mod.PrideMod.UI {
                 settings.FinalFlag,
                 prideType => settings.FinalFlag = prideType
             );
+            TextMenu.Item item_Confetti = CreatePrideSettingSlider(
+                "modoptions_PrideMod_Confetti",
+                settings.Confetti,
+                prideType => settings.Confetti = prideType
+            );
 
 
             menu.Add(header_CrystalHearts);
@@ -104,6 +109,7 @@ namespace Celeste.Mod.PrideMod.UI {
             menu.Add(header_Flags);
             menu.Add(item_SummitFlag);
             menu.Add(item_FinalFlag);
+            menu.Add(item_Confetti);
 
 
             item_ASideCrystalHeart      .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_ASideCrystalHeart_sub"));
@@ -119,6 +125,7 @@ namespace Celeste.Mod.PrideMod.UI {
             item_GhostSilverStrawberry  .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_GhostSilverStrawberry_sub"));
             item_SummitFlag             .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_SummitFlag_sub"));
             item_FinalFlag              .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_FinalFlag_sub"));
+            item_Confetti               .AddDescription(menu, Dialog.Clean("modoptions_PrideMod_Confetti_sub"));
         }
 
         private static TextMenu.Item CreatePrideSettingSlider(string settingName, PrideTypes value, Action<PrideTypes> action)

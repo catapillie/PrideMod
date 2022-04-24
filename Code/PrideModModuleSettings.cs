@@ -53,6 +53,9 @@ namespace Celeste.Mod.PrideMod {
         [SettingIgnore]
         public PrideTypes FinalFlag { get; set; } = PrideTypes.Default;
 
+        [SettingIgnore]
+        public PrideTypes Confetti { get; set; } = PrideTypes.Default;
+
 
         [YamlIgnore]
         public int PrideSettings { get; set; } = 0;
