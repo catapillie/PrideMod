@@ -2224,6 +2224,6 @@
 
         <Loop id="idle" path="idle" delay=".08" frames="0-5,0-5,0-5,0-5,0-7" />
         <Anim id="collect" path="idle" delay=".07" frames="7-11"/>
-    </PrideMod_ghostsilverberry_transgender>$
+    </PrideMod_ghostsilverberry_transgender>
 
 </Sprites>
