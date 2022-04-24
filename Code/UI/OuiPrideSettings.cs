@@ -2,7 +2,6 @@
 
 namespace Celeste.Mod.PrideMod.UI {
     public class OuiPrideSettings : AbstractSubmenu {
-
         public OuiPrideSettings()
             : base("modoptions_PrideMod_PrideSettings_title", "modoptions_PrideMod_PrideSettings") { }
 
@@ -11,7 +10,7 @@ namespace Celeste.Mod.PrideMod.UI {
 
 
             CreateSubHeader     (menu, "modoptions_PrideMod_header_CrystalHearts");
-            CreatePrideSetting  (menu, "modoptions_PrideMod_ASideCrystalHeart", settings.ASideCrystalHeart, prideType => settings.ASideCrystalHeart = prideType);
+            CreatePrideSetting  (menu, "modoptions_PrideMod_ASideCrystalHeart", settings.ASideCrystalHeart, prideType => settings.ASideCrystalHeart = prideType, displayDesc: true);
             CreatePrideSetting  (menu, "modoptions_PrideMod_BSideCrystalHeart", settings.BSideCrystalHeart, prideType => settings.BSideCrystalHeart = prideType);
             CreatePrideSetting  (menu, "modoptions_PrideMod_CSideCrystalHeart", settings.CSideCrystalHeart, prideType => settings.CSideCrystalHeart = prideType);
             CreatePrideSetting  (menu, "modoptions_PrideMod_EmptyCrystalHeart", settings.EmptyCrystalHeart, prideType => settings.EmptyCrystalHeart = prideType);
@@ -33,7 +32,7 @@ namespace Celeste.Mod.PrideMod.UI {
             CreatePrideSetting  (menu, "modoptions_PrideMod_Confetti", settings.Confetti, prideType => settings.Confetti = prideType);
         }
 
-        private static void CreatePrideSetting(TextMenu menu, string settingName, PrideTypes value, Action<PrideTypes> action) {
+        private void CreatePrideSetting(TextMenu menu, string settingName, PrideTypes value, Action<PrideTypes> action, bool displayDesc = false) {
             TextMenu.Item item = new TextMenu.Slider(
                 Dialog.Clean(settingName),
                 i => ((PrideTypes)i).GetFormattedName(),
@@ -43,6 +42,11 @@ namespace Celeste.Mod.PrideMod.UI {
 
             menu.Add(item);
             item.AddDescription(menu, Dialog.Clean(settingName + "_sub"));
+
+            // The first TextMenu.Item in the submenu would not display its description until reselected
+            // so we want to show it anyway
+            if (displayDesc)
+                item.OnEnter();
         }
 
         private static void CreateSubHeader(TextMenu menu, string header)
