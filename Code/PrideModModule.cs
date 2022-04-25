@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Celeste.Mod.PrideMod {
     public class PrideModModule : EverestModule {
@@ -7,31 +8,35 @@ namespace Celeste.Mod.PrideMod {
         public override Type SettingsType => typeof(PrideModModuleSettings);
         public static PrideModModuleSettings Settings => (PrideModModuleSettings)Instance._Settings;
 
-        public bool Loaded_CollabUtils2 { get; private set; }
+        public EverestModuleMetadata[] AllDependencies { get; private set; }
 
         public PrideModModule() {
             Instance = this;
         }
 
         public override void Load() {
+            AllDependencies = Enumerable.Concat(Metadata.Dependencies, Metadata.OptionalDependencies).ToArray();
+
             Reskinning.CrystalHearts.Hook();
+            Reskinning.MiniHearts.Hook();
             Reskinning.Strawberries.Hook();
             Reskinning.FlagDecals.Hook();
 
-            FindOptionalDependencies();
+            Everest.Events.Everest.OnLoadMod += Dependencies.Everest_OnLoadMod;
+            Dependencies.Hook();
         }
 
         public override void Unload() {
             Reskinning.CrystalHearts.Unhook();
+            Reskinning.MiniHearts.Unhook();
             Reskinning.Strawberries.Unhook();
             Reskinning.FlagDecals.Unhook();
+
+            Everest.Events.Everest.OnLoadMod -= Dependencies.Everest_OnLoadMod;
+            Dependencies.Unhook();
         }
 
-        private void FindOptionalDependencies() {
-            Loaded_CollabUtils2 = Everest.Loader.DependencyLoaded(new() {
-                Name = "CollabUtils2",
-                VersionString = "1.6.10",
-            });
-        }
+        internal static void Log(string msg)
+            => Logger.Log("Pride Mod", msg);
     }
 }

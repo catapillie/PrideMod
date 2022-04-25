@@ -73,7 +73,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                     bool applyMinimalBloom = false;
 
                     if (strawberry.Golden) {
-                        bool isSilverBerry = PrideModModule.Instance.Loaded_CollabUtils2 && CollabUtils2_Loaded_SilverBerryCheck(strawberry);
+                        bool isSilverBerry = Dependencies.CollabUtils2_Loaded && CollabUtils2_Loaded_SilverBerryCheck(strawberry);
 
                         if (isGhostBerry) {
                             applyMinimalBloom = (isSilverBerry ? settings.GhostSilverStrawberry : settings.GhostGoldenStrawberry) != PrideTypes.Default;

@@ -23,7 +23,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
         private static ILHook IL_Decal_orig_ctor;
 
         internal static void Hook() {
-            IL_Decal_orig_ctor  = new ILHook(m_Decal_orig_ctor, Mod_Decal_orig_ctor);
+            IL_Decal_orig_ctor = new ILHook(m_Decal_orig_ctor, Mod_Decal_orig_ctor);
             IL.Celeste.SummitCheckpoint.ConfettiRenderer.ctor += Mod_ConfettiRenderer_ctor;
         }
 

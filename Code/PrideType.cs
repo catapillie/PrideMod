@@ -199,6 +199,11 @@ namespace Celeste.Mod.PrideMod {
 				originalID :
 				$"PrideMod_{spriteType}_{prideType.ToString().ToLower()}";
 
+		public static Sprite GetCustomSprite(this PrideTypes prideType, string spriteType, Sprite originalSprite)
+			=> prideType == PrideTypes.Default ?
+				originalSprite :
+				GFX.SpriteBank.Create($"PrideMod_{spriteType}_{prideType.ToString().ToLower()}");
+
 		public static string GetCustomSummitFlagDecalPath(this PrideTypes prideType, string originalPath)
 			=> prideType == PrideTypes.Default ?
 				originalPath :
