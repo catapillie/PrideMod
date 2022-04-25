@@ -1,4 +1,5 @@
-﻿using Mono.Cecil.Cil;
+﻿using Celeste.Mod.PrideMod.Components;
+using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using System;
 using System.Reflection;
@@ -10,10 +11,12 @@ namespace Celeste.Mod.PrideMod.Reskinning {
 
         internal static void Hook() {
             IL.Celeste.HeartGem.Awake += Mod_HeartGem_Awake;
+            On.Celeste.HeartGem.Collect += Mod_HeartGem_Collect;
         }
 
         internal static void Unhook() {
             IL.Celeste.HeartGem.Awake -= Mod_HeartGem_Awake;
+            On.Celeste.HeartGem.Collect -= Mod_HeartGem_Collect;
         }
 
         private static void Mod_HeartGem_Awake(ILContext il) {
@@ -26,18 +29,30 @@ namespace Celeste.Mod.PrideMod.Reskinning {
             cursor.EmitDelegate<Func<string, HeartGem, string>>((id, heartGem) => {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 if (settings.Enabled) {
+                    PrideTypes pride;
+
                     if (heartGem.IsGhost)
-                        id = settings.GhostCrystalHeart.GetCustomSpriteID("crystalheart", id);
+                        pride = settings.GhostCrystalHeart;
                     else if (heartGem.IsFake)
-                        id = settings.EmptyCrystalHeart.GetCustomSpriteID("crystalheart", id);
+                        pride = settings.EmptyCrystalHeart;
                     else {
                         Level level = heartGem.SceneAs<Level>();
-                        id = level.Session.Area.Mode switch {
-                            AreaMode.Normal => settings.ASideCrystalHeart.GetCustomSpriteID("crystalheart", id),
-                            AreaMode.BSide => settings.BSideCrystalHeart.GetCustomSpriteID("crystalheart", id),
-                            AreaMode.CSide => settings.CSideCrystalHeart.GetCustomSpriteID("crystalheart", id),
-                            _ => id,
+                        pride = level.Session.Area.Mode switch {
+                            AreaMode.Normal => settings.ASideCrystalHeart,
+                            AreaMode.BSide => settings.BSideCrystalHeart,
+                            AreaMode.CSide => settings.CSideCrystalHeart,
+                            _ => PrideTypes.Default,
                         };
+                    }
+
+                    string newID = pride.GetCustomSpriteID("crystalheart", id);
+
+                    if (id != newID) {
+                        id = newID;
+                        heartGem.Add(new CrystalHeartParticleChanger(
+                            new(heartGem),
+                            (heartGem.IsFake ? PrideData.PrideParticles_HeartGem_P_FakeShine : PrideData.PrideParticles_HeartGem_P_AnyShine)[pride]
+                        ));
                     }
                 }
 
@@ -75,6 +90,11 @@ namespace Celeste.Mod.PrideMod.Reskinning {
 
                 return alpha;
             });
+        }
+
+        private static void Mod_HeartGem_Collect(On.Celeste.HeartGem.orig_Collect orig, HeartGem self, Player player) {
+            self.Get<CrystalHeartParticleChanger>().RemoveSelf();
+            orig(self, player);
         }
     }
 }

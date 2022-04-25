@@ -1,4 +1,5 @@
 ﻿using Celeste.Mod.CollabUtils2.Entities;
+using Celeste.Mod.PrideMod.Components;
 using Mono.Cecil.Cil;
 using Monocle;
 using MonoMod.Cil;
@@ -50,15 +51,17 @@ namespace Celeste.Mod.PrideMod.Reskinning {
 
                 if (settings.Enabled) {
                     DynData<AbstractMiniHeart> data = new(miniHeart);
-                    Sprite sprite = (Sprite)data["sprite"];
 
+                    PrideTypes pride = PrideTypes.Default;
+
+                    Sprite sprite = (Sprite)data["sprite"];
                     Sprite newSprite = sprite.Path switch {
-                        beginnerminiheart_sprite => settings.BeginnerMiniHeart.GetCustomSprite("miniheart", sprite),
-                        intermediateminiheart_sprite => settings.IntermediateMiniHeart.GetCustomSprite("miniheart", sprite),
-                        advancedminiheart_sprite => settings.AdvancedMiniHeart.GetCustomSprite("miniheart", sprite),
-                        expertminiheart_sprite => settings.ExpertMiniHeart.GetCustomSprite("miniheart", sprite),
-                        grandmasterminiheart_sprite => settings.GrandmasterMiniHeart.GetCustomSprite("miniheart", sprite),
-                        ghostminiheart_sprite => settings.GhostMiniHeart.GetCustomSprite("miniheart", sprite),
+                        beginnerminiheart_sprite => (pride = settings.BeginnerMiniHeart).GetCustomSprite("miniheart", sprite),
+                        intermediateminiheart_sprite => (pride = settings.IntermediateMiniHeart).GetCustomSprite("miniheart", sprite),
+                        advancedminiheart_sprite => (pride = settings.AdvancedMiniHeart).GetCustomSprite("miniheart", sprite),
+                        expertminiheart_sprite => (pride = settings.ExpertMiniHeart).GetCustomSprite("miniheart", sprite),
+                        grandmasterminiheart_sprite => (pride = settings.GrandmasterMiniHeart).GetCustomSprite("miniheart", sprite),
+                        ghostminiheart_sprite => (pride = settings.GhostMiniHeart).GetCustomSprite("miniheart", sprite),
                         _ => sprite,
                     };
 
@@ -67,6 +70,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                         miniHeart.Add(newSprite);
                         data["sprite"] = newSprite;
                         data["PrideMod_AbstractMiniHeart_wasReskinned"] = true;
+                        miniHeart.Add(new MiniHeartParticleChanger(data, PrideData.PrideParticles_HeartGem_P_AnyShine[pride]));
                     }
                 }
             });
