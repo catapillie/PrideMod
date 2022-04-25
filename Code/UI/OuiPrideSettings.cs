@@ -44,7 +44,7 @@ namespace Celeste.Mod.PrideMod.UI {
         }
 
         private void CreatePrideSetting(TextMenu menu, string settingName, PrideTypes value, Action<PrideTypes> action, bool displayDesc = false) {
-            TextMenu.Item item = new TextMenu.Slider(
+            TextMenu.Item item = new PreviewedSlider(
                 Dialog.Clean(settingName),
                 i => ((PrideTypes)i).GetFormattedName(),
                 0, PrideData.PrideCount - 1,
