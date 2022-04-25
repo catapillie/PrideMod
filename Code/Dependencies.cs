@@ -15,8 +15,8 @@ namespace Celeste.Mod.PrideMod {
             if (!CollabUtils2_Loaded) {
                 if (Everest.Loader.DependencyLoaded(GetDependencyMetadata("CollabUtils2"))) {
                     Reskinning.MiniHearts.Hook_CollabUtils2();
+                    CollabUtils2_Loaded = true;
                 }
-                CollabUtils2_Loaded = true;
             }
         }
 
