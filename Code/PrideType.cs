@@ -2,6 +2,7 @@
 using Monocle;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Celeste.Mod.PrideMod {
     public enum PrideTypes {
@@ -32,18 +33,13 @@ namespace Celeste.Mod.PrideMod {
 	public static class PrideData {
 		public static readonly int PrideCount = Enum.GetNames(typeof(PrideTypes)).Length;
 
-		public static readonly Dictionary<PrideTypes, Color[]> PrideColors = new() {
-			{ PrideTypes.Default,
-				null
-			},
-
+		public static readonly ReadOnlyDictionary<PrideTypes, Color[]> PrideColors = new(new Dictionary<PrideTypes, Color[]> {
 			{ PrideTypes.Agender, new[] {
 				Calc.HexToColor("3f3f3f"),
 				Calc.HexToColor("969696"),
 				Calc.HexToColor("f0f0f0"),
 				Calc.HexToColor("c7ff9a"),
 			} },
-
 			{ PrideTypes.Aromantic, new[] {
 				Calc.HexToColor("4dcc53"),
 				Calc.HexToColor("c7ff9a"),
@@ -51,7 +47,6 @@ namespace Celeste.Mod.PrideMod {
 				Calc.HexToColor("969696"),
 				Calc.HexToColor("3f3f3f"),
 			} },
-
 			{ PrideTypes.Asexual, new[] {
 				Calc.HexToColor("3f3f3f"),
 				Calc.HexToColor("969696"),
@@ -166,7 +161,10 @@ namespace Celeste.Mod.PrideMod {
 				Calc.HexToColor("ffa2b7"),
 				Calc.HexToColor("f0f0f0"),
 			} },
-		};
+		});
+
+		public static ReadOnlyDictionary<PrideTypes, ParticleType[]> PrideParticles_HeartGem_P_AnyShine { get; private set; } = null;
+		public static ReadOnlyDictionary<PrideTypes, ParticleType[]> PrideParticles_HeartGem_P_FakeShine { get; private set; } = null;
 
 		public static string GetFormattedName(this PrideTypes prideType)
 			=> prideType switch {
@@ -218,5 +216,24 @@ namespace Celeste.Mod.PrideMod {
 			=> prideType == PrideTypes.Default ?
 				originalPath :
 				$"PrideMod/finalflag/{prideType.ToString().ToLower()}/finalflag";
+
+		internal static void InitializeContent() {
+			PrideParticles_HeartGem_P_AnyShine	= BuildParticleTypes(HeartGem.P_BlueShine, (p, color) => p.Color = color);
+			PrideParticles_HeartGem_P_FakeShine	= BuildParticleTypes(HeartGem.P_FakeShine, (p, color) => p.Color = color);
+		}
+
+		private static ReadOnlyDictionary<PrideTypes, ParticleType[]> BuildParticleTypes(ParticleType from, Action<ParticleType, Color> particleTypeModifier) {
+			Dictionary<PrideTypes, ParticleType[]> prideParticleTypes = new();
+
+			foreach (var kv in PrideColors) {
+				ParticleType[] particleTypes = new ParticleType[kv.Value.Length];
+				for (int i = 0; i < particleTypes.Length; i++)
+					particleTypeModifier(particleTypes[i] = new ParticleType(from), kv.Value[i]);
+
+				prideParticleTypes[kv.Key] = particleTypes;
+			}
+
+			return new(prideParticleTypes);
+		}
 	}
 }

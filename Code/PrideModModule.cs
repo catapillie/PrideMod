@@ -14,6 +14,12 @@ namespace Celeste.Mod.PrideMod {
             Instance = this;
         }
 
+        public override void LoadContent(bool firstLoad) {
+            base.LoadContent(firstLoad);
+
+            PrideData.InitializeContent();
+        }
+
         public override void Load() {
             AllDependencies = Enumerable.Concat(Metadata.Dependencies, Metadata.OptionalDependencies).ToArray();
 
