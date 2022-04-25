@@ -194,6 +194,11 @@ namespace Celeste.Mod.PrideMod {
 				_ => "Default",
 			};
 
+		public static string GetCustomTexturePath(this PrideTypes prideType, string spriteType, string frame, string originalID)
+			=> prideType == PrideTypes.Default ?
+				originalID :
+				$"PrideMod/{spriteType}/{prideType.ToString().ToLower()}/{frame}";
+
 		public static string GetCustomSpriteID(this PrideTypes prideType, string spriteType, string originalID)
 			=> prideType == PrideTypes.Default ?
 				originalID :

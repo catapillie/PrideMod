@@ -3,6 +3,7 @@
 namespace Celeste.Mod.PrideMod {
     internal static class Dependencies {
         public static bool CollabUtils2_Loaded { get; private set; }
+        public static EverestModule CollabUtils2_Module { get; private set; }
 
         internal static void Everest_OnLoadMod(EverestModuleMetadata meta) {
             if (PrideModModule.Instance.AllDependencies.Contains(meta))
@@ -13,9 +14,12 @@ namespace Celeste.Mod.PrideMod {
             PrideModModule.Log("Hooking into Pride Mod dependencies");
 
             if (!CollabUtils2_Loaded) {
-                if (Everest.Loader.DependencyLoaded(GetDependencyMetadata("CollabUtils2"))) {
-                    Reskinning.MiniHearts.Hook_CollabUtils2();
+                if (Everest.Loader.TryGetDependency(GetDependencyMetadata("CollabUtils2"), out EverestModule module)) {
                     CollabUtils2_Loaded = true;
+                    CollabUtils2_Module = module;
+
+                    Reskinning.MiniHearts.Hook_CollabUtils2();
+                    Reskinning.Strawberries.Hook_CollabUtils2();
                 }
             }
         }
@@ -25,7 +29,10 @@ namespace Celeste.Mod.PrideMod {
 
             if (CollabUtils2_Loaded) {
                 Reskinning.MiniHearts.Unhook_CollabUtils2();
+                Reskinning.Strawberries.Unhook_CollabUtils2();
+
                 CollabUtils2_Loaded = false;
+                CollabUtils2_Module = null;
             }
         }
 

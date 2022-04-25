@@ -2,11 +2,16 @@
 using Mono.Cecil.Cil;
 using Monocle;
 using MonoMod.Cil;
+using MonoMod.RuntimeDetour;
 using MonoMod.Utils;
 using System;
+using System.Linq;
+using System.Reflection;
 
 namespace Celeste.Mod.PrideMod.Reskinning {
     public static class Strawberries {
+        private const string silverberry_firstframe                 = "CollabUtils2/silverBerry/idle00";
+
         private const string ghostgoldberry_sprite                  = "goldghostberry";
         private const string ghostberry_sprite                      = "ghostberry";
         private const string goldberry_sprite                       = "goldberry";
@@ -18,6 +23,10 @@ namespace Celeste.Mod.PrideMod.Reskinning {
         private const string goldberryseed_sprite                   = "goldberrySeed";
         private const string ghostberryseed                         = "ghostberrySeed";
 
+        private const string CollabUtils2_RainbowBerryUnlockCutscene_typename = "RainbowBerryUnlockCutscene";
+
+        private static ILHook IL_RainbowBerryUnlockCutscene_Cutscene;
+
         internal static void Hook() {
             IL.Celeste.Strawberry.Added += Mod_Strawberry_Added;
             IL.Celeste.StrawberrySeed.Awake += Mod_StrawberrySeed_Awake;
@@ -28,6 +37,23 @@ namespace Celeste.Mod.PrideMod.Reskinning {
             IL.Celeste.Strawberry.Added -= Mod_Strawberry_Added;
             IL.Celeste.StrawberrySeed.Awake -= Mod_StrawberrySeed_Awake;
             On.Monocle.SpriteBank.Create -= Mod_SpriteBank_Create;
+        }
+        
+        internal static void Hook_CollabUtils2() {
+            Type t_CollabUtils2_RainbowBerryUnlockCutscene
+                = Dependencies.CollabUtils2_Module
+                    .GetType().Assembly
+                    .GetTypesSafe()
+                    .First(type => type.Name == CollabUtils2_RainbowBerryUnlockCutscene_typename);
+
+            MethodInfo m_RainbowBerryUnlockCutscene_Cutscene
+                = t_CollabUtils2_RainbowBerryUnlockCutscene.GetMethod("Cutscene", BindingFlags.Instance | BindingFlags.NonPublic).GetStateMachineTarget();
+
+            IL_RainbowBerryUnlockCutscene_Cutscene = new ILHook(m_RainbowBerryUnlockCutscene_Cutscene, Mod_RainbowBerryUnlockCutscene_Cutscene);
+        }
+
+        internal static void Unhook_CollabUtils2() {
+            IL_RainbowBerryUnlockCutscene_Cutscene.Dispose();
         }
 
         private static bool CollabUtils2_Loaded_SilverBerryCheck(Strawberry strawberry)
@@ -147,6 +173,17 @@ namespace Celeste.Mod.PrideMod.Reskinning {
             }
 
             return orig(self, id);
+        }
+
+        private static void Mod_RainbowBerryUnlockCutscene_Cutscene(ILContext il) {
+            ILCursor cursor = new(il);
+
+            cursor.GotoNext(MoveType.After, instr => instr.MatchLdstr(silverberry_firstframe));
+
+            cursor.EmitDelegate<Func<string, string>>(image => {
+                PrideModModuleSettings settings = PrideModModule.Settings;
+                return settings.Enabled ? settings.SilverStrawberry.GetCustomTexturePath("silverberry", "idle00", image) : image;
+            });
         }
     }
 }
