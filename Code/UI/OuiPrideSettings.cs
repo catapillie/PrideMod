@@ -7,7 +7,7 @@ namespace Celeste.Mod.PrideMod.UI {
 
         protected override void addOptionsToMenu(TextMenu menu, bool inGame, object[] parameters) {
             PrideModModuleSettings settings = PrideModModule.Settings;
-            bool collabUtils2Loaded = PrideModModule.Instance.Loaded_CollabUtils2;
+            bool collabUtils2Loaded = Dependencies.CollabUtils2_Loaded;
 
 
             CreateSubHeader     (menu, "modoptions_PrideMod_header_CrystalHearts");

@@ -16,7 +16,7 @@
 
     <!-- Agender Mini Heart-->
 
-    <PrideMod_miniheart_agender path="PrideMod/miniheart/agender/">
+    <PrideMod_miniheart_agender path="PrideMod/miniheart/agender/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13" delay="0.1" />
@@ -130,7 +130,7 @@
 
     <!-- Aromantic Mini Heart-->
 
-    <PrideMod_miniheart_aromantic path="PrideMod/miniheart/aromantic/">
+    <PrideMod_miniheart_aromantic path="PrideMod/miniheart/aromantic/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -244,7 +244,7 @@
 
     <!-- Asexual Mini Heart-->
 
-    <PrideMod_miniheart_asexual path="PrideMod/miniheart/asexual/">
+    <PrideMod_miniheart_asexual path="PrideMod/miniheart/asexual/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -358,7 +358,7 @@
 
     <!-- Bigender Mini Heart-->
 
-    <PrideMod_miniheart_bigender path="PrideMod/miniheart/bigender/">
+    <PrideMod_miniheart_bigender path="PrideMod/miniheart/bigender/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -472,7 +472,7 @@
 
     <!-- Bisexual Mini Heart-->
 
-    <PrideMod_miniheart_bisexual path="PrideMod/miniheart/bisexual/">
+    <PrideMod_miniheart_bisexual path="PrideMod/miniheart/bisexual/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -586,7 +586,7 @@
 
     <!-- Demiboy Mini Heart-->
 
-    <PrideMod_miniheart_demiboy path="PrideMod/miniheart/demiboy/">
+    <PrideMod_miniheart_demiboy path="PrideMod/miniheart/demiboy/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13" delay="0.1" />
@@ -700,7 +700,7 @@
 
     <!-- Demigirl Mini Heart-->
 
-    <PrideMod_miniheart_demigirl path="PrideMod/miniheart/demigirl/">
+    <PrideMod_miniheart_demigirl path="PrideMod/miniheart/demigirl/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13" delay="0.1" />
@@ -814,7 +814,7 @@
 
     <!-- Deminonbinary Mini Heart-->
 
-    <PrideMod_miniheart_deminonbinary path="PrideMod/miniheart/deminonbinary/">
+    <PrideMod_miniheart_deminonbinary path="PrideMod/miniheart/deminonbinary/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13" delay="0.1" />
@@ -928,7 +928,7 @@
 
     <!-- Demisexual Mini Heart-->
 
-    <PrideMod_miniheart_demisexual path="PrideMod/miniheart/demisexual/">
+    <PrideMod_miniheart_demisexual path="PrideMod/miniheart/demisexual/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -1042,7 +1042,7 @@
 
     <!-- Gay Mini Heart-->
 
-    <PrideMod_miniheart_gay path="PrideMod/miniheart/gay/">
+    <PrideMod_miniheart_gay path="PrideMod/miniheart/gay/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -1156,7 +1156,7 @@
 
     <!-- Genderfluid Mini Heart-->
 
-    <PrideMod_miniheart_genderfluid path="PrideMod/miniheart/genderfluid/">
+    <PrideMod_miniheart_genderfluid path="PrideMod/miniheart/genderfluid/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -1270,7 +1270,7 @@
 
     <!-- Genderqueer Mini Heart-->
 
-    <PrideMod_miniheart_genderqueer path="PrideMod/miniheart/genderqueer/">
+    <PrideMod_miniheart_genderqueer path="PrideMod/miniheart/genderqueer/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -1384,10 +1384,10 @@
 
     <!-- Intersex Mini Heart-->
 
-    <PrideMod_miniheart_intersex path="PrideMod/miniheart/intersex/">
+    <PrideMod_miniheart_intersex path="PrideMod/miniheart/intersex/" start="idle">
         <Center />
 
-        <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
+        <Loop id="idle" path="" frames="0*10,1-13" delay="0.1" />
     </PrideMod_miniheart_intersex>
 
     <!-- Intersex Strawberry -->
@@ -1498,7 +1498,7 @@
 
     <!-- Lesbian Mini Heart-->
 
-    <PrideMod_miniheart_lesbian path="PrideMod/miniheart/lesbian/">
+    <PrideMod_miniheart_lesbian path="PrideMod/miniheart/lesbian/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -1612,7 +1612,7 @@
 
     <!-- Non-Binary Mini Heart-->
 
-    <PrideMod_miniheart_nonbinary path="PrideMod/miniheart/nonbinary/">
+    <PrideMod_miniheart_nonbinary path="PrideMod/miniheart/nonbinary/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -1726,7 +1726,7 @@
 
     <!-- Omnisexual Mini Heart-->
 
-    <PrideMod_miniheart_omnisexual path="PrideMod/miniheart/omnisexual/">
+    <PrideMod_miniheart_omnisexual path="PrideMod/miniheart/omnisexual/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -1840,7 +1840,7 @@
 
     <!-- Pansexual Mini Heart-->
 
-    <PrideMod_miniheart_pansexual path="PrideMod/miniheart/pansexual/">
+    <PrideMod_miniheart_pansexual path="PrideMod/miniheart/pansexual/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -1954,7 +1954,7 @@
 
     <!-- Plural Mini Heart-->
 
-    <PrideMod_miniheart_plural path="PrideMod/miniheart/plural/">
+    <PrideMod_miniheart_plural path="PrideMod/miniheart/plural/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -2068,7 +2068,7 @@
 
     <!-- Polyamorous Mini Heart-->
 
-    <PrideMod_miniheart_polyamorous path="PrideMod/miniheart/polyamorous/">
+    <PrideMod_miniheart_polyamorous path="PrideMod/miniheart/polyamorous/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -2182,7 +2182,7 @@
 
     <!-- Polysexual Mini Heart-->
 
-    <PrideMod_miniheart_polysexual path="PrideMod/miniheart/polysexual/">
+    <PrideMod_miniheart_polysexual path="PrideMod/miniheart/polysexual/" start="idle">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
@@ -2294,10 +2294,10 @@
 
     <!-- Transgender Mini Heart-->
 
-    <PrideMod_miniheart_transgender path="PrideMod/miniheart/transgender/">
+    <PrideMod_miniheart_transgender path="PrideMod/miniheart/transgender/" start="idle">
         <Center />
 
-        <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
+        <Loop id="idle" path="" frames="0*10,1-13" delay="0.1" />
     </PrideMod_miniheart_transgender>
 
     <!-- Transgender Strawberry -->
