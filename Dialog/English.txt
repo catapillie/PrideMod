@@ -18,38 +18,38 @@ modoptions_PrideMod_header_Flags=Flags
 
 
 modoptions_PrideMod_ASideCrystalHeart=A-Side Crystal Heart
-modoptions_PrideMod_ASideCrystalHeart_sub=The pride type for the A-Side crystal heart. Default uses the blue heart.
+modoptions_PrideMod_ASideCrystalHeart_sub=The pride type for the A-Side crystal heart.
 
 modoptions_PrideMod_BSideCrystalHeart=B-Side Crystal Heart
-modoptions_PrideMod_BSideCrystalHeart_sub=The pride type for the B-Side crystal heart. Default uses the red heart.
+modoptions_PrideMod_BSideCrystalHeart_sub=The pride type for the B-Side crystal heart.
 
 modoptions_PrideMod_CSideCrystalHeart=C-Side Crystal Heart
-modoptions_PrideMod_CSideCrystalHeart_sub=The pride type for the C-Side crystal heart. Default uses the yellow heart.
+modoptions_PrideMod_CSideCrystalHeart_sub=The pride type for the C-Side crystal heart.
 
 modoptions_PrideMod_EmptyCrystalHeart=Empty Crystal Heart
-modoptions_PrideMod_EmptyCrystalHeart_sub=The pride type for the Empty crystal heart. Default uses the white heart.
+modoptions_PrideMod_EmptyCrystalHeart_sub=The pride type for the Empty crystal heart.
 
 modoptions_PrideMod_GhostCrystalHeart=Ghost Crystal Heart
-modoptions_PrideMod_GhostCrystalHeart_sub=The pride type for the Ghost crystal heart. Default uses the ghost heart.
+modoptions_PrideMod_GhostCrystalHeart_sub=The pride type for the Ghost crystal heart.
 
 
 modoptions_PrideMod_BeginnerMiniHeart=Beginner Mini Heart 
-modoptions_PrideMod_BeginnerMiniHeart_sub=The pride type for the Beginner mini heart. Default uses the blue mini heart.
+modoptions_PrideMod_BeginnerMiniHeart_sub=The pride type for the Beginner mini heart.
 
 modoptions_PrideMod_IntermediateMiniHeart=Intermediate Mini Heart 
-modoptions_PrideMod_IntermediateMiniHeart_sub=The pride type for the Intermediate mini heart. Default uses the red mini heart.
+modoptions_PrideMod_IntermediateMiniHeart_sub=The pride type for the Intermediate mini heart.
 
 modoptions_PrideMod_AdvancedMiniHeart=Advanced Mini Heart 
-modoptions_PrideMod_AdvancedMiniHeart_sub=The pride type for the Advanced mini heart. Default uses the yellow mini heart.
+modoptions_PrideMod_AdvancedMiniHeart_sub=The pride type for the Advanced mini heart.
 
 modoptions_PrideMod_ExpertMiniHeart=Expert Mini Heart 
-modoptions_PrideMod_ExpertMiniHeart_sub=The pride type for the Expert mini heart. Default uses the orange mini heart.
+modoptions_PrideMod_ExpertMiniHeart_sub=The pride type for the Expert mini heart.
 
 modoptions_PrideMod_GrandmasterMiniHeart=Grandmaster Mini Heart 
-modoptions_PrideMod_GrandmasterMiniHeart_sub=The pride type for the Grandmaster mini heart. Default uses the purple mini heart.
+modoptions_PrideMod_GrandmasterMiniHeart_sub=The pride type for the Grandmaster mini heart.
 
 modoptions_PrideMod_GhostMiniHeart=Ghost Mini Heart 
-modoptions_PrideMod_GhostMiniHeart_sub=The pride type for the Ghost mini heart. Default uses the ghost mini heart.
+modoptions_PrideMod_GhostMiniHeart_sub=The pride type for the Ghost mini heart.
 
 
 modoptions_PrideMod_Strawberry=Strawberry
@@ -72,10 +72,10 @@ modoptions_PrideMod_GhostSilverStrawberry_sub=The pride type for the ghost silve
 
 
 modoptions_PrideMod_SummitFlag=Summit Flag
-modoptions_PrideMod_SummitFlag_sub=The pride type for the summit flag. Default uses the red flag.
+modoptions_PrideMod_SummitFlag_sub=The pride type for the summit flag.
 
 modoptions_PrideMod_FinalFlag=Final Flag
-modoptions_PrideMod_FinalFlag_sub=The pride type for the final flag. Default uses the green flag.
+modoptions_PrideMod_FinalFlag_sub=The pride type for the final flag.
 
 modoptions_PrideMod_Confetti=Confetti
-modoptions_PrideMod_Confetti_sub=The pride type for the confetti from summit checkpoints and final flag.
+modoptions_PrideMod_Confetti_sub=The pride type for the confetti particles.
