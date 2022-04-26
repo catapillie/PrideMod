@@ -57,6 +57,8 @@ namespace Celeste.Mod.PrideMod.UI {
 			}
 
 			ready = true;
+
+			Audio.Play(SFX.game_07_checkpointconfetti);
 		}
 
 		public override void Update() {

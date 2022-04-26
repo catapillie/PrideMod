@@ -3,12 +3,21 @@ modname_PrideMod=Pride Mod
 
 modoptions_PrideMod=Pride Mod
 
+modoptions_PrideMod_Enabled=Enabled
+modoptions_PrideMod_Enabled_sub=Toggles Pride Mod reskins.
+
 modoptions_PrideMod_MinimalBloom=Minimal Bloom
 modoptions_PrideMod_MinimalBloom_sub=Reduces the bloom level of reskinned hearts and strawberries.
 
+modoptions_PrideMod_MinimalBloom=Minimal Bloom
+modoptions_PrideMod_MinimalBloom_sub=Reduces the bloom level of reskinned hearts and strawberries.
+
+modoptions_PrideMod_GlobalPride=Set Global Pride
+modoptions_PrideMod_GlobalPride_sub=Changes the pride for all pride settings.
 
 modoptions_PrideMod_PrideSettings=Pride Settings
 modoptions_PrideMod_PrideSettings_title=PRIDE SETTINGS
+
 
 
 modoptions_PrideMod_header_CrystalHearts=Crystal Hearts

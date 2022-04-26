@@ -30,6 +30,8 @@ namespace Celeste.Mod.PrideMod {
             Reskinning.Strawberries.Hook();
             Reskinning.FlagDecals.Hook();
 
+            UI.GlobalPrideButton.Hook();
+
             Everest.Events.Everest.OnLoadMod += Dependencies.Everest_OnLoadMod;
             Dependencies.Hook();
         }
@@ -39,6 +41,8 @@ namespace Celeste.Mod.PrideMod {
             Reskinning.MiniHearts.Unhook();
             Reskinning.Strawberries.Unhook();
             Reskinning.FlagDecals.Unhook();
+
+            UI.GlobalPrideButton.Unhook();
 
             Everest.Events.Everest.OnLoadMod -= Dependencies.Everest_OnLoadMod;
             Dependencies.Unhook();

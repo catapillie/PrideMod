@@ -36,6 +36,8 @@ namespace Celeste.Mod.PrideMod {
                                                 p.GetCustomAttribute<DoesTheConfettiAttribute>()))
                                             .Where(info => info.Attribute != null).ToArray();
 
+        [SettingName("modoptions_PrideMod_Enabled")]
+        [SettingSubText("modoptions_PrideMod_Enabled_sub")]
         public bool Enabled { get; set; } = true;
 
         [SettingName("modoptions_PrideMod_MinimalBloom")]
@@ -43,7 +45,15 @@ namespace Celeste.Mod.PrideMod {
         public bool MinimalBloom { get; set; } = true;
 
         [YamlIgnore]
-        public int PrideSettings { get; set; } = 0;
+        public int GlobalPride { get; private set; } = 0;
+        public void CreateGlobalPrideEntry(TextMenu menu, bool _) {
+            GlobalPrideButton button = new();
+            menu.Add(button);
+            button.AddDescription(menu, Dialog.Clean("modoptions_PrideMod_GlobalPride_sub"));
+        }
+
+        [YamlIgnore]
+        public int PrideSettings { get; private set; } = 0;
         public void CreatePrideSettingsEntry(TextMenu menu, bool inGame) {
             menu.Add(
                 AbstractSubmenu.BuildOpenMenuButton<OuiPrideSettings>(
@@ -52,7 +62,7 @@ namespace Celeste.Mod.PrideMod {
                     () => OuiModOptions.Instance.Overworld.Goto<OuiModOptions>(),
                     new object[0]
                 )
-            ); // :>
+            );
         }
 
         #region Crystal Hearts
@@ -237,6 +247,17 @@ namespace Celeste.Mod.PrideMod {
         public PrideTypes Confetti { get; set; } = PrideTypes.Default;
 
         #endregion
+
+        /// <summary>
+        /// Checks all the pride settings and finds a common value.
+        /// </summary>
+        /// <returns>The common pride setting value, or <see cref="PrideTypes.Default"/> if at least two are not equal.</returns>
+        public static PrideTypes GetGlobalPride() {
+            var prides = Info.Select(p => p.Property.GetValue(PrideModModule.Settings)).Cast<PrideTypes>();
+
+            PrideTypes first = prides.First();
+            return prides.All(pride => pride == first) ? first : PrideTypes.Default;
+        }
     }
 
     #region Pride Mod Settings Attributes
