@@ -4,7 +4,7 @@
 
     <!-- Agender -->
 
-    <!-- Agender Crystal Heart-->
+    <!-- Agender Crystal Heart -->
 
     <PrideMod_crystalheart_agender path="PrideMod/crystalheart/agender/">
         <Center />
@@ -14,7 +14,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_agender>
 
-    <!-- Agender Mini Heart-->
+    <!-- Agender Mini Heart -->
 
     <PrideMod_miniheart_agender path="PrideMod/miniheart/agender/" start="idle">
         <Center />
@@ -41,7 +41,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_agender>
 
-    <!-- Agender Strawberry Seed-->
+    <!-- Agender Strawberry Seed -->
 
     <PrideMod_strawberryseed_agender path="PrideMod/strawberry/agender/">
         <Center />
@@ -50,7 +50,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_agender>
 
-    <!-- Agender Ghost Strawberry-->
+    <!-- Agender Ghost Strawberry -->
 
     <PrideMod_ghostberry_agender path="PrideMod/ghostberry/agender/" start="idle">
         <Center />
@@ -60,7 +60,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_agender>
 
-    <!-- Agender Ghost Strawberry Seed-->
+    <!-- Agender Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_agender path="PrideMod/ghostberry/agender/">
         <Center />
@@ -69,7 +69,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_agender>
 
-    <!-- Agender Golden Strawberry-->
+    <!-- Agender Golden Strawberry -->
 
     <PrideMod_goldenberry_agender path="PrideMod/goldenberry/agender/" start="idle">
         <Center />
@@ -79,7 +79,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_agender>
 
-    <!-- Agender Golden Strawberry Seed-->
+    <!-- Agender Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_agender path="PrideMod/goldenberry/agender/">
         <Center />
@@ -88,7 +88,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_agender>
 
-    <!-- Agender Ghost Golden Strawberry-->
+    <!-- Agender Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_agender path="PrideMod/ghostgoldenberry/agender/" start="idle">
         <Center />
@@ -98,7 +98,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_agender>
 
-    <!-- Agender Silver Strawberry-->
+    <!-- Agender Silver Strawberry -->
 
     <PrideMod_silverberry_agender path="PrideMod/silverberry/agender/" start="idle">
         <Center />
@@ -107,7 +107,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_silverberry_agender>
 
-    <!-- Agender Ghost Silver Strawberry-->
+    <!-- Agender Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_agender path="PrideMod/ghostsilverberry/agender/" start="idle">
         <Center />
@@ -118,7 +118,7 @@
 
     <!-- Aromantic -->
 
-    <!-- Aromantic Crystal Heart-->
+    <!-- Aromantic Crystal Heart -->
 
     <PrideMod_crystalheart_aromantic path="PrideMod/crystalheart/aromantic/">
         <Center />
@@ -128,7 +128,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_aromantic>
 
-    <!-- Aromantic Mini Heart-->
+    <!-- Aromantic Mini Heart -->
 
     <PrideMod_miniheart_aromantic path="PrideMod/miniheart/aromantic/" start="idle">
         <Center />
@@ -155,7 +155,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_aromantic>
 
-    <!-- Aromantic Strawberry Seed-->
+    <!-- Aromantic Strawberry Seed -->
 
     <PrideMod_strawberryseed_aromantic path="PrideMod/strawberry/aromantic/">
         <Center />
@@ -164,7 +164,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_aromantic>
 
-    <!-- Aromantic Ghost Strawberry-->
+    <!-- Aromantic Ghost Strawberry -->
 
     <PrideMod_ghostberry_aromantic path="PrideMod/ghostberry/aromantic/" start="idle">
         <Center />
@@ -174,7 +174,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_aromantic>
 
-    <!-- Aromantic Ghost Strawberry Seed-->
+    <!-- Aromantic Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_aromantic path="PrideMod/ghostberry/aromantic/">
         <Center />
@@ -183,7 +183,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_aromantic>
 
-    <!-- Aromantic Golden Strawberry-->
+    <!-- Aromantic Golden Strawberry -->
 
     <PrideMod_goldenberry_aromantic path="PrideMod/goldenberry/aromantic/" start="idle">
         <Center />
@@ -193,7 +193,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_aromantic>
 
-    <!-- Aromantic Golden Strawberry Seed-->
+    <!-- Aromantic Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_aromantic path="PrideMod/goldenberry/aromantic/">
         <Center />
@@ -202,7 +202,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_aromantic>
 
-    <!-- Aromantic Ghost Golden Strawberry-->
+    <!-- Aromantic Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_aromantic path="PrideMod/ghostgoldenberry/aromantic/" start="idle">
         <Center />
@@ -212,7 +212,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_aromantic>
 
-    <!-- Aromantic Silver Strawberry-->
+    <!-- Aromantic Silver Strawberry -->
 
     <PrideMod_silverberry_aromantic path="PrideMod/silverberry/aromantic/" start="idle">
         <Center />
@@ -221,7 +221,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_aromantic>
 
-    <!-- Aromantic Ghost Silver Strawberry-->
+    <!-- Aromantic Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_aromantic path="PrideMod/ghostsilverberry/aromantic/" start="idle">
         <Center />
@@ -232,7 +232,7 @@
 
     <!-- Asexual -->
 
-    <!-- Asexual Crystal Heart-->
+    <!-- Asexual Crystal Heart -->
 
     <PrideMod_crystalheart_asexual path="PrideMod/crystalheart/asexual/">
         <Center />
@@ -242,7 +242,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_asexual>
 
-    <!-- Asexual Mini Heart-->
+    <!-- Asexual Mini Heart -->
 
     <PrideMod_miniheart_asexual path="PrideMod/miniheart/asexual/" start="idle">
         <Center />
@@ -269,7 +269,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_asexual>
 
-    <!-- Asexual Strawberry Seed-->
+    <!-- Asexual Strawberry Seed -->
 
     <PrideMod_strawberryseed_asexual path="PrideMod/strawberry/asexual/">
         <Center />
@@ -278,7 +278,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_asexual>
 
-    <!-- Asexual Ghost Strawberry-->
+    <!-- Asexual Ghost Strawberry -->
 
     <PrideMod_ghostberry_asexual path="PrideMod/ghostberry/asexual/" start="idle">
         <Center />
@@ -288,7 +288,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_asexual>
 
-    <!-- Asexual Ghost Strawberry Seed-->
+    <!-- Asexual Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_asexual path="PrideMod/ghostberry/asexual/">
         <Center />
@@ -297,7 +297,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_asexual>
 
-    <!-- Asexual Golden Strawberry-->
+    <!-- Asexual Golden Strawberry -->
 
     <PrideMod_goldenberry_asexual path="PrideMod/goldenberry/asexual/" start="idle">
         <Center />
@@ -307,7 +307,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_asexual>
 
-    <!-- Asexual Golden Strawberry Seed-->
+    <!-- Asexual Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_asexual path="PrideMod/goldenberry/asexual/">
         <Center />
@@ -316,7 +316,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_asexual>
 
-    <!-- Asexual Ghost Golden Strawberry-->
+    <!-- Asexual Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_asexual path="PrideMod/ghostgoldenberry/asexual/" start="idle">
         <Center />
@@ -326,7 +326,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_asexual>
 
-    <!-- Asexual Silver Strawberry-->
+    <!-- Asexual Silver Strawberry -->
 
     <PrideMod_silverberry_asexual path="PrideMod/silverberry/asexual/" start="idle">
         <Center />
@@ -335,7 +335,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_asexual>
 
-    <!-- Asexual Ghost Silver Strawberry-->
+    <!-- Asexual Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_asexual path="PrideMod/ghostsilverberry/asexual/" start="idle">
         <Center />
@@ -346,7 +346,7 @@
 
     <!-- Bigender -->
 
-    <!-- Bigender Crystal Heart-->
+    <!-- Bigender Crystal Heart -->
 
     <PrideMod_crystalheart_bigender path="PrideMod/crystalheart/bigender/">
         <Center />
@@ -356,7 +356,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_bigender>
 
-    <!-- Bigender Mini Heart-->
+    <!-- Bigender Mini Heart -->
 
     <PrideMod_miniheart_bigender path="PrideMod/miniheart/bigender/" start="idle">
         <Center />
@@ -383,7 +383,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_bigender>
 
-    <!-- Bigender Strawberry Seed-->
+    <!-- Bigender Strawberry Seed -->
 
     <PrideMod_strawberryseed_bigender path="PrideMod/strawberry/bigender/">
         <Center />
@@ -392,7 +392,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_bigender>
 
-    <!-- Bigender Ghost Strawberry-->
+    <!-- Bigender Ghost Strawberry -->
 
     <PrideMod_ghostberry_bigender path="PrideMod/ghostberry/bigender/" start="idle">
         <Center />
@@ -402,7 +402,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_bigender>
 
-    <!-- Bigender Ghost Strawberry Seed-->
+    <!-- Bigender Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_bigender path="PrideMod/ghostberry/bigender/">
         <Center />
@@ -411,7 +411,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_bigender>
 
-    <!-- Bigender Golden Strawberry-->
+    <!-- Bigender Golden Strawberry -->
 
     <PrideMod_goldenberry_bigender path="PrideMod/goldenberry/bigender/" start="idle">
         <Center />
@@ -421,7 +421,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_bigender>
 
-    <!-- Bigender Golden Strawberry Seed-->
+    <!-- Bigender Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_bigender path="PrideMod/goldenberry/bigender/">
         <Center />
@@ -430,7 +430,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_bigender>
 
-    <!-- Bigender Ghost Golden Strawberry-->
+    <!-- Bigender Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_bigender path="PrideMod/ghostgoldenberry/bigender/" start="idle">
         <Center />
@@ -440,7 +440,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_bigender>
 
-    <!-- Bigender Silver Strawberry-->
+    <!-- Bigender Silver Strawberry -->
 
     <PrideMod_silverberry_bigender path="PrideMod/silverberry/bigender/" start="idle">
         <Center />
@@ -449,7 +449,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_bigender>
 
-    <!-- Bigender Ghost Silver Strawberry-->
+    <!-- Bigender Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_bigender path="PrideMod/ghostsilverberry/bigender/" start="idle">
         <Center />
@@ -460,7 +460,7 @@
 
     <!-- Bisexual -->
 
-    <!-- Bisexual Crystal Heart-->
+    <!-- Bisexual Crystal Heart -->
 
     <PrideMod_crystalheart_bisexual path="PrideMod/crystalheart/bisexual/">
         <Center />
@@ -470,7 +470,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_bisexual>
 
-    <!-- Bisexual Mini Heart-->
+    <!-- Bisexual Mini Heart -->
 
     <PrideMod_miniheart_bisexual path="PrideMod/miniheart/bisexual/" start="idle">
         <Center />
@@ -497,7 +497,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_bisexual>
 
-    <!-- Bisexual Strawberry Seed-->
+    <!-- Bisexual Strawberry Seed -->
 
     <PrideMod_strawberryseed_bisexual path="PrideMod/strawberry/bisexual/">
         <Center />
@@ -506,7 +506,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_bisexual>
 
-    <!-- Bisexual Ghost Strawberry-->
+    <!-- Bisexual Ghost Strawberry -->
 
     <PrideMod_ghostberry_bisexual path="PrideMod/ghostberry/bisexual/" start="idle">
         <Center />
@@ -516,7 +516,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_bisexual>
 
-    <!-- Bisexual Ghost Strawberry Seed-->
+    <!-- Bisexual Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_bisexual path="PrideMod/ghostberry/bisexual/">
         <Center />
@@ -525,7 +525,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_bisexual>
 
-    <!-- Bisexual Golden Strawberry-->
+    <!-- Bisexual Golden Strawberry -->
 
     <PrideMod_goldenberry_bisexual path="PrideMod/goldenberry/bisexual/" start="idle">
         <Center />
@@ -535,7 +535,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_bisexual>
 
-    <!-- Bisexual Golden Strawberry Seed-->
+    <!-- Bisexual Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_bisexual path="PrideMod/goldenberry/bisexual/">
         <Center />
@@ -544,7 +544,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_bisexual>
 
-    <!-- Bisexual Ghost Golden Strawberry-->
+    <!-- Bisexual Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_bisexual path="PrideMod/ghostgoldenberry/bisexual/" start="idle">
         <Center />
@@ -554,7 +554,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_bisexual>
 
-    <!-- Bisexual Silver Strawberry-->
+    <!-- Bisexual Silver Strawberry -->
 
     <PrideMod_silverberry_bisexual path="PrideMod/silverberry/bisexual/" start="idle">
         <Center />
@@ -563,7 +563,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_bisexual>
 
-    <!-- Bisexual Ghost Silver Strawberry-->
+    <!-- Bisexual Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_bisexual path="PrideMod/ghostsilverberry/bisexual/" start="idle">
         <Center />
@@ -574,7 +574,7 @@
 
     <!-- Demiboy -->
 
-    <!-- Demiboy Crystal Heart-->
+    <!-- Demiboy Crystal Heart -->
 
     <PrideMod_crystalheart_demiboy path="PrideMod/crystalheart/demiboy/">
         <Center />
@@ -584,7 +584,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_demiboy>
 
-    <!-- Demiboy Mini Heart-->
+    <!-- Demiboy Mini Heart -->
 
     <PrideMod_miniheart_demiboy path="PrideMod/miniheart/demiboy/" start="idle">
         <Center />
@@ -611,7 +611,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_demiboy>
 
-    <!-- Demiboy Strawberry Seed-->
+    <!-- Demiboy Strawberry Seed -->
 
     <PrideMod_strawberryseed_demiboy path="PrideMod/strawberry/demiboy/">
         <Center />
@@ -620,7 +620,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_demiboy>
 
-    <!-- Demiboy Ghost Strawberry-->
+    <!-- Demiboy Ghost Strawberry -->
 
     <PrideMod_ghostberry_demiboy path="PrideMod/ghostberry/demiboy/" start="idle">
         <Center />
@@ -630,7 +630,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_demiboy>
 
-    <!-- Demiboy Ghost Strawberry Seed-->
+    <!-- Demiboy Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_demiboy path="PrideMod/ghostberry/demiboy/">
         <Center />
@@ -639,7 +639,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_demiboy>
 
-    <!-- Demiboy Golden Strawberry-->
+    <!-- Demiboy Golden Strawberry -->
 
     <PrideMod_goldenberry_demiboy path="PrideMod/goldenberry/demiboy/" start="idle">
         <Center />
@@ -649,7 +649,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_demiboy>
 
-    <!-- Demiboy Golden Strawberry Seed-->
+    <!-- Demiboy Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_demiboy path="PrideMod/goldenberry/demiboy/">
         <Center />
@@ -658,7 +658,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_demiboy>
 
-    <!-- Demiboy Ghost Golden Strawberry-->
+    <!-- Demiboy Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_demiboy path="PrideMod/ghostgoldenberry/demiboy/" start="idle">
         <Center />
@@ -668,7 +668,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_demiboy>
 
-    <!-- Demiboy Silver Strawberry-->
+    <!-- Demiboy Silver Strawberry -->
 
     <PrideMod_silverberry_demiboy path="PrideMod/silverberry/demiboy/" start="idle">
         <Center />
@@ -677,7 +677,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_silverberry_demiboy>
 
-    <!-- Demiboy Ghost Silver Strawberry-->
+    <!-- Demiboy Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_demiboy path="PrideMod/ghostsilverberry/demiboy/" start="idle">
         <Center />
@@ -688,7 +688,7 @@
 
     <!-- Demigirl -->
 
-    <!-- Demigirl Crystal Heart-->
+    <!-- Demigirl Crystal Heart -->
 
     <PrideMod_crystalheart_demigirl path="PrideMod/crystalheart/demigirl/">
         <Center />
@@ -698,7 +698,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_demigirl>
 
-    <!-- Demigirl Mini Heart-->
+    <!-- Demigirl Mini Heart -->
 
     <PrideMod_miniheart_demigirl path="PrideMod/miniheart/demigirl/" start="idle">
         <Center />
@@ -725,7 +725,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_demigirl>
 
-    <!-- Demigirl Strawberry Seed-->
+    <!-- Demigirl Strawberry Seed -->
 
     <PrideMod_strawberryseed_demigirl path="PrideMod/strawberry/demigirl/">
         <Center />
@@ -734,7 +734,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_demigirl>
 
-    <!-- Demigirl Ghost Strawberry-->
+    <!-- Demigirl Ghost Strawberry -->
 
     <PrideMod_ghostberry_demigirl path="PrideMod/ghostberry/demigirl/" start="idle">
         <Center />
@@ -744,7 +744,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_demigirl>
 
-    <!-- Demigirl Ghost Strawberry Seed-->
+    <!-- Demigirl Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_demigirl path="PrideMod/ghostberry/demigirl/">
         <Center />
@@ -753,7 +753,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_demigirl>
 
-    <!-- Demigirl Golden Strawberry-->
+    <!-- Demigirl Golden Strawberry -->
 
     <PrideMod_goldenberry_demigirl path="PrideMod/goldenberry/demigirl/" start="idle">
         <Center />
@@ -763,7 +763,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_demigirl>
 
-    <!-- Demigirl Golden Strawberry Seed-->
+    <!-- Demigirl Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_demigirl path="PrideMod/goldenberry/demigirl/">
         <Center />
@@ -772,7 +772,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_demigirl>
 
-    <!-- Demigirl Ghost Golden Strawberry-->
+    <!-- Demigirl Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_demigirl path="PrideMod/ghostgoldenberry/demigirl/" start="idle">
         <Center />
@@ -782,7 +782,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_demigirl>
 
-    <!-- Demigirl Silver Strawberry-->
+    <!-- Demigirl Silver Strawberry -->
 
     <PrideMod_silverberry_demigirl path="PrideMod/silverberry/demigirl/" start="idle">
         <Center />
@@ -791,7 +791,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_silverberry_demigirl>
 
-    <!-- Demigirl Ghost Silver Strawberry-->
+    <!-- Demigirl Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_demigirl path="PrideMod/ghostsilverberry/demigirl/" start="idle">
         <Center />
@@ -802,7 +802,7 @@
 
     <!-- Deminonbinary -->
 
-    <!-- Deminonbinary Crystal Heart-->
+    <!-- Deminonbinary Crystal Heart -->
 
     <PrideMod_crystalheart_deminonbinary path="PrideMod/crystalheart/deminonbinary/">
         <Center />
@@ -812,7 +812,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_deminonbinary>
 
-    <!-- Deminonbinary Mini Heart-->
+    <!-- Deminonbinary Mini Heart -->
 
     <PrideMod_miniheart_deminonbinary path="PrideMod/miniheart/deminonbinary/" start="idle">
         <Center />
@@ -839,7 +839,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_deminonbinary>
 
-    <!-- Deminonbinary Strawberry Seed-->
+    <!-- Deminonbinary Strawberry Seed -->
 
     <PrideMod_strawberryseed_deminonbinary path="PrideMod/strawberry/deminonbinary/">
         <Center />
@@ -848,7 +848,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_deminonbinary>
 
-    <!-- Deminonbinary Ghost Strawberry-->
+    <!-- Deminonbinary Ghost Strawberry -->
 
     <PrideMod_ghostberry_deminonbinary path="PrideMod/ghostberry/deminonbinary/" start="idle">
         <Center />
@@ -858,7 +858,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_deminonbinary>
 
-    <!-- Deminonbinary Ghost Strawberry Seed-->
+    <!-- Deminonbinary Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_deminonbinary path="PrideMod/ghostberry/deminonbinary/">
         <Center />
@@ -867,7 +867,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_deminonbinary>
 
-    <!-- Deminonbinary Golden Strawberry-->
+    <!-- Deminonbinary Golden Strawberry -->
 
     <PrideMod_goldenberry_deminonbinary path="PrideMod/goldenberry/deminonbinary/" start="idle">
         <Center />
@@ -877,7 +877,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_deminonbinary>
 
-    <!-- Deminonbinary Golden Strawberry Seed-->
+    <!-- Deminonbinary Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_deminonbinary path="PrideMod/goldenberry/deminonbinary/">
         <Center />
@@ -886,7 +886,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_deminonbinary>
 
-    <!-- Deminonbinary Ghost Golden Strawberry-->
+    <!-- Deminonbinary Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_deminonbinary path="PrideMod/ghostgoldenberry/deminonbinary/" start="idle">
         <Center />
@@ -896,7 +896,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_deminonbinary>
 
-    <!-- Deminonbinary Silver Strawberry-->
+    <!-- Deminonbinary Silver Strawberry -->
 
     <PrideMod_silverberry_deminonbinary path="PrideMod/silverberry/deminonbinary/" start="idle">
         <Center />
@@ -905,7 +905,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_silverberry_deminonbinary>
 
-    <!-- Deminonbinary Ghost Silver Strawberry-->
+    <!-- Deminonbinary Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_deminonbinary path="PrideMod/ghostsilverberry/deminonbinary/" start="idle">
         <Center />
@@ -916,7 +916,7 @@
 
     <!-- Demisexual -->
 
-    <!-- Demisexual Crystal Heart-->
+    <!-- Demisexual Crystal Heart -->
 
     <PrideMod_crystalheart_demisexual path="PrideMod/crystalheart/demisexual/">
         <Center />
@@ -926,7 +926,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_demisexual>
 
-    <!-- Demisexual Mini Heart-->
+    <!-- Demisexual Mini Heart -->
 
     <PrideMod_miniheart_demisexual path="PrideMod/miniheart/demisexual/" start="idle">
         <Center />
@@ -953,7 +953,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_demisexual>
 
-    <!-- Demisexual Strawberry Seed-->
+    <!-- Demisexual Strawberry Seed -->
 
     <PrideMod_strawberryseed_demisexual path="PrideMod/strawberry/demisexual/">
         <Center />
@@ -962,7 +962,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_demisexual>
 
-    <!-- Demisexual Ghost Strawberry-->
+    <!-- Demisexual Ghost Strawberry -->
 
     <PrideMod_ghostberry_demisexual path="PrideMod/ghostberry/demisexual/" start="idle">
         <Center />
@@ -972,7 +972,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_demisexual>
 
-    <!-- Demisexual Ghost Strawberry Seed-->
+    <!-- Demisexual Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_demisexual path="PrideMod/ghostberry/demisexual/">
         <Center />
@@ -981,7 +981,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_demisexual>
 
-    <!-- Demisexual Golden Strawberry-->
+    <!-- Demisexual Golden Strawberry -->
 
     <PrideMod_goldenberry_demisexual path="PrideMod/goldenberry/demisexual/" start="idle">
         <Center />
@@ -991,7 +991,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_demisexual>
 
-    <!-- Demisexual Golden Strawberry Seed-->
+    <!-- Demisexual Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_demisexual path="PrideMod/goldenberry/demisexual/">
         <Center />
@@ -1000,7 +1000,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_demisexual>
 
-    <!-- Demisexual Ghost Golden Strawberry-->
+    <!-- Demisexual Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_demisexual path="PrideMod/ghostgoldenberry/demisexual/" start="idle">
         <Center />
@@ -1010,7 +1010,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_demisexual>
 
-    <!-- Demisexual Silver Strawberry-->
+    <!-- Demisexual Silver Strawberry -->
 
     <PrideMod_silverberry_demisexual path="PrideMod/silverberry/demisexual/" start="idle">
         <Center />
@@ -1019,7 +1019,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_demisexual>
 
-    <!-- Demisexual Ghost Silver Strawberry-->
+    <!-- Demisexual Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_demisexual path="PrideMod/ghostsilverberry/demisexual/" start="idle">
         <Center />
@@ -1030,7 +1030,7 @@
 
     <!-- Gay -->
 
-    <!-- Gay Crystal Heart-->
+    <!-- Gay Crystal Heart -->
 
     <PrideMod_crystalheart_gay path="PrideMod/crystalheart/gay/">
         <Center />
@@ -1040,7 +1040,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_gay>
 
-    <!-- Gay Mini Heart-->
+    <!-- Gay Mini Heart -->
 
     <PrideMod_miniheart_gay path="PrideMod/miniheart/gay/" start="idle">
         <Center />
@@ -1067,7 +1067,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_gay>
 
-    <!-- Gay Strawberry Seed-->
+    <!-- Gay Strawberry Seed -->
 
     <PrideMod_strawberryseed_gay path="PrideMod/strawberry/gay/">
         <Center />
@@ -1076,7 +1076,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_gay>
 
-    <!-- Gay Ghost Strawberry-->
+    <!-- Gay Ghost Strawberry -->
 
     <PrideMod_ghostberry_gay path="PrideMod/ghostberry/gay/" start="idle">
         <Center />
@@ -1086,7 +1086,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_gay>
 
-    <!-- Gay Ghost Strawberry Seed-->
+    <!-- Gay Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_gay path="PrideMod/ghostberry/gay/">
         <Center />
@@ -1095,7 +1095,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_gay>
 
-    <!-- Gay Golden Strawberry-->
+    <!-- Gay Golden Strawberry -->
 
     <PrideMod_goldenberry_gay path="PrideMod/goldenberry/gay/" start="idle">
         <Center />
@@ -1105,7 +1105,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_gay>
 
-    <!-- Gay Golden Strawberry Seed-->
+    <!-- Gay Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_gay path="PrideMod/goldenberry/gay/">
         <Center />
@@ -1114,7 +1114,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_gay>
 
-    <!-- Gay Ghost Golden Strawberry-->
+    <!-- Gay Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_gay path="PrideMod/ghostgoldenberry/gay/" start="idle">
         <Center />
@@ -1124,7 +1124,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_gay>
 
-    <!-- Gay Silver Strawberry-->
+    <!-- Gay Silver Strawberry -->
 
     <PrideMod_silverberry_gay path="PrideMod/silverberry/gay/" start="idle">
         <Center />
@@ -1133,7 +1133,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_gay>
 
-    <!-- Gay Ghost Silver Strawberry-->
+    <!-- Gay Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_gay path="PrideMod/ghostsilverberry/gay/" start="idle">
         <Center />
@@ -1144,7 +1144,7 @@
 
     <!-- Genderfluid -->
 
-    <!-- Genderfluid Crystal Heart-->
+    <!-- Genderfluid Crystal Heart -->
 
     <PrideMod_crystalheart_genderfluid path="PrideMod/crystalheart/genderfluid/">
         <Center />
@@ -1154,7 +1154,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_genderfluid>
 
-    <!-- Genderfluid Mini Heart-->
+    <!-- Genderfluid Mini Heart -->
 
     <PrideMod_miniheart_genderfluid path="PrideMod/miniheart/genderfluid/" start="idle">
         <Center />
@@ -1181,7 +1181,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_genderfluid>
 
-    <!-- Genderfluid Strawberry Seed-->
+    <!-- Genderfluid Strawberry Seed -->
 
     <PrideMod_strawberryseed_genderfluid path="PrideMod/strawberry/genderfluid/">
         <Center />
@@ -1190,7 +1190,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_genderfluid>
 
-    <!-- Genderfluid Ghost Strawberry-->
+    <!-- Genderfluid Ghost Strawberry -->
 
     <PrideMod_ghostberry_genderfluid path="PrideMod/ghostberry/genderfluid/" start="idle">
         <Center />
@@ -1200,7 +1200,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_genderfluid>
 
-    <!-- Genderfluid Ghost Strawberry Seed-->
+    <!-- Genderfluid Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_genderfluid path="PrideMod/ghostberry/genderfluid/">
         <Center />
@@ -1209,7 +1209,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_genderfluid>
 
-    <!-- Genderfluid Golden Strawberry-->
+    <!-- Genderfluid Golden Strawberry -->
 
     <PrideMod_goldenberry_genderfluid path="PrideMod/goldenberry/genderfluid/" start="idle">
         <Center />
@@ -1219,7 +1219,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_genderfluid>
 
-    <!-- Genderfluid Golden Strawberry Seed-->
+    <!-- Genderfluid Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_genderfluid path="PrideMod/goldenberry/genderfluid/">
         <Center />
@@ -1228,7 +1228,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_genderfluid>
 
-    <!-- Genderfluid Ghost Golden Strawberry-->
+    <!-- Genderfluid Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_genderfluid path="PrideMod/ghostgoldenberry/genderfluid/" start="idle">
         <Center />
@@ -1238,7 +1238,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_genderfluid>
 
-    <!-- Genderfluid Silver Strawberry-->
+    <!-- Genderfluid Silver Strawberry -->
 
     <PrideMod_silverberry_genderfluid path="PrideMod/silverberry/genderfluid/" start="idle">
         <Center />
@@ -1247,7 +1247,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_genderfluid>
 
-    <!-- Genderfluid Ghost Silver Strawberry-->
+    <!-- Genderfluid Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_genderfluid path="PrideMod/ghostsilverberry/genderfluid/" start="idle">
         <Center />
@@ -1258,7 +1258,7 @@
 
     <!-- Genderqueer -->
 
-    <!-- Genderqueer Crystal Heart-->
+    <!-- Genderqueer Crystal Heart -->
 
     <PrideMod_crystalheart_genderqueer path="PrideMod/crystalheart/genderqueer/">
         <Center />
@@ -1268,7 +1268,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_genderqueer>
 
-    <!-- Genderqueer Mini Heart-->
+    <!-- Genderqueer Mini Heart -->
 
     <PrideMod_miniheart_genderqueer path="PrideMod/miniheart/genderqueer/" start="idle">
         <Center />
@@ -1295,7 +1295,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_genderqueer>
 
-    <!-- Genderqueer Strawberry Seed-->
+    <!-- Genderqueer Strawberry Seed -->
 
     <PrideMod_strawberryseed_genderqueer path="PrideMod/strawberry/genderqueer/">
         <Center />
@@ -1304,7 +1304,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_genderqueer>
 
-    <!-- Genderqueer Ghost Strawberry-->
+    <!-- Genderqueer Ghost Strawberry -->
 
     <PrideMod_ghostberry_genderqueer path="PrideMod/ghostberry/genderqueer/" start="idle">
         <Center />
@@ -1314,7 +1314,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_genderqueer>
 
-    <!-- Genderqueer Ghost Strawberry Seed-->
+    <!-- Genderqueer Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_genderqueer path="PrideMod/ghostberry/genderqueer/">
         <Center />
@@ -1323,7 +1323,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_genderqueer>
 
-    <!-- Genderqueer Golden Strawberry-->
+    <!-- Genderqueer Golden Strawberry -->
 
     <PrideMod_goldenberry_genderqueer path="PrideMod/goldenberry/genderqueer/" start="idle">
         <Center />
@@ -1333,7 +1333,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_genderqueer>
 
-    <!-- Genderqueer Golden Strawberry Seed-->
+    <!-- Genderqueer Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_genderqueer path="PrideMod/goldenberry/genderqueer/">
         <Center />
@@ -1342,7 +1342,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_genderqueer>
 
-    <!-- Genderqueer Ghost Golden Strawberry-->
+    <!-- Genderqueer Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_genderqueer path="PrideMod/ghostgoldenberry/genderqueer/" start="idle">
         <Center />
@@ -1352,7 +1352,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_genderqueer>
 
-    <!-- Genderqueer Silver Strawberry-->
+    <!-- Genderqueer Silver Strawberry -->
 
     <PrideMod_silverberry_genderqueer path="PrideMod/silverberry/genderqueer/" start="idle">
         <Center />
@@ -1361,7 +1361,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_genderqueer>
 
-    <!-- Genderqueer Ghost Silver Strawberry-->
+    <!-- Genderqueer Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_genderqueer path="PrideMod/ghostsilverberry/genderqueer/" start="idle">
         <Center />
@@ -1372,7 +1372,7 @@
 
     <!-- Intersex -->
 
-    <!-- Intersex Crystal Heart-->
+    <!-- Intersex Crystal Heart -->
 
     <PrideMod_crystalheart_intersex path="PrideMod/crystalheart/intersex/">
         <Center />
@@ -1382,7 +1382,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_intersex>
 
-    <!-- Intersex Mini Heart-->
+    <!-- Intersex Mini Heart -->
 
     <PrideMod_miniheart_intersex path="PrideMod/miniheart/intersex/" start="idle">
         <Center />
@@ -1409,7 +1409,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_intersex>
 
-    <!-- Intersex Strawberry Seed-->
+    <!-- Intersex Strawberry Seed -->
 
     <PrideMod_strawberryseed_intersex path="PrideMod/strawberry/intersex/">
         <Center />
@@ -1418,7 +1418,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_intersex>
 
-    <!-- Intersex Ghost Strawberry-->
+    <!-- Intersex Ghost Strawberry -->
 
     <PrideMod_ghostberry_intersex path="PrideMod/ghostberry/intersex/" start="idle">
         <Center />
@@ -1428,7 +1428,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_intersex>
 
-    <!-- Intersex Ghost Strawberry Seed-->
+    <!-- Intersex Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_intersex path="PrideMod/ghostberry/intersex/">
         <Center />
@@ -1437,7 +1437,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_intersex>
 
-    <!-- Intersex Golden Strawberry-->
+    <!-- Intersex Golden Strawberry -->
 
     <PrideMod_goldenberry_intersex path="PrideMod/goldenberry/intersex/" start="idle">
         <Center />
@@ -1447,7 +1447,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_intersex>
 
-    <!-- Intersex Golden Strawberry Seed-->
+    <!-- Intersex Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_intersex path="PrideMod/goldenberry/intersex/">
         <Center />
@@ -1456,7 +1456,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_intersex>
 
-    <!-- Intersex Ghost Golden Strawberry-->
+    <!-- Intersex Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_intersex path="PrideMod/ghostgoldenberry/intersex/" start="idle">
         <Center />
@@ -1466,7 +1466,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_intersex>
 
-    <!-- Intersex Silver Strawberry-->
+    <!-- Intersex Silver Strawberry -->
 
     <PrideMod_silverberry_intersex path="PrideMod/silverberry/intersex/" start="idle">
         <Center />
@@ -1475,7 +1475,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_silverberry_intersex>
 
-    <!-- Intersex Ghost Silver Strawberry-->
+    <!-- Intersex Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_intersex path="PrideMod/ghostsilverberry/intersex/" start="idle">
         <Center />
@@ -1486,7 +1486,7 @@
 
     <!-- Lesbian -->
 
-    <!-- Lesbian Crystal Heart-->
+    <!-- Lesbian Crystal Heart -->
 
     <PrideMod_crystalheart_lesbian path="PrideMod/crystalheart/lesbian/">
         <Center />
@@ -1496,7 +1496,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_lesbian>
 
-    <!-- Lesbian Mini Heart-->
+    <!-- Lesbian Mini Heart -->
 
     <PrideMod_miniheart_lesbian path="PrideMod/miniheart/lesbian/" start="idle">
         <Center />
@@ -1523,7 +1523,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_lesbian>
 
-    <!-- Lesbian Strawberry Seed-->
+    <!-- Lesbian Strawberry Seed -->
 
     <PrideMod_strawberryseed_lesbian path="PrideMod/strawberry/lesbian/">
         <Center />
@@ -1532,7 +1532,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_lesbian>
 
-    <!-- Lesbian Ghost Strawberry-->
+    <!-- Lesbian Ghost Strawberry -->
 
     <PrideMod_ghostberry_lesbian path="PrideMod/ghostberry/lesbian/" start="idle">
         <Center />
@@ -1542,7 +1542,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_lesbian>
 
-    <!-- Lesbian Ghost Strawberry Seed-->
+    <!-- Lesbian Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_lesbian path="PrideMod/ghostberry/lesbian/">
         <Center />
@@ -1551,7 +1551,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_lesbian>
 
-    <!-- Lesbian Golden Strawberry-->
+    <!-- Lesbian Golden Strawberry -->
 
     <PrideMod_goldenberry_lesbian path="PrideMod/goldenberry/lesbian/" start="idle">
         <Center />
@@ -1561,7 +1561,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_lesbian>
 
-    <!-- Lesbian Golden Strawberry Seed-->
+    <!-- Lesbian Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_lesbian path="PrideMod/goldenberry/lesbian/">
         <Center />
@@ -1570,7 +1570,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_lesbian>
 
-    <!-- Lesbian Ghost Golden Strawberry-->
+    <!-- Lesbian Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_lesbian path="PrideMod/ghostgoldenberry/lesbian/" start="idle">
         <Center />
@@ -1580,7 +1580,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_lesbian>
 
-    <!-- Lesbian Silver Strawberry-->
+    <!-- Lesbian Silver Strawberry -->
 
     <PrideMod_silverberry_lesbian path="PrideMod/silverberry/lesbian/" start="idle">
         <Center />
@@ -1589,7 +1589,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_lesbian>
 
-    <!-- Lesbian Ghost Silver Strawberry-->
+    <!-- Lesbian Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_lesbian path="PrideMod/ghostsilverberry/lesbian/" start="idle">
         <Center />
@@ -1600,7 +1600,7 @@
 
     <!-- Non-Binary -->
 
-    <!-- Non-Binary Crystal Heart-->
+    <!-- Non-Binary Crystal Heart -->
 
     <PrideMod_crystalheart_nonbinary path="PrideMod/crystalheart/nonbinary/">
         <Center />
@@ -1610,7 +1610,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_nonbinary>
 
-    <!-- Non-Binary Mini Heart-->
+    <!-- Non-Binary Mini Heart -->
 
     <PrideMod_miniheart_nonbinary path="PrideMod/miniheart/nonbinary/" start="idle">
         <Center />
@@ -1637,7 +1637,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_nonbinary>
 
-    <!-- Non-Binary Strawberry Seed-->
+    <!-- Non-Binary Strawberry Seed -->
 
     <PrideMod_strawberryseed_nonbinary path="PrideMod/strawberry/nonbinary/">
         <Center />
@@ -1646,7 +1646,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_nonbinary>
 
-    <!-- Non-Binary Ghost Strawberry-->
+    <!-- Non-Binary Ghost Strawberry -->
 
     <PrideMod_ghostberry_nonbinary path="PrideMod/ghostberry/nonbinary/" start="idle">
         <Center />
@@ -1656,7 +1656,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_nonbinary>
 
-    <!-- Non-Binary Ghost Strawberry Seed-->
+    <!-- Non-Binary Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_nonbinary path="PrideMod/ghostberry/nonbinary/">
         <Center />
@@ -1665,7 +1665,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_nonbinary>
 
-    <!-- Non-Binary Golden Strawberry-->
+    <!-- Non-Binary Golden Strawberry -->
 
     <PrideMod_goldenberry_nonbinary path="PrideMod/goldenberry/nonbinary/" start="idle">
         <Center />
@@ -1675,7 +1675,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_nonbinary>
 
-    <!-- Non-Binary Golden Strawberry Seed-->
+    <!-- Non-Binary Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_nonbinary path="PrideMod/goldenberry/nonbinary/">
         <Center />
@@ -1684,7 +1684,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_nonbinary>
 
-    <!-- Non-Binary Ghost Golden Strawberry-->
+    <!-- Non-Binary Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_nonbinary path="PrideMod/ghostgoldenberry/nonbinary/" start="idle">
         <Center />
@@ -1694,7 +1694,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_nonbinary>
 
-    <!-- Non-Binary Silver Strawberry-->
+    <!-- Non-Binary Silver Strawberry -->
 
     <PrideMod_silverberry_nonbinary path="PrideMod/silverberry/nonbinary/" start="idle">
         <Center />
@@ -1703,7 +1703,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_nonbinary>
 
-    <!-- Non-Binary Ghost Silver Strawberry-->
+    <!-- Non-Binary Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_nonbinary path="PrideMod/ghostsilverberry/nonbinary/" start="idle">
         <Center />
@@ -1714,7 +1714,7 @@
 
     <!-- Omnisexual -->
 
-    <!-- Omnisexual Crystal Heart-->
+    <!-- Omnisexual Crystal Heart -->
 
     <PrideMod_crystalheart_omnisexual path="PrideMod/crystalheart/omnisexual/">
         <Center />
@@ -1724,7 +1724,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_omnisexual>
 
-    <!-- Omnisexual Mini Heart-->
+    <!-- Omnisexual Mini Heart -->
 
     <PrideMod_miniheart_omnisexual path="PrideMod/miniheart/omnisexual/" start="idle">
         <Center />
@@ -1751,7 +1751,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_omnisexual>
 
-    <!-- Omnisexual Strawberry Seed-->
+    <!-- Omnisexual Strawberry Seed -->
 
     <PrideMod_strawberryseed_omnisexual path="PrideMod/strawberry/omnisexual/">
         <Center />
@@ -1760,7 +1760,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_omnisexual>
 
-    <!-- Omnisexual Ghost Strawberry-->
+    <!-- Omnisexual Ghost Strawberry -->
 
     <PrideMod_ghostberry_omnisexual path="PrideMod/ghostberry/omnisexual/" start="idle">
         <Center />
@@ -1770,7 +1770,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_omnisexual>
 
-    <!-- Omnisexual Ghost Strawberry Seed-->
+    <!-- Omnisexual Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_omnisexual path="PrideMod/ghostberry/omnisexual/">
         <Center />
@@ -1779,7 +1779,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_omnisexual>
 
-    <!-- Omnisexual Golden Strawberry-->
+    <!-- Omnisexual Golden Strawberry -->
 
     <PrideMod_goldenberry_omnisexual path="PrideMod/goldenberry/omnisexual/" start="idle">
         <Center />
@@ -1789,7 +1789,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_omnisexual>
 
-    <!-- Omnisexual Golden Strawberry Seed-->
+    <!-- Omnisexual Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_omnisexual path="PrideMod/goldenberry/omnisexual/">
         <Center />
@@ -1798,7 +1798,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_omnisexual>
 
-    <!-- Omnisexual Ghost Golden Strawberry-->
+    <!-- Omnisexual Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_omnisexual path="PrideMod/ghostgoldenberry/omnisexual/" start="idle">
         <Center />
@@ -1808,7 +1808,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_omnisexual>
 
-    <!-- Omnisexual Silver Strawberry-->
+    <!-- Omnisexual Silver Strawberry -->
 
     <PrideMod_silverberry_omnisexual path="PrideMod/silverberry/omnisexual/" start="idle">
         <Center />
@@ -1817,7 +1817,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_omnisexual>
 
-    <!-- Omnisexual Ghost Silver Strawberry-->
+    <!-- Omnisexual Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_omnisexual path="PrideMod/ghostsilverberry/omnisexual/" start="idle">
         <Center />
@@ -1828,7 +1828,7 @@
 
     <!-- Pansexual -->
 
-    <!-- Pansexual Crystal Heart-->
+    <!-- Pansexual Crystal Heart -->
 
     <PrideMod_crystalheart_pansexual path="PrideMod/crystalheart/pansexual/">
         <Center />
@@ -1838,7 +1838,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_pansexual>
 
-    <!-- Pansexual Mini Heart-->
+    <!-- Pansexual Mini Heart -->
 
     <PrideMod_miniheart_pansexual path="PrideMod/miniheart/pansexual/" start="idle">
         <Center />
@@ -1865,7 +1865,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_pansexual>
 
-    <!-- Pansexual Strawberry Seed-->
+    <!-- Pansexual Strawberry Seed -->
 
     <PrideMod_strawberryseed_pansexual path="PrideMod/strawberry/pansexual/">
         <Center />
@@ -1874,7 +1874,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_pansexual>
 
-    <!-- Pansexual Ghost Strawberry-->
+    <!-- Pansexual Ghost Strawberry -->
 
     <PrideMod_ghostberry_pansexual path="PrideMod/ghostberry/pansexual/" start="idle">
         <Center />
@@ -1884,7 +1884,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_pansexual>
 
-    <!-- Pansexual Ghost Strawberry Seed-->
+    <!-- Pansexual Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_pansexual path="PrideMod/ghostberry/pansexual/">
         <Center />
@@ -1893,7 +1893,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_pansexual>
 
-    <!-- Pansexual Golden Strawberry-->
+    <!-- Pansexual Golden Strawberry -->
 
     <PrideMod_goldenberry_pansexual path="PrideMod/goldenberry/pansexual/" start="idle">
         <Center />
@@ -1903,7 +1903,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_pansexual>
 
-    <!-- Pansexual Golden Strawberry Seed-->
+    <!-- Pansexual Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_pansexual path="PrideMod/goldenberry/pansexual/">
         <Center />
@@ -1912,7 +1912,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_pansexual>
 
-    <!-- Pansexual Ghost Golden Strawberry-->
+    <!-- Pansexual Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_pansexual path="PrideMod/ghostgoldenberry/pansexual/" start="idle">
         <Center />
@@ -1922,7 +1922,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_pansexual>
 
-    <!-- Pansexual Silver Strawberry-->
+    <!-- Pansexual Silver Strawberry -->
 
     <PrideMod_silverberry_pansexual path="PrideMod/silverberry/pansexual/" start="idle">
         <Center />
@@ -1931,7 +1931,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_pansexual>
 
-    <!-- Pansexual Ghost Silver Strawberry-->
+    <!-- Pansexual Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_pansexual path="PrideMod/ghostsilverberry/pansexual/" start="idle">
         <Center />
@@ -1942,7 +1942,7 @@
 
     <!-- Plural -->
 
-    <!-- Plural Crystal Heart-->
+    <!-- Plural Crystal Heart -->
 
     <PrideMod_crystalheart_plural path="PrideMod/crystalheart/plural/">
         <Center />
@@ -1952,7 +1952,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_plural>
 
-    <!-- Plural Mini Heart-->
+    <!-- Plural Mini Heart -->
 
     <PrideMod_miniheart_plural path="PrideMod/miniheart/plural/" start="idle">
         <Center />
@@ -1979,7 +1979,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_plural>
 
-    <!-- Plural Strawberry Seed-->
+    <!-- Plural Strawberry Seed -->
 
     <PrideMod_strawberryseed_plural path="PrideMod/strawberry/plural/">
         <Center />
@@ -1988,7 +1988,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_plural>
 
-    <!-- Plural Ghost Strawberry-->
+    <!-- Plural Ghost Strawberry -->
 
     <PrideMod_ghostberry_plural path="PrideMod/ghostberry/plural/" start="idle">
         <Center />
@@ -1998,7 +1998,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_plural>
 
-    <!-- Plural Ghost Strawberry Seed-->
+    <!-- Plural Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_plural path="PrideMod/ghostberry/plural/">
         <Center />
@@ -2007,7 +2007,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_plural>
 
-    <!-- Plural Golden Strawberry-->
+    <!-- Plural Golden Strawberry -->
 
     <PrideMod_goldenberry_plural path="PrideMod/goldenberry/plural/" start="idle">
         <Center />
@@ -2017,7 +2017,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_plural>
 
-    <!-- Plural Golden Strawberry Seed-->
+    <!-- Plural Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_plural path="PrideMod/goldenberry/plural/">
         <Center />
@@ -2026,7 +2026,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_plural>
 
-    <!-- Plural Ghost Golden Strawberry-->
+    <!-- Plural Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_plural path="PrideMod/ghostgoldenberry/plural/" start="idle">
         <Center />
@@ -2036,7 +2036,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_plural>
 
-    <!-- Plural Silver Strawberry-->
+    <!-- Plural Silver Strawberry -->
 
     <PrideMod_silverberry_plural path="PrideMod/silverberry/plural/" start="idle">
         <Center />
@@ -2045,7 +2045,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_plural>
 
-    <!-- Plural Ghost Silver Strawberry-->
+    <!-- Plural Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_plural path="PrideMod/ghostsilverberry/plural/" start="idle">
         <Center />
@@ -2056,7 +2056,7 @@
 
     <!-- Polyamorous -->
 
-    <!-- Polyamorous Crystal Heart-->
+    <!-- Polyamorous Crystal Heart -->
 
     <PrideMod_crystalheart_polyamorous path="PrideMod/crystalheart/polyamorous/">
         <Center />
@@ -2066,7 +2066,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_polyamorous>
 
-    <!-- Polyamorous Mini Heart-->
+    <!-- Polyamorous Mini Heart -->
 
     <PrideMod_miniheart_polyamorous path="PrideMod/miniheart/polyamorous/" start="idle">
         <Center />
@@ -2093,7 +2093,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_polyamorous>
 
-    <!-- Polyamorous Strawberry Seed-->
+    <!-- Polyamorous Strawberry Seed -->
 
     <PrideMod_strawberryseed_polyamorous path="PrideMod/strawberry/polyamorous/">
         <Center />
@@ -2102,7 +2102,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_polyamorous>
 
-    <!-- Polyamorous Ghost Strawberry-->
+    <!-- Polyamorous Ghost Strawberry -->
 
     <PrideMod_ghostberry_polyamorous path="PrideMod/ghostberry/polyamorous/" start="idle">
         <Center />
@@ -2112,7 +2112,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_polyamorous>
 
-    <!-- Polyamorous Ghost Strawberry Seed-->
+    <!-- Polyamorous Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_polyamorous path="PrideMod/ghostberry/polyamorous/">
         <Center />
@@ -2121,7 +2121,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_polyamorous>
 
-    <!-- Polyamorous Golden Strawberry-->
+    <!-- Polyamorous Golden Strawberry -->
 
     <PrideMod_goldenberry_polyamorous path="PrideMod/goldenberry/polyamorous/" start="idle">
         <Center />
@@ -2131,7 +2131,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_polyamorous>
 
-    <!-- Polyamorous Golden Strawberry Seed-->
+    <!-- Polyamorous Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_polyamorous path="PrideMod/goldenberry/polyamorous/">
         <Center />
@@ -2140,7 +2140,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_polyamorous>
 
-    <!-- Polyamorous Ghost Golden Strawberry-->
+    <!-- Polyamorous Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_polyamorous path="PrideMod/ghostgoldenberry/polyamorous/" start="idle">
         <Center />
@@ -2150,7 +2150,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_polyamorous>
 
-    <!-- Polyamorous Silver Strawberry-->
+    <!-- Polyamorous Silver Strawberry -->
 
     <PrideMod_silverberry_polyamorous path="PrideMod/silverberry/polyamorous/" start="idle">
         <Center />
@@ -2159,7 +2159,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_polyamorous>
 
-    <!-- Polyamorous Ghost Silver Strawberry-->
+    <!-- Polyamorous Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_polyamorous path="PrideMod/ghostsilverberry/polyamorous/" start="idle">
         <Center />
@@ -2170,7 +2170,7 @@
 
     <!-- Polysexual -->
 
-    <!-- Polysexual Crystal Heart-->
+    <!-- Polysexual Crystal Heart -->
 
     <PrideMod_crystalheart_polysexual path="PrideMod/crystalheart/polysexual/">
         <Center />
@@ -2180,7 +2180,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_polysexual>
 
-    <!-- Polysexual Mini Heart-->
+    <!-- Polysexual Mini Heart -->
 
     <PrideMod_miniheart_polysexual path="PrideMod/miniheart/polysexual/" start="idle">
         <Center />
@@ -2207,7 +2207,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_polysexual>
 
-    <!-- Polysexual Strawberry Seed-->
+    <!-- Polysexual Strawberry Seed -->
 
     <PrideMod_strawberryseed_polysexual path="PrideMod/strawberry/polysexual/">
         <Center />
@@ -2216,7 +2216,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_polysexual>
 
-    <!-- Polysexual Ghost Strawberry-->
+    <!-- Polysexual Ghost Strawberry -->
 
     <PrideMod_ghostberry_polysexual path="PrideMod/ghostberry/polysexual/" start="idle">
         <Center />
@@ -2226,7 +2226,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_polysexual>
 
-    <!-- Polysexual Ghost Strawberry Seed-->
+    <!-- Polysexual Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_polysexual path="PrideMod/ghostberry/polysexual/">
         <Center />
@@ -2235,7 +2235,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_polysexual>
 
-    <!-- Polysexual Golden Strawberry-->
+    <!-- Polysexual Golden Strawberry -->
 
     <PrideMod_goldenberry_polysexual path="PrideMod/goldenberry/polysexual/" start="idle">
         <Center />
@@ -2245,7 +2245,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_polysexual>
 
-    <!-- Polysexual Golden Strawberry Seed-->
+    <!-- Polysexual Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_polysexual path="PrideMod/goldenberry/polysexual/">
         <Center />
@@ -2254,7 +2254,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_polysexual>
 
-    <!-- Polysexual Ghost Golden Strawberry-->
+    <!-- Polysexual Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_polysexual path="PrideMod/ghostgoldenberry/polysexual/" start="idle">
         <Center />
@@ -2264,7 +2264,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_polysexual>
 
-    <!-- Polysexual Silver Strawberry-->
+    <!-- Polysexual Silver Strawberry -->
 
     <PrideMod_silverberry_polysexual path="PrideMod/silverberry/polysexual/" start="idle">
         <Center />
@@ -2273,7 +2273,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_silverberry_polysexual>
 
-    <!-- Polysexual Ghost Silver Strawberry-->
+    <!-- Polysexual Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_polysexual path="PrideMod/ghostsilverberry/polysexual/" start="idle">
         <Center />
@@ -2282,7 +2282,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_polysexual>    <!-- Transgender -->
 
-    <!-- Transgender Crystal Heart-->
+    <!-- Transgender Crystal Heart -->
 
     <PrideMod_crystalheart_transgender path="PrideMod/crystalheart/transgender/">
         <Center />
@@ -2292,7 +2292,7 @@
         <Loop id="fastspin" path="" delay="0.1" />
     </PrideMod_crystalheart_transgender>
 
-    <!-- Transgender Mini Heart-->
+    <!-- Transgender Mini Heart -->
 
     <PrideMod_miniheart_transgender path="PrideMod/miniheart/transgender/" start="idle">
         <Center />
@@ -2319,7 +2319,7 @@
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_transgender>
 
-    <!-- Transgender Strawberry Seed-->
+    <!-- Transgender Strawberry Seed -->
 
     <PrideMod_strawberryseed_transgender path="PrideMod/strawberry/transgender/">
         <Center />
@@ -2328,7 +2328,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_strawberryseed_transgender>
 
-    <!-- Transgender Ghost Strawberry-->
+    <!-- Transgender Ghost Strawberry -->
 
     <PrideMod_ghostberry_transgender path="PrideMod/ghostberry/transgender/" start="idle">
         <Center />
@@ -2338,7 +2338,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostberry_transgender>
 
-    <!-- Transgender Ghost Strawberry Seed-->
+    <!-- Transgender Ghost Strawberry Seed -->
 
     <PrideMod_ghostberryseed_transgender path="PrideMod/ghostberry/transgender/">
         <Center />
@@ -2347,7 +2347,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_ghostberryseed_transgender>
 
-    <!-- Transgender Golden Strawberry-->
+    <!-- Transgender Golden Strawberry -->
 
     <PrideMod_goldenberry_transgender path="PrideMod/goldenberry/transgender/" start="idle">
         <Center />
@@ -2357,7 +2357,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_goldenberry_transgender>
 
-    <!-- Transgender Golden Strawberry Seed-->
+    <!-- Transgender Golden Strawberry Seed -->
 
     <PrideMod_goldenberryseed_transgender path="PrideMod/goldenberry/transgender/">
         <Center />
@@ -2366,7 +2366,7 @@
         <Loop id="noFlash" path="seed" frames="0" />
     </PrideMod_goldenberryseed_transgender>
 
-    <!-- Transgender Ghost Golden Strawberry-->
+    <!-- Transgender Ghost Golden Strawberry -->
 
     <PrideMod_ghostgoldenberry_transgender path="PrideMod/ghostgoldenberry/transgender/" start="idle">
         <Center />
@@ -2376,7 +2376,7 @@
         <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
     </PrideMod_ghostgoldenberry_transgender>
 
-    <!-- Transgender Silver Strawberry-->
+    <!-- Transgender Silver Strawberry -->
 
     <PrideMod_silverberry_transgender path="PrideMod/silverberry/transgender/" start="idle">
         <Center />
@@ -2385,7 +2385,7 @@
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_silverberry_transgender>
 
-    <!-- Transgender Ghost Silver Strawberry-->
+    <!-- Transgender Ghost Silver Strawberry -->
 
     <PrideMod_ghostsilverberry_transgender path="PrideMod/ghostsilverberry/transgender/" start="idle">
         <Center />

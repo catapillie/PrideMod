@@ -10,15 +10,19 @@ namespace Celeste.Mod.PrideMod.UI {
             set => Index = (int)value;
         }
 
-        private readonly string spriteType;
+        private readonly string spriteType, anim, defaultSprite, defaultAnim;
         private Sprite sprite;
 
-        public PrideSlider(string label, string spriteType, Func<PrideTypes, string> values, int min, int max, int value = -1)
+        public PrideSlider(string label, string spriteType, string anim, string defaultSprite, string defaultAnim, Func<PrideTypes, string> values, int min, int max, int value = -1)
             : base(label) {
             for (int i = min; i <= max; i++)
                 Add(values((PrideTypes)i), i, value == i);
 
             this.spriteType = spriteType;
+            this.anim = anim;
+            this.defaultSprite = defaultSprite;
+            this.defaultAnim = defaultAnim;
+
             RecreatePreviewSprite();
         }
 
@@ -38,8 +42,9 @@ namespace Celeste.Mod.PrideMod.UI {
 
         private void RecreatePreviewSprite() {
             if (spriteType != null) {
-                sprite = GFX.SpriteBank.Create(PrideType.GetCustomSpriteID(spriteType, "strawberry"));
-                sprite.Play("idle");
+                string id = PrideType.GetCustomSpriteID(spriteType, defaultSprite);
+                sprite = GFX.SpriteBank.Create(id);
+                sprite.Play(id == defaultSprite ? defaultAnim : anim);
             }
         }
 
