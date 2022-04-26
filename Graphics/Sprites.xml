@@ -2,6 +2,16 @@
 
 <Sprites>
 
+    <!-- Default -->
+
+    <!-- Default Summit Flag -->
+
+    <PrideMod_summitflag_default path="decals/7-summit/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_default>
+
     <!-- Agender -->
 
     <!-- Agender Crystal Heart -->
@@ -115,6 +125,14 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-5,0-5,0-5,0-5,0-7" />
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_ghostsilverberry_agender>
+
+    <!-- Agender Summit Flag -->
+
+    <PrideMod_summitflag_agender path="PrideMod/summitflag/agender/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_agender>
 
     <!-- Aromantic -->
 
@@ -230,6 +248,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_aromantic>
 
+    <!-- Aromantic Summit Flag -->
+
+    <PrideMod_summitflag_aromantic path="PrideMod/summitflag/aromantic/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_aromantic>
+
     <!-- Asexual -->
 
     <!-- Asexual Crystal Heart -->
@@ -343,6 +369,14 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_asexual>
+
+    <!-- Asexual Summit Flag -->
+
+    <PrideMod_summitflag_asexual path="PrideMod/summitflag/asexual/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_asexual>
 
     <!-- Bigender -->
 
@@ -458,6 +492,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_bigender>
 
+    <!-- Bigender Summit Flag -->
+
+    <PrideMod_summitflag_bigender path="PrideMod/summitflag/bigender/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_bigender>
+
     <!-- Bisexual -->
 
     <!-- Bisexual Crystal Heart -->
@@ -571,6 +613,14 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_bisexual>
+
+    <!-- Bisexual Summit Flag -->
+
+    <PrideMod_summitflag_bisexual path="PrideMod/summitflag/bisexual/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_bisexual>
 
     <!-- Demiboy -->
 
@@ -686,6 +736,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_ghostsilverberry_demiboy>
 
+    <!-- Demiboy Summit Flag -->
+
+    <PrideMod_summitflag_demiboy path="PrideMod/summitflag/demiboy/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_demiboy>
+
     <!-- Demigirl -->
 
     <!-- Demigirl Crystal Heart -->
@@ -799,6 +857,14 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-5,0-5,0-5,0-5,0-7" />
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_ghostsilverberry_demigirl>
+
+    <!-- Demigirl Summit Flag -->
+
+    <PrideMod_summitflag_demigirl path="PrideMod/summitflag/demigirl/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_demigirl>
 
     <!-- Deminonbinary -->
 
@@ -914,6 +980,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_ghostsilverberry_deminonbinary>
 
+    <!-- Deminonbinary Summit Flag -->
+
+    <PrideMod_summitflag_deminonbinary path="PrideMod/summitflag/deminonbinary/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_deminonbinary>
+
     <!-- Demisexual -->
 
     <!-- Demisexual Crystal Heart -->
@@ -1027,6 +1101,14 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_demisexual>
+
+    <!-- Demisexual Summit Flag -->
+
+    <PrideMod_summitflag_demisexual path="PrideMod/summitflag/demisexual/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_demisexual>
 
     <!-- Gay -->
 
@@ -1142,6 +1224,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_gay>
 
+    <!-- Gay Summit Flag -->
+
+    <PrideMod_summitflag_gay path="PrideMod/summitflag/gay/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_gay>
+
     <!-- Genderfluid -->
 
     <!-- Genderfluid Crystal Heart -->
@@ -1255,6 +1345,14 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_genderfluid>
+
+    <!-- Genderfluid Summit Flag -->
+
+    <PrideMod_summitflag_genderfluid path="PrideMod/summitflag/genderfluid/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_genderfluid>
 
     <!-- Genderqueer -->
 
@@ -1370,6 +1468,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_genderqueer>
 
+    <!-- Genderqueer Summit Flag -->
+
+    <PrideMod_summitflag_genderqueer path="PrideMod/summitflag/genderqueer/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_genderqueer>
+
     <!-- Intersex -->
 
     <!-- Intersex Crystal Heart -->
@@ -1483,6 +1589,14 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-5,0-5,0-5,0-5,0-7" />
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_ghostsilverberry_intersex>
+
+    <!-- Intersex Summit Flag -->
+
+    <PrideMod_summitflag_intersex path="PrideMod/summitflag/intersex/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_intersex>
 
     <!-- Lesbian -->
 
@@ -1598,6 +1712,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_lesbian>
 
+    <!-- Lesbian Summit Flag -->
+
+    <PrideMod_summitflag_lesbian path="PrideMod/summitflag/lesbian/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_lesbian>
+
     <!-- Non-Binary -->
 
     <!-- Non-Binary Crystal Heart -->
@@ -1711,6 +1833,14 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_nonbinary>
+
+    <!-- Non-Binary Summit Flag -->
+
+    <PrideMod_summitflag_nonbinary path="PrideMod/summitflag/nonbinary/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_nonbinary>
 
     <!-- Omnisexual -->
 
@@ -1826,6 +1956,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_omnisexual>
 
+    <!-- Omnisexual Summit Flag -->
+
+    <PrideMod_summitflag_omnisexual path="PrideMod/summitflag/omnisexual/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_omnisexual>
+
     <!-- Pansexual -->
 
     <!-- Pansexual Crystal Heart -->
@@ -1939,6 +2077,14 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_pansexual>
+
+    <!-- Pansexual Summit Flag -->
+
+    <PrideMod_summitflag_pansexual path="PrideMod/summitflag/pansexual/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_pansexual>
 
     <!-- Plural -->
 
@@ -2054,6 +2200,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_plural>
 
+    <!-- Plural Summit Flag -->
+
+    <PrideMod_summitflag_plural path="PrideMod/summitflag/plural/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_plural>
+
     <!-- Polyamorous -->
 
     <!-- Polyamorous Crystal Heart -->
@@ -2168,6 +2322,14 @@
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
     </PrideMod_ghostsilverberry_polyamorous>
 
+    <!-- Polyamorous Summit Flag -->
+
+    <PrideMod_summitflag_polyamorous path="PrideMod/summitflag/polyamorous/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_polyamorous>
+
     <!-- Polysexual -->
 
     <!-- Polysexual Crystal Heart -->
@@ -2280,7 +2442,17 @@
 
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
         <Anim id="collect" path="idle" delay=".07" frames="15-19" />
-    </PrideMod_ghostsilverberry_polysexual>    <!-- Transgender -->
+    </PrideMod_ghostsilverberry_polysexual>
+
+    <!-- Polysexual Summit Flag -->
+
+    <PrideMod_summitflag_polysexual path="PrideMod/summitflag/polysexual/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_polysexual>
+    
+    <!-- Transgender -->
 
     <!-- Transgender Crystal Heart -->
 
@@ -2393,5 +2565,13 @@
         <Loop id="idle" path="idle" delay=".08" frames="0-5,0-5,0-5,0-5,0-7" />
         <Anim id="collect" path="idle" delay=".07" frames="7-11" />
     </PrideMod_ghostsilverberry_transgender>
+
+    <!-- Transgender Summit Flag -->
+
+    <PrideMod_summitflag_transgender path="PrideMod/summitflag/transgender/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_transgender>
 
 </Sprites>

@@ -62,10 +62,10 @@ namespace Celeste.Mod.PrideMod.UI {
                 Draw.SpriteBatch.End();
                 SamplerState oldSamplerState = Draw.SpriteBatch.GraphicsDevice.SamplerStates[0];
 
-                Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointWrap, DepthStencilState.None, RasterizerState.CullNone);
+                Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone);
 
                 if (sprite != null && sprite.Texture != null) {
-                    sprite.Texture.DrawCentered(position + new Vector2(Container.Width + 100, 0), Color.White, 6f);
+                    sprite.Texture.DrawJustified(position + new Vector2(Container.Width + 100, 0), sprite.Justify ?? Vector2.One * 0.5f, Color.White, 6f);
                 }
 
                 Draw.SpriteBatch.End();

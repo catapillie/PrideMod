@@ -167,8 +167,8 @@ namespace Celeste.Mod.PrideMod {
         [SettingIgnore]
         [PrideSetting(
             "modoptions_PrideMod_SummitFlag",
-            spriteType: null, anim: "idle",
-            defaultSprite: "strawberry", defaultAnim: "idle",
+            spriteType: "summitflag", anim: "idle",
+            defaultSprite: "PrideMod_summitflag_default", defaultAnim: "idle",
             header: "modoptions_PrideMod_header_Flags"
         )]
         public PrideTypes SummitFlag { get; set; } = PrideTypes.Default;
