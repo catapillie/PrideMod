@@ -1,10 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Monocle;
 using System;
 
 namespace Celeste.Mod.PrideMod.UI {
-    public class PrideSlider : TextMenu.Option<int> {
+    public class PreviewedPrideSlider : AbstractPrideSlider {
+        public override bool PerformCustomRendering => Selected;
+
         public PrideTypes PrideType {
             get => (PrideTypes)Index;
             set => Index = (int)value;
@@ -14,10 +15,10 @@ namespace Celeste.Mod.PrideMod.UI {
         private readonly float[] offsets;
         private readonly Sprite[] sprites;
 
-        internal PrideSlider(string label, PreviewSpriteAttribute[] sprites, Func<PrideTypes, string> values, int min, int max, int value = -1)
-            : base(label) {
-            for (int i = min; i <= max; i++)
-                Add(values((PrideTypes)i), i, value == i);
+        private bool Selected => Container.Current == this;
+
+        internal PreviewedPrideSlider(string label, PreviewSpriteAttribute[] sprites, Func<PrideTypes, string> values, PrideTypes value)
+            : base(label, values, value) {
 
             this.sprites = new Sprite[sprites.Length];
             spriteTypes = new string[sprites.Length];
@@ -70,33 +71,19 @@ namespace Celeste.Mod.PrideMod.UI {
         public override void Update() {
             base.Update();
 
-            if (Container.Current == this) {
+            if (Selected) {
                 for (int i = 0; i < sprites.Length; i++)
                     sprites[i].Update();
             }
         }
 
-        public override void Render(Vector2 position, bool highlighted) {
-            base.Render(position, highlighted);
+        public override void CustomRender(Vector2 position) {
+            for (int i = 0; i < sprites.Length; i++) {
+                Sprite sprite = sprites[i];
+                float offset = offsets[i];
 
-            if (Container.Current == this) {
-                Draw.SpriteBatch.End();
-                SamplerState oldSamplerState = Draw.SpriteBatch.GraphicsDevice.SamplerStates[0];
-
-                Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone);
-
-                for (int i = 0; i < sprites.Length; i++) {
-                    Sprite sprite = sprites[i];
-                    float offset = offsets[i];
-
-                    if (sprite.Texture != null)
-                        sprite.Texture.DrawJustified(position + new Vector2(Container.Width + 100 + offset, 0), sprite.Justify ?? Vector2.One * 0.5f, Color.White, 6f);
-                }
-
-                Draw.SpriteBatch.End();
-
-                Draw.SpriteBatch.GraphicsDevice.SamplerStates[0] = oldSamplerState;
-                Draw.SpriteBatch.Begin();
+                if (sprite.Texture != null)
+                    sprite.Texture.DrawJustified(position + new Vector2(Container.Width + 100 + offset, 0), sprite.Justify ?? Vector2.One * 0.5f, Color.White, 6f);
             }
         }
     }

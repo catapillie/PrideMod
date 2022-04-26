@@ -28,13 +28,12 @@ namespace Celeste.Mod.PrideMod.UI {
         }
 
         private void CreatePrideSetting(TextMenu menu, string settingName, PreviewSpriteAttribute[] sprites, PrideTypes value, Action<PrideTypes> action, bool displayDesc = false) {
-            PrideSlider item = new PrideSlider(
+            PreviewedPrideSlider item = new PreviewedPrideSlider(
                 Dialog.Clean(settingName),
                 sprites,
                 i => i.GetFormattedName(),
-                0, PrideData.PrideCount - 1,
-                (int)value
-            ).Change(i => action((PrideTypes)i)) as PrideSlider;
+                value
+            ).Change(i => action((PrideTypes)i)) as PreviewedPrideSlider;
 
             menu.Add(item);
             item.AddDescription(menu, Dialog.Clean(settingName + "_sub"));

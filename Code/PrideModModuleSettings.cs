@@ -27,7 +27,7 @@ namespace Celeste.Mod.PrideMod {
                                             .Select(p => new PrideModSettingInfo(
                                                 p, p.GetCustomAttribute<PrideSettingAttribute>(),
                                                 p.GetCustomAttributes<PreviewSpriteAttribute>()))
-                                            .Where(kv => kv.Attribute != null).ToArray();
+                                            .Where(info => info.Attribute != null).ToArray();
 
         public bool Enabled { get; set; } = true;
 
