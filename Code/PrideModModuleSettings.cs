@@ -176,8 +176,8 @@ namespace Celeste.Mod.PrideMod {
         [SettingIgnore]
         [PrideSetting(
             "modoptions_PrideMod_FinalFlag",
-            spriteType: null, anim: "idle",
-            defaultSprite: "strawberry", defaultAnim: "idle"
+            spriteType: "finalflag", anim: "idle",
+            defaultSprite: "PrideMod_finalflag_default", defaultAnim: "idle"
         )]
         public PrideTypes FinalFlag { get; set; } = PrideTypes.Default;
 

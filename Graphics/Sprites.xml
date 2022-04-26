@@ -12,6 +12,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_default>
 
+    <!-- Default Final Flag -->
+
+    <PrideMod_finalflag_default path="decals/10-farewell/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_default>
+
     <!-- Agender -->
 
     <!-- Agender Crystal Heart -->
@@ -133,6 +141,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_agender>
+
+    <!-- Agender Final Flag -->
+
+    <PrideMod_finalflag_agender path="PrideMod/finalflag/agender/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_agender>
 
     <!-- Aromantic -->
 
@@ -256,6 +272,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_aromantic>
 
+    <!-- Aromantic Final Flag -->
+
+    <PrideMod_finalflag_aromantic path="PrideMod/finalflag/aromantic/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_aromantic>
+
     <!-- Asexual -->
 
     <!-- Asexual Crystal Heart -->
@@ -377,6 +401,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_asexual>
+
+    <!-- Asexual Final Flag -->
+
+    <PrideMod_finalflag_asexual path="PrideMod/finalflag/asexual/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_asexual>
 
     <!-- Bigender -->
 
@@ -500,6 +532,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_bigender>
 
+    <!-- Bigender Final Flag -->
+
+    <PrideMod_finalflag_bigender path="PrideMod/finalflag/bigender/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_bigender>
+
     <!-- Bisexual -->
 
     <!-- Bisexual Crystal Heart -->
@@ -621,6 +661,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_bisexual>
+
+    <!-- Bisexual Final Flag -->
+
+    <PrideMod_finalflag_bisexual path="PrideMod/finalflag/bisexual/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_bisexual>
 
     <!-- Demiboy -->
 
@@ -744,6 +792,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_demiboy>
 
+    <!-- Demiboy Final Flag -->
+
+    <PrideMod_finalflag_demiboy path="PrideMod/finalflag/demiboy/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_demiboy>
+
     <!-- Demigirl -->
 
     <!-- Demigirl Crystal Heart -->
@@ -865,6 +921,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_demigirl>
+
+    <!-- Demigirl Final Flag -->
+
+    <PrideMod_finalflag_demigirl path="PrideMod/finalflag/demigirl/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_demigirl>
 
     <!-- Deminonbinary -->
 
@@ -988,6 +1052,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_deminonbinary>
 
+    <!-- Deminonbinary Final Flag -->
+
+    <PrideMod_finalflag_deminonbinary path="PrideMod/finalflag/deminonbinary/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_deminonbinary>
+
     <!-- Demisexual -->
 
     <!-- Demisexual Crystal Heart -->
@@ -1109,6 +1181,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_demisexual>
+
+    <!-- Demisexual Final Flag -->
+
+    <PrideMod_finalflag_demisexual path="PrideMod/finalflag/demisexual/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_demisexual>
 
     <!-- Gay -->
 
@@ -1232,6 +1312,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_gay>
 
+    <!-- Gay Final Flag -->
+
+    <PrideMod_finalflag_gay path="PrideMod/finalflag/gay/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_gay>
+
     <!-- Genderfluid -->
 
     <!-- Genderfluid Crystal Heart -->
@@ -1353,6 +1441,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_genderfluid>
+
+    <!-- Genderfluid Final Flag -->
+
+    <PrideMod_finalflag_genderfluid path="PrideMod/finalflag/genderfluid/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_genderfluid>
 
     <!-- Genderqueer -->
 
@@ -1476,6 +1572,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_genderqueer>
 
+    <!-- Genderqueer Final Flag -->
+
+    <PrideMod_finalflag_genderqueer path="PrideMod/finalflag/genderqueer/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_genderqueer>
+
     <!-- Intersex -->
 
     <!-- Intersex Crystal Heart -->
@@ -1597,6 +1701,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_intersex>
+
+    <!-- Intersex Final Flag -->
+
+    <PrideMod_finalflag_intersex path="PrideMod/finalflag/intersex/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_intersex>
 
     <!-- Lesbian -->
 
@@ -1720,6 +1832,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_lesbian>
 
+    <!-- Lesbian Final Flag -->
+
+    <PrideMod_finalflag_lesbian path="PrideMod/finalflag/lesbian/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_lesbian>
+
     <!-- Non-Binary -->
 
     <!-- Non-Binary Crystal Heart -->
@@ -1841,6 +1961,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_nonbinary>
+
+    <!-- Non-Binary Final Flag -->
+
+    <PrideMod_finalflag_nonbinary path="PrideMod/finalflag/nonbinary/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_nonbinary>
 
     <!-- Omnisexual -->
 
@@ -1964,6 +2092,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_omnisexual>
 
+    <!-- Omnisexual Final Flag -->
+
+    <PrideMod_finalflag_omnisexual path="PrideMod/finalflag/omnisexual/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_omnisexual>
+
     <!-- Pansexual -->
 
     <!-- Pansexual Crystal Heart -->
@@ -2085,6 +2221,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_pansexual>
+
+    <!-- Pansexual Final Flag -->
+
+    <PrideMod_finalflag_pansexual path="PrideMod/finalflag/pansexual/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_pansexual>
 
     <!-- Plural -->
 
@@ -2208,6 +2352,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_plural>
 
+    <!-- Plural Final Flag -->
+
+    <PrideMod_finalflag_plural path="PrideMod/finalflag/plural/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_plural>
+
     <!-- Polyamorous -->
 
     <!-- Polyamorous Crystal Heart -->
@@ -2330,6 +2482,14 @@
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_polyamorous>
 
+    <!-- Polyamorous Final Flag -->
+
+    <PrideMod_finalflag_polyamorous path="PrideMod/finalflag/polyamorous/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_polyamorous>
+
     <!-- Polysexual -->
 
     <!-- Polysexual Crystal Heart -->
@@ -2451,6 +2611,14 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_polysexual>
+
+    <!-- Polysexual Final Flag -->
+
+    <PrideMod_finalflag_polysexual path="PrideMod/finalflag/polysexual/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_polysexual>
     
     <!-- Transgender -->
 
@@ -2573,5 +2741,13 @@
 
         <Loop id="idle" path="SummitFlag" delay="0.083" />
     </PrideMod_summitflag_transgender>
+
+    <!-- Transgender Final Flag -->
+
+    <PrideMod_finalflag_transgender path="PrideMod/finalflag/transgender/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_transgender>
 
 </Sprites>

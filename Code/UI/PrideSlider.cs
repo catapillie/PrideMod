@@ -64,9 +64,8 @@ namespace Celeste.Mod.PrideMod.UI {
 
                 Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone);
 
-                if (sprite != null && sprite.Texture != null) {
+                if (sprite != null && sprite.Texture != null)
                     sprite.Texture.DrawJustified(position + new Vector2(Container.Width + 100, 0), sprite.Justify ?? Vector2.One * 0.5f, Color.White, 6f);
-                }
 
                 Draw.SpriteBatch.End();
 
