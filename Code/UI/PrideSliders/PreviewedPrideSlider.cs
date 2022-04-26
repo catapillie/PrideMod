@@ -5,11 +5,6 @@ namespace Celeste.Mod.PrideMod.UI {
     public class PreviewedPrideSlider : PrideSliderBase {
         public override bool PerformCustomRendering => Selected;
 
-        public PrideTypes PrideType {
-            get => (PrideTypes)Index;
-            set => Index = (int)value;
-        }
-
         private readonly string[] spriteTypes, anims, defaultSprites, defaultAnims;
         private readonly float[] offsets;
         private readonly Sprite[] sprites;
@@ -37,19 +32,7 @@ namespace Celeste.Mod.PrideMod.UI {
             RecreatePreviewSprites();
         }
 
-        public override void LeftPressed() {
-            int prev = Index;
-            base.LeftPressed();
-            if (Index != prev)
-                RecreatePreviewSprites();
-        }
-
-        public override void RightPressed() {
-            int prev = Index;
-            base.RightPressed();
-            if (Index != prev)
-                RecreatePreviewSprites();
-        }
+        public override void SelectedDifferentValue() => RecreatePreviewSprites();
 
         private void RecreatePreviewSprites() {
             for (int i = 0; i < sprites.Length; i++) {

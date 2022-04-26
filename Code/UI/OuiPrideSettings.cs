@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Celeste.Mod.PrideMod.UI {
+﻿namespace Celeste.Mod.PrideMod.UI {
     public class OuiPrideSettings : AbstractSubmenu {
         public OuiPrideSettings()
             : base("modoptions_PrideMod_PrideSettings_title", "modoptions_PrideMod_PrideSettings") { }
@@ -9,14 +7,20 @@ namespace Celeste.Mod.PrideMod.UI {
             PrideModModuleSettings settings = PrideModModule.Settings;
 
             bool first = true;
+            float yOffset = 0f;
+
             foreach (var info in PrideModModuleSettings.Info) {
                 var prop = info.Property;
                 var attr = info.Attribute;
-                var sprites = info.PreviewSpritesAttributes;
 
                 if (attr.Shown()) {
-                    if (attr.Header != null)
-                        CreateSubHeader(menu, attr.Header);
+                    var sprites = info.PreviewSpritesAttributes;
+
+                    if (attr.Header != null) {
+                        var subHeader = new TextMenu.SubHeader(Dialog.Clean(attr.Header));
+                        menu.Add(subHeader);
+                        yOffset += subHeader.Height() + menu.ItemSpacing;
+                    }
 
                     PrideTypes value = (PrideTypes)prop.GetValue(settings);
                     void action(PrideTypes prideType) => prop.SetValue(settings, prideType);
@@ -28,7 +32,7 @@ namespace Celeste.Mod.PrideMod.UI {
                     if (sprites.Length > 0)
                         item = new PreviewedPrideSlider(name, value, sprites);
                     else if (info.DoesTheConfetti)
-                        item = new ConfettiPrideSlider(name, value);
+                        item = new ConfettiPrideSlider(name, value, yOffset);
                     else
                         item = new(name, value);
 
@@ -43,12 +47,10 @@ namespace Celeste.Mod.PrideMod.UI {
                         item.OnEnter();
 
                     first = false;
+                    yOffset += item.Height() + menu.ItemSpacing; 
                 }
             }
         }
-
-        private static void CreateSubHeader(TextMenu menu, string header)
-            => menu.Add(new TextMenu.SubHeader(Dialog.Clean(header)));
 
         protected override void gotoMenu(Overworld overworld)
             => overworld.Goto<OuiPrideSettings>();

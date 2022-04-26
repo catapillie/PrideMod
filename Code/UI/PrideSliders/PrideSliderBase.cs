@@ -1,10 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Monocle;
-using System;
 
 namespace Celeste.Mod.PrideMod.UI {
     public class PrideSliderBase : TextMenu.Option<int> {
+        public PrideTypes PrideType {
+            get => (PrideTypes)Index;
+            set => Index = (int)value;
+        }
+
         public virtual bool PerformCustomRendering => false;
 
         public PrideSliderBase(string label, PrideTypes value)
@@ -12,6 +16,24 @@ namespace Celeste.Mod.PrideMod.UI {
             int val = (int)value;
             for (int i = 0; i < PrideData.PrideCount; i++)
                 Add(((PrideTypes)i).GetFormattedName(), i, val == i);
+        }
+
+        public override void LeftPressed() {
+            int prev = Index;
+
+            base.LeftPressed();
+
+            if (Index != prev)
+                SelectedDifferentValue();
+        }
+
+        public override void RightPressed() {
+            int prev = Index;
+
+            base.RightPressed();
+
+            if (Index != prev)
+                SelectedDifferentValue();
         }
 
         public override void Render(Vector2 position, bool highlighted) {
@@ -31,6 +53,8 @@ namespace Celeste.Mod.PrideMod.UI {
                 Draw.SpriteBatch.Begin();
             }
         }
+
+        public virtual void SelectedDifferentValue() { }
 
         public virtual void CustomRender(Vector2 position) { }
     }

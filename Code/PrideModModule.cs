@@ -18,6 +18,8 @@ namespace Celeste.Mod.PrideMod {
             base.LoadContent(firstLoad);
 
             PrideData.InitializeContent();
+
+            UI.ConfettiPrideSlider.InitializeContent();
         }
 
         public override void Load() {
