@@ -10,8 +10,9 @@ namespace Celeste.Mod.PrideMod.UI {
 
             bool first = true;
             foreach (var info in PrideModModuleSettings.Info) {
-                var prop = info.Key;
-                var attr = info.Value;
+                var prop = info.Property;
+                var attr = info.Attribute;
+                var sprites = info.PreviewSpritesAttributes;
 
                 if (attr.Shown()) {
                     if (attr.Header != null)
@@ -19,18 +20,17 @@ namespace Celeste.Mod.PrideMod.UI {
 
                     PrideTypes value = (PrideTypes)prop.GetValue(settings);
                     void action(PrideTypes prideType) => prop.SetValue(settings, prideType);
-                    CreatePrideSetting(menu, attr.Name, attr.SpriteType, attr.Anim, attr.DefaultSprite, attr.DefaultAnim, value, action, displayDesc: first);
+                    CreatePrideSetting(menu, attr.Name, sprites, value, action, displayDesc: first);
 
                     first = false;
                 }
             }
         }
 
-        private void CreatePrideSetting(TextMenu menu, string settingName, string spriteType, string anim, string defaultSprite, string defaultAnim, PrideTypes value, Action<PrideTypes> action, bool displayDesc = false) {
+        private void CreatePrideSetting(TextMenu menu, string settingName, PreviewSpriteAttribute[] sprites, PrideTypes value, Action<PrideTypes> action, bool displayDesc = false) {
             PrideSlider item = new PrideSlider(
                 Dialog.Clean(settingName),
-                spriteType, anim,
-                defaultSprite, defaultAnim,
+                sprites,
                 i => i.GetFormattedName(),
                 0, PrideData.PrideCount - 1,
                 (int)value
