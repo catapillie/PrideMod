@@ -7,11 +7,11 @@ namespace Celeste.Mod.PrideMod.UI {
     public class PrideSliderBase : TextMenu.Option<int> {
         public virtual bool PerformCustomRendering => false;
 
-        public PrideSliderBase(string label, Func<PrideTypes, string> values, PrideTypes value)
+        public PrideSliderBase(string label, PrideTypes value)
             : base(label) {
             int val = (int)value;
             for (int i = 0; i < PrideData.PrideCount; i++)
-                Add(values((PrideTypes)i), i, val == i);
+                Add(((PrideTypes)i).GetFormattedName(), i, val == i);
         }
 
         public override void Render(Vector2 position, bool highlighted) {

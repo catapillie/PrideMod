@@ -17,8 +17,8 @@ namespace Celeste.Mod.PrideMod.UI {
 
         private bool Selected => Container.Current == this;
 
-        internal PreviewedPrideSlider(string label, PreviewSpriteAttribute[] sprites, Func<PrideTypes, string> values, PrideTypes value)
-            : base(label, values, value) {
+        internal PreviewedPrideSlider(string label, PreviewSpriteAttribute[] sprites, PrideTypes value)
+            : base(label, value) {
 
             this.sprites = new Sprite[sprites.Length];
             spriteTypes = new string[sprites.Length];

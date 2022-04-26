@@ -26,9 +26,9 @@ namespace Celeste.Mod.PrideMod.UI {
 
                     PrideSliderBase item;
                     if (sprites.Length > 0)
-                        item = CreatePrideSetting(name, sprites, value, action, displayDesc: first);
+                        item = CreatePrideSetting(name, sprites, value);
                     else
-                        item = new(name, i => i.GetFormattedName(), value);
+                        item = new(name, value);
 
                     Console.WriteLine(item.GetType());
 
@@ -47,8 +47,8 @@ namespace Celeste.Mod.PrideMod.UI {
             }
         }
 
-        private PreviewedPrideSlider CreatePrideSetting(string settingName, PreviewSpriteAttribute[] sprites, PrideTypes value, Action<PrideTypes> action, bool displayDesc = false)
-            => new(settingName, sprites, i => i.GetFormattedName(), value);
+        private PreviewedPrideSlider CreatePrideSetting(string settingName, PreviewSpriteAttribute[] sprites, PrideTypes value)
+            => new(settingName, sprites, value);
 
         private static void CreateSubHeader(TextMenu menu, string header)
             => menu.Add(new TextMenu.SubHeader(Dialog.Clean(header)));
