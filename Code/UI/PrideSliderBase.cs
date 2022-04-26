@@ -4,10 +4,10 @@ using Monocle;
 using System;
 
 namespace Celeste.Mod.PrideMod.UI {
-    public abstract class AbstractPrideSlider : TextMenu.Option<int> {
-        public abstract bool PerformCustomRendering { get; }
+    public class PrideSliderBase : TextMenu.Option<int> {
+        public virtual bool PerformCustomRendering => false;
 
-        protected AbstractPrideSlider(string label, Func<PrideTypes, string> values, PrideTypes value)
+        public PrideSliderBase(string label, Func<PrideTypes, string> values, PrideTypes value)
             : base(label) {
             int val = (int)value;
             for (int i = 0; i < PrideData.PrideCount; i++)
@@ -32,6 +32,6 @@ namespace Celeste.Mod.PrideMod.UI {
             }
         }
 
-        public abstract void CustomRender(Vector2 position);
+        public virtual void CustomRender(Vector2 position) { }
     }
 }

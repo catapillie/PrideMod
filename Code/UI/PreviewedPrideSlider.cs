@@ -3,7 +3,7 @@ using Monocle;
 using System;
 
 namespace Celeste.Mod.PrideMod.UI {
-    public class PreviewedPrideSlider : AbstractPrideSlider {
+    public class PreviewedPrideSlider : PrideSliderBase {
         public override bool PerformCustomRendering => Selected;
 
         public PrideTypes PrideType {

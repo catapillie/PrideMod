@@ -20,29 +20,35 @@ namespace Celeste.Mod.PrideMod.UI {
 
                     PrideTypes value = (PrideTypes)prop.GetValue(settings);
                     void action(PrideTypes prideType) => prop.SetValue(settings, prideType);
-                    CreatePrideSetting(menu, attr.Name, sprites, value, action, displayDesc: first);
+
+                    string name = Dialog.Clean(attr.Name);
+                    string desc = Dialog.Clean(attr.Name + "_sub");
+
+                    PrideSliderBase item;
+                    if (sprites.Length > 0)
+                        item = CreatePrideSetting(name, sprites, value, action, displayDesc: first);
+                    else
+                        item = new(name, i => i.GetFormattedName(), value);
+
+                    Console.WriteLine(item.GetType());
+
+                    item.Change(i => action((PrideTypes)i));
+
+                    menu.Add(item);
+                    item.AddDescription(menu, desc);
+
+                    // The first TextMenu.Item in the submenu would not display its description until reselected
+                    // so we want to show it anyway
+                    if (first)
+                        item.OnEnter();
 
                     first = false;
                 }
             }
         }
 
-        private void CreatePrideSetting(TextMenu menu, string settingName, PreviewSpriteAttribute[] sprites, PrideTypes value, Action<PrideTypes> action, bool displayDesc = false) {
-            PreviewedPrideSlider item = new PreviewedPrideSlider(
-                Dialog.Clean(settingName),
-                sprites,
-                i => i.GetFormattedName(),
-                value
-            ).Change(i => action((PrideTypes)i)) as PreviewedPrideSlider;
-
-            menu.Add(item);
-            item.AddDescription(menu, Dialog.Clean(settingName + "_sub"));
-
-            // The first TextMenu.Item in the submenu would not display its description until reselected
-            // so we want to show it anyway
-            if (displayDesc)
-                item.OnEnter();
-        }
+        private PreviewedPrideSlider CreatePrideSetting(string settingName, PreviewSpriteAttribute[] sprites, PrideTypes value, Action<PrideTypes> action, bool displayDesc = false)
+            => new(settingName, sprites, i => i.GetFormattedName(), value);
 
         private static void CreateSubHeader(TextMenu menu, string header)
             => menu.Add(new TextMenu.SubHeader(Dialog.Clean(header)));

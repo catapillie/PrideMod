@@ -1,7 +1,7 @@
 modname_PrideMod=Pride Mod
 
 
-modoptions_PrideMod=Pride Mod Options
+modoptions_PrideMod=Pride Mod
 
 modoptions_PrideMod_MinimalBloom=Minimal Bloom
 modoptions_PrideMod_MinimalBloom_sub=Reduces the bloom level of reskinned hearts and strawberries.
