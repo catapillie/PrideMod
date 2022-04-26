@@ -11,6 +11,7 @@ namespace Celeste.Mod.PrideMod.UI {
         }
 
         private readonly string[] spriteTypes, anims, defaultSprites, defaultAnims;
+        private readonly float[] offsets;
         private readonly Sprite[] sprites;
 
         internal PrideSlider(string label, PreviewSpriteAttribute[] sprites, Func<PrideTypes, string> values, int min, int max, int value = -1)
@@ -23,12 +24,14 @@ namespace Celeste.Mod.PrideMod.UI {
             anims = new string[sprites.Length];
             defaultSprites = new string[sprites.Length];
             defaultAnims = new string[sprites.Length];
+            offsets = new float[sprites.Length];
 
             for (int i = 0; i < sprites.Length; i++) {
                 spriteTypes[i] = sprites[i].SpriteType;
                 anims[i] = sprites[i].Anim;
                 defaultSprites[i] = sprites[i].DefaultSprite;
                 defaultAnims[i] = sprites[i].DefaultAnim;
+                offsets[i] = sprites[i].Offset;
             }
 
             RecreatePreviewSprites();
@@ -67,7 +70,7 @@ namespace Celeste.Mod.PrideMod.UI {
         public override void Update() {
             base.Update();
 
-            if (Container.Current == this && Container.Focused) {
+            if (Container.Current == this) {
                 for (int i = 0; i < sprites.Length; i++)
                     sprites[i].Update();
             }
@@ -76,7 +79,7 @@ namespace Celeste.Mod.PrideMod.UI {
         public override void Render(Vector2 position, bool highlighted) {
             base.Render(position, highlighted);
 
-            if (highlighted) {
+            if (Container.Current == this) {
                 Draw.SpriteBatch.End();
                 SamplerState oldSamplerState = Draw.SpriteBatch.GraphicsDevice.SamplerStates[0];
 
@@ -84,9 +87,10 @@ namespace Celeste.Mod.PrideMod.UI {
 
                 for (int i = 0; i < sprites.Length; i++) {
                     Sprite sprite = sprites[i];
+                    float offset = offsets[i];
 
                     if (sprite.Texture != null)
-                        sprite.Texture.DrawJustified(position + new Vector2(Container.Width + 100, 0), sprite.Justify ?? Vector2.One * 0.5f, Color.White, 6f);
+                        sprite.Texture.DrawJustified(position + new Vector2(Container.Width + 100 + offset, 0), sprite.Justify ?? Vector2.One * 0.5f, Color.White, 6f);
                 }
 
                 Draw.SpriteBatch.End();

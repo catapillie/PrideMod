@@ -152,6 +152,11 @@ namespace Celeste.Mod.PrideMod {
             spriteType: "strawberry", anim: "idle",
             defaultSprite: "strawberry", defaultAnim: "idle"
         )]
+        [PreviewSprite(
+            spriteType: "strawberryseed", anim: "idle",
+            defaultSprite: "strawberrySeed", defaultAnim: "idle",
+            offset: 14 * 6
+        )]
         public PrideTypes Strawberry { get; set; } = PrideTypes.Default;
 
         [SettingIgnore]
@@ -159,6 +164,11 @@ namespace Celeste.Mod.PrideMod {
         [PreviewSprite(
             spriteType: "ghostberry", anim: "idle",
             defaultSprite: "ghostberry", defaultAnim: "idle"
+        )]
+        [PreviewSprite(
+            spriteType: "ghostberryseed", anim: "idle",
+            defaultSprite: "ghostberrySeed", defaultAnim: "idle",
+            offset: 14 * 6
         )]
         public PrideTypes GhostStrawberry { get; set; } = PrideTypes.Default;
 
@@ -242,15 +252,17 @@ namespace Celeste.Mod.PrideMod {
         public override bool Shown() => Dependencies.CollabUtils2_Loaded;
     }
 
-    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
     public class PreviewSpriteAttribute : Attribute {
         public readonly string SpriteType, Anim, DefaultSprite, DefaultAnim;
+        public readonly float Offset;
 
-        public PreviewSpriteAttribute(string spriteType, string anim, string defaultSprite, string defaultAnim) {
+        public PreviewSpriteAttribute(string spriteType, string anim, string defaultSprite, string defaultAnim, float offset = 0f) {
             SpriteType = spriteType;
             Anim = anim;
             DefaultSprite = defaultSprite;
             DefaultAnim = defaultAnim;
+            Offset = offset;
         }
     }
 
