@@ -37,7 +37,7 @@ namespace Celeste.Mod.PrideMod.UI {
         }
 
         private void RecreatePreviewSprite() {
-            if (spriteType != "...") {
+            if (spriteType != null) {
                 sprite = GFX.SpriteBank.Create(PrideType.GetCustomSpriteID(spriteType, "strawberry"));
                 sprite.Play("idle");
             }
