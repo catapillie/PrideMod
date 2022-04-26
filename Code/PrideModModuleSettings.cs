@@ -67,8 +67,8 @@ namespace Celeste.Mod.PrideMod {
         [SettingIgnore]
         [CollabUtils2_PrideSetting(
             "modoptions_PrideMod_BeginnerMiniHeart",
-            spriteType: "miniheart", anim: "idle",
-            defaultSprite: "strawberry", defaultAnim: "idle",
+            spriteType: "miniheart", anim: "fastspin",
+            defaultSprite: "PrideMod_beginnerminiheart_default", defaultAnim: "fastspin",
             header: "modoptions_PrideMod_header_MiniHearts"
         )]
         public PrideTypes BeginnerMiniHeart { get; set; } = PrideTypes.Default;
@@ -76,40 +76,40 @@ namespace Celeste.Mod.PrideMod {
         [SettingIgnore]
         [CollabUtils2_PrideSetting(
             "modoptions_PrideMod_IntermediateMiniHeart",
-            spriteType: "miniheart", anim: "idle",
-            defaultSprite: "strawberry", defaultAnim: "idle"
+            spriteType: "miniheart", anim: "fastspin",
+            defaultSprite: "PrideMod_intermediateminiheart_default", defaultAnim: "fastspin"
         )]
         public PrideTypes IntermediateMiniHeart { get; set; } = PrideTypes.Default;
         
         [SettingIgnore]
         [CollabUtils2_PrideSetting(
             "modoptions_PrideMod_AdvancedMiniHeart",
-            spriteType: "miniheart", anim: "idle",
-            defaultSprite: "strawberry", defaultAnim: "idle"
+            spriteType: "miniheart", anim: "fastspin",
+            defaultSprite: "PrideMod_advancedminiheart_default", defaultAnim: "fastspin"
         )]
         public PrideTypes AdvancedMiniHeart { get; set; } = PrideTypes.Default;
         
         [SettingIgnore]
         [CollabUtils2_PrideSetting(
             "modoptions_PrideMod_ExpertMiniHeart",
-            spriteType: "miniheart", anim: "idle",
-            defaultSprite: "strawberry", defaultAnim: "idle"
+            spriteType: "miniheart", anim: "fastspin",
+            defaultSprite: "PrideMod_expertminiheart_default", defaultAnim: "fastspin"
         )]
         public PrideTypes ExpertMiniHeart { get; set; } = PrideTypes.Default;
         
         [SettingIgnore]
         [CollabUtils2_PrideSetting(
             "modoptions_PrideMod_GrandmasterMiniHeart",
-            spriteType: "miniheart", anim: "idle",
-            defaultSprite: "strawberry", defaultAnim: "idle"
+            spriteType: "miniheart", anim: "fastspin",
+            defaultSprite: "PrideMod_grandmasterminiheart_default", defaultAnim: "fastspin"
         )]
         public PrideTypes GrandmasterMiniHeart { get; set; } = PrideTypes.Default;
         
         [SettingIgnore]
         [CollabUtils2_PrideSetting(
             "modoptions_PrideMod_GhostMiniHeart",
-            spriteType: "miniheart", anim: "idle",
-            defaultSprite: "strawberry", defaultAnim: "idle"
+            spriteType: "miniheart", anim: "fastspin",
+            defaultSprite: "PrideMod_ghostminiheart_default", defaultAnim: "fastspin"
         )]
         public PrideTypes GhostMiniHeart { get; set; } = PrideTypes.Default;
 
