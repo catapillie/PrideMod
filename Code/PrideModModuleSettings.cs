@@ -9,13 +9,19 @@ using YamlDotNet.Serialization;
 namespace Celeste.Mod.PrideMod {
     public class PrideModSettingInfo {
         public readonly PropertyInfo Property;
+
         public readonly PrideSettingAttribute Attribute;
         public readonly PreviewSpriteAttribute[] PreviewSpritesAttributes;
+        public readonly bool DoesTheConfetti;
 
-        public PrideModSettingInfo(PropertyInfo property, PrideSettingAttribute attribute, IEnumerable<PreviewSpriteAttribute> previewSpriteAttributes) {
+        public PrideModSettingInfo(PropertyInfo property,
+                                   PrideSettingAttribute attribute,
+                                   IEnumerable<PreviewSpriteAttribute> previewSpriteAttributes,
+                                   DoesTheConfettiAttribute confettiAttribute) {
             Property = property;
             Attribute = attribute;
             PreviewSpritesAttributes = previewSpriteAttributes.ToArray();
+            DoesTheConfetti = confettiAttribute != null;
         }
     }
 
@@ -26,7 +32,8 @@ namespace Celeste.Mod.PrideMod {
                                             .Where(p => p.PropertyType == typeof(PrideTypes))
                                             .Select(p => new PrideModSettingInfo(
                                                 p, p.GetCustomAttribute<PrideSettingAttribute>(),
-                                                p.GetCustomAttributes<PreviewSpriteAttribute>()))
+                                                p.GetCustomAttributes<PreviewSpriteAttribute>(),
+                                                p.GetCustomAttribute<DoesTheConfettiAttribute>()))
                                             .Where(info => info.Attribute != null).ToArray();
 
         public bool Enabled { get; set; } = true;
@@ -226,6 +233,7 @@ namespace Celeste.Mod.PrideMod {
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_Confetti")]
+        [DoesTheConfetti]
         public PrideTypes Confetti { get; set; } = PrideTypes.Default;
 
         #endregion
@@ -265,6 +273,9 @@ namespace Celeste.Mod.PrideMod {
             Offset = offset;
         }
     }
+
+    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
+    public class DoesTheConfettiAttribute : Attribute { }
 
     #endregion
 }

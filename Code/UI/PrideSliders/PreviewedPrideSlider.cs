@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Monocle;
-using System;
 
 namespace Celeste.Mod.PrideMod.UI {
     public class PreviewedPrideSlider : PrideSliderBase {
@@ -17,7 +16,7 @@ namespace Celeste.Mod.PrideMod.UI {
 
         private bool Selected => Container.Current == this;
 
-        internal PreviewedPrideSlider(string label, PreviewSpriteAttribute[] sprites, PrideTypes value)
+        internal PreviewedPrideSlider(string label, PrideTypes value, PreviewSpriteAttribute[] sprites)
             : base(label, value) {
 
             this.sprites = new Sprite[sprites.Length];

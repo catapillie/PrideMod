@@ -26,11 +26,11 @@ namespace Celeste.Mod.PrideMod.UI {
 
                     PrideSliderBase item;
                     if (sprites.Length > 0)
-                        item = CreatePrideSetting(name, sprites, value);
+                        item = new PreviewedPrideSlider(name, value, sprites);
+                    else if (info.DoesTheConfetti)
+                        item = new ConfettiPrideSlider(name, value);
                     else
                         item = new(name, value);
-
-                    Console.WriteLine(item.GetType());
 
                     item.Change(i => action((PrideTypes)i));
 
@@ -46,9 +46,6 @@ namespace Celeste.Mod.PrideMod.UI {
                 }
             }
         }
-
-        private PreviewedPrideSlider CreatePrideSetting(string settingName, PreviewSpriteAttribute[] sprites, PrideTypes value)
-            => new(settingName, sprites, value);
 
         private static void CreateSubHeader(TextMenu menu, string header)
             => menu.Add(new TextMenu.SubHeader(Dialog.Clean(header)));
