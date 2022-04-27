@@ -339,7 +339,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_aromantic>
 
     <!-- Aromantic Summit Flag -->
@@ -482,7 +482,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_asexual>
 
     <!-- Asexual Summit Flag -->
@@ -625,7 +625,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_bigender>
 
     <!-- Bigender Summit Flag -->
@@ -768,7 +768,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_bisexual>
 
     <!-- Bisexual Summit Flag -->
@@ -1334,7 +1334,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_demisexual>
 
     <!-- Demisexual Summit Flag -->
@@ -1477,7 +1477,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_gay>
 
     <!-- Gay Summit Flag -->
@@ -1620,7 +1620,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_genderfluid>
 
     <!-- Genderfluid Summit Flag -->
@@ -1763,7 +1763,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_genderqueer>
 
     <!-- Genderqueer Summit Flag -->
@@ -2047,7 +2047,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_lesbian>
 
     <!-- Lesbian Summit Flag -->
@@ -2190,7 +2190,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_nonbinary>
 
     <!-- Non-Binary Summit Flag -->
@@ -2333,7 +2333,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_omnisexual>
 
     <!-- Omnisexual Summit Flag -->
@@ -2476,7 +2476,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_pansexual>
 
     <!-- Pansexual Summit Flag -->
@@ -2619,7 +2619,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_plural>
 
     <!-- Plural Summit Flag -->
@@ -2762,7 +2762,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_polyamorous>
 
     <!-- Polyamorous Summit Flag -->
@@ -2905,7 +2905,7 @@
         <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
         <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
         <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-30" goto="spin" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
     </PrideMod_cassette_polysexual>
 
     <!-- Polysexual Summit Flag -->
