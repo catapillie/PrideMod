@@ -16,8 +16,8 @@ namespace Celeste.Mod.PrideMod.Reskinning {
         private const string ghostberry_sprite                      = "ghostberry";
         private const string goldberry_sprite                       = "goldberry";
         private const string strawberry_sprite                      = "strawberry";
-        private const string collabutils2_ghostsilverberry_sprite   = "CollabUtils2_ghostSilverBerry";
-        private const string collabutils2_silverberry_sprite        = "CollabUtils2_silverBerry";
+        // private const string collabutils2_ghostsilverberry_sprite   = "CollabUtils2_ghostSilverBerry";
+        // private const string collabutils2_silverberry_sprite        = "CollabUtils2_silverBerry";
 
         private const string strawberryseed_sprite                  = "strawberrySeed";
         private const string goldberryseed_sprite                   = "goldberrySeed";
@@ -137,7 +137,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 if (pride != Pride.Default) {
 
                     Sprite oldSprite = (Sprite)data["sprite"];
-                    Sprite sprite = pride.GetCustomSprite(isGhostBerry ? "ghostsilverberry" : "silverberry", oldSprite);
+                    Sprite sprite = pride.GetCustomSprite(isGhostBerry ? "ghostsilverberry" : "silverberry");
 
                     self.Remove(oldSprite);
                     self.Add(sprite);

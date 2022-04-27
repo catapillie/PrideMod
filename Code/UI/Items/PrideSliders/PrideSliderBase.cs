@@ -78,7 +78,7 @@ namespace Celeste.Mod.PrideMod.UI {
                 Pride pride = slider.Pride;
                 self.HighlightColor = pride == Pride.Default ?
                     Util.MultiColorLerp(self.Scene.RawTimeActive * 10f, DefaultHighlightColors) :
-                    Util.MultiColorPingPong(self.Scene.RawTimeActive * 2f, PrideData.PrideColors[pride]);
+                    Util.MultiColorPingPong(self.Scene.RawTimeActive * 2f, pride.GetColors());
             }
         }
 

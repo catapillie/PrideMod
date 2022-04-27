@@ -36,7 +36,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 if (settings.Enabled) {
                     if (settings.Cassette != Pride.Default) {
-                        id = settings.Cassette.GetCustomSpriteID("cassette", id);
+                        id = settings.Cassette.GetCustomSpriteID("cassette");
                         new DynData<Cassette>(cassette)[PrideMod_Cassette_pride] = settings.Cassette;
                     }
                 }
@@ -51,7 +51,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 if (settings.Enabled) {
                     if (settings.GhostCassette != Pride.Default) {
-                        id = settings.GhostCassette.GetCustomSpriteID("cassette", id);
+                        id = settings.GhostCassette.GetCustomSpriteID("cassette");
                         new DynData<Cassette>(cassette)[PrideMod_Cassette_pride] = settings.GhostCassette;
                     }
                 }
