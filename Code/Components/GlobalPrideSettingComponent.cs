@@ -224,8 +224,8 @@ namespace Celeste.Mod.PrideMod.Components {
 
             Vector2 from = mid + new Vector2(halfMaxWidth + 120, 0);
 
-            Draw.SpriteBatch.End();
-            Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone, null, Engine.ScreenMatrix);
+            HiresRenderer.EndRender();
+            HiresRenderer.BeginRender(sampler: SamplerState.PointClamp);
 
             foreach (Preview preview in previews) {
                 Sprite sprite = preview.Sprite;
@@ -237,8 +237,8 @@ namespace Celeste.Mod.PrideMod.Components {
                 }
             }
 
-            Draw.SpriteBatch.End();
-            Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullNone, null, Engine.ScreenMatrix);
+            HiresRenderer.EndRender();
+            HiresRenderer.BeginRender();
 
             #endregion
         }
