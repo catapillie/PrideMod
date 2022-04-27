@@ -242,6 +242,28 @@ namespace Celeste.Mod.PrideMod {
 
         #endregion
 
+        #region Cassettes
+
+        [SettingIgnore]
+        [PrideSetting("modoptions_PrideMod_Cassette", header: "modoptions_PrideMod_header_Cassettes")]
+        [PreviewSprite(
+            spriteType: "cassette", anim: "idle",
+            defaultSprite: "cassette", defaultAnim: "idle",
+            globalOffsetX: 84, globalOffsetY: 32
+        )]
+        public PrideTypes Cassette { get; set; } = PrideTypes.Default;
+
+        [SettingIgnore]
+        [PrideSetting("modoptions_PrideMod_GhostCassette")]
+        [PreviewSprite(
+            spriteType: "cassette", anim: "idle",
+            defaultSprite: "cassetteGhost", defaultAnim: "idle",
+            globalOffsetX: 84, globalOffsetY: 52
+        )]
+        public PrideTypes GhostCassette { get; set; } = PrideTypes.Default;
+
+        #endregion
+
         #region Flags
 
         [SettingIgnore]
@@ -266,28 +288,6 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_Confetti")]
         [DoesTheConfetti]
         public PrideTypes Confetti { get; set; } = PrideTypes.Default;
-
-        #endregion
-
-        #region Cassettes
-
-        [SettingIgnore]
-        [PrideSetting("modoptions_PrideMod_Cassette", header: "modoptions_PrideMod_header_Cassettes")]
-        [PreviewSprite(
-            spriteType: "cassette", anim: "idle",
-            defaultSprite: "cassette", defaultAnim: "idle",
-            globalOffsetX: 84, globalOffsetY: 32
-        )]
-        public PrideTypes Cassette { get; set; } = PrideTypes.Default;
-
-        [SettingIgnore]
-        [PrideSetting("modoptions_PrideMod_GhostCassette")]
-        [PreviewSprite(
-            spriteType: "cassette", anim: "idle",
-            defaultSprite: "cassetteGhost", defaultAnim: "idle",
-            globalOffsetX: 84, globalOffsetY: 52
-        )]
-        public PrideTypes GhostCassette { get; set; } = PrideTypes.Default;
 
         #endregion
 

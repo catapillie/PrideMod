@@ -29,6 +29,7 @@ namespace Celeste.Mod.PrideMod {
             Reskinning.MiniHearts.Hook();
             Reskinning.Strawberries.Hook();
             Reskinning.FlagDecals.Hook();
+            Reskinning.Cassettes.Hook();
 
             UI.PrideSliderBase.Hook();
             UI.GlobalPrideButton.Hook();
@@ -42,6 +43,7 @@ namespace Celeste.Mod.PrideMod {
             Reskinning.MiniHearts.Unhook();
             Reskinning.Strawberries.Unhook();
             Reskinning.FlagDecals.Unhook();
+            Reskinning.Cassettes.Unhook();
 
             UI.PrideSliderBase.Unhook();
             UI.GlobalPrideButton.Unhook();
