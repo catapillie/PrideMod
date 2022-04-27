@@ -219,11 +219,13 @@ namespace Celeste.Mod.PrideMod {
 			Dictionary<Pride, ParticleType[]> prideParticleTypes = new();
 
 			foreach (var kv in prideColors) {
-				ParticleType[] particleTypes = new ParticleType[kv.Value.Length];
-				for (int i = 0; i < particleTypes.Length; i++)
-					particleTypeModifier(particleTypes[i] = new ParticleType(from), kv.Value[i]);
+				if (kv.Key != Pride.Default) {
+					ParticleType[] particleTypes = new ParticleType[kv.Value.Length];
+					for (int i = 0; i < particleTypes.Length; i++)
+						particleTypeModifier(particleTypes[i] = new ParticleType(from), kv.Value[i]);
 
-				prideParticleTypes[kv.Key] = particleTypes;
+					prideParticleTypes[kv.Key] = particleTypes;
+				}
 			}
 
 			return new(prideParticleTypes);
