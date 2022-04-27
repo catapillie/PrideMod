@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Celeste.Mod.PrideMod.UI;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Monocle;
 using System;
@@ -44,11 +45,6 @@ namespace Celeste.Mod.PrideMod.Components {
                 OffsetY = spriteInfo.GlobalOffsetY * GLOBAL_PREVIEW_UI_SCALE;
             }
         }
-
-        private static readonly Color[] defaultHighlightColors = new[] {
-            TextMenu.HighlightColorA,
-            TextMenu.HighlightColorB,
-        };
 
         private float alpha;
         private bool shown;
@@ -199,7 +195,7 @@ namespace Celeste.Mod.PrideMod.Components {
                             color = TextMenu.HighlightColorA;
                         else
                             color = entry.Pride == PrideTypes.Default ?
-                                Util.MultiColorLerp(Entity.Scene.TimeActive * 10f, defaultHighlightColors) :
+                                Util.MultiColorLerp(Entity.Scene.TimeActive * 10f, PrideSliderBase.DefaultHighlightColors) :
                                 Util.MultiColorPingPong(Entity.Scene.TimeActive * 2f, PrideData.PrideColors[entry.Pride]);
 
                         GFX.Gui["dot"].DrawCentered(pos - new Vector2(halfMaxWidth, 0), color * alpha);

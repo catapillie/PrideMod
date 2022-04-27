@@ -4,6 +4,11 @@ using Monocle;
 
 namespace Celeste.Mod.PrideMod.UI {
     public class PrideSliderBase : TextMenu.Option<int> {
+        public static readonly Color[] DefaultHighlightColors = new[] {
+            TextMenu.HighlightColorA,
+            TextMenu.HighlightColorB,
+        };
+
         public const int PRIDE_SETTINGS_UI_SCALE = 6;
 
         public PrideTypes PrideType {
@@ -59,5 +64,28 @@ namespace Celeste.Mod.PrideMod.UI {
         public virtual void SelectedDifferentValue() { }
 
         public virtual void CustomRender(Vector2 position) { }
+
+        #region Hooks
+
+        internal static void Hook() {
+            On.Celeste.TextMenu.Update += TextMenu_Update;
+        }
+
+        internal static void Unhook() {
+            On.Celeste.TextMenu.Update -= TextMenu_Update;
+        }
+
+        private static void TextMenu_Update(On.Celeste.TextMenu.orig_Update orig, TextMenu self) {
+            orig(self);
+
+            if (!Settings.Instance.DisableFlashes && self.Current is PrideSliderBase slider) {
+                PrideTypes pride = slider.PrideType;
+                self.HighlightColor = pride == PrideTypes.Default ?
+                    Util.MultiColorLerp(self.Scene.TimeActive * 10f, DefaultHighlightColors) :
+                    Util.MultiColorPingPong(self.Scene.TimeActive * 2f, PrideData.PrideColors[pride]);
+            }
+        }
+
+        #endregion
     }
 }
