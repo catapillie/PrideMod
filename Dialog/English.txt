@@ -25,6 +25,7 @@ modoptions_PrideMod_header_CrystalHearts=Crystal Hearts
 modoptions_PrideMod_header_MiniHearts=Mini Hearts
 modoptions_PrideMod_header_Strawberries=Strawberries
 modoptions_PrideMod_header_Flags=Flags
+modoptions_PrideMod_header_Cassettes=Cassettes
 
 
 modoptions_PrideMod_ASideCrystalHeart=A-Side Crystal Heart
@@ -89,3 +90,10 @@ modoptions_PrideMod_FinalFlag_sub=The pride type for the final flag.
 
 modoptions_PrideMod_Confetti=Confetti
 modoptions_PrideMod_Confetti_sub=The pride type for the confetti particles.
+
+
+modoptions_PrideMod_Cassette=Cassette
+modoptions_PrideMod_Cassette_sub=The pride type for the cassette.
+
+modoptions_PrideMod_GhostCassette=Ghost Cassette
+modoptions_PrideMod_GhostCassette_sub=The pride type for the ghost cassette.
