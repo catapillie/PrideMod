@@ -5,32 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Celeste.Mod.PrideMod {
-    public enum Pride {
-		Default,
-		Agender,
-		Aromantic,
-		Asexual,
-		Bigender,
-		Bisexual,
-		Demiboy,
-		Demigirl,
-		Deminonbinary,
-		Demisexual,
-		Gay,
-		Genderfluid,
-		Genderqueer,
-		Intersex,
-		Lesbian,
-		NonBinary,
-		Omnisexual,
-		Pansexual,
-		Plural,
-		Polyamorous,
-		Polysexual,
-		Transgender,
-	}
-
-	public static class PrideData {
+    public static class PrideData {
 		public static readonly int PrideCount = Enum.GetNames(typeof(Pride)).Length;
 
 		public static readonly ReadOnlyDictionary<Pride, Color[]> PrideColors = new(new Dictionary<Pride, Color[]> {
