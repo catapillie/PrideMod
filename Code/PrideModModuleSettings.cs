@@ -247,8 +247,8 @@ namespace Celeste.Mod.PrideMod {
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_Cassette", header: "modoptions_PrideMod_header_Cassettes")]
         [PreviewSprite(
-            spriteType: "cassette", anim: "idle",
-            defaultSprite: "cassette", defaultAnim: "idle",
+            spriteType: "cassette", anim: "fastspin",
+            defaultSprite: "PrideMod_cassette_default", defaultAnim: "fastspin",
             globalOffsetX: 84, globalOffsetY: 32
         )]
         public PrideTypes Cassette { get; set; } = PrideTypes.Default;
@@ -256,8 +256,8 @@ namespace Celeste.Mod.PrideMod {
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_GhostCassette")]
         [PreviewSprite(
-            spriteType: "cassette", anim: "idle",
-            defaultSprite: "cassetteGhost", defaultAnim: "idle",
+            spriteType: "cassette", anim: "fastspin",
+            defaultSprite: "PrideMod_ghostcassette_default", defaultAnim: "fastspin",
             globalOffsetX: 84, globalOffsetY: 52
         )]
         public PrideTypes GhostCassette { get; set; } = PrideTypes.Default;
