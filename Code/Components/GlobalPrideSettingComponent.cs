@@ -46,8 +46,10 @@ namespace Celeste.Mod.PrideMod.Components {
             }
         }
 
-        private float alpha;
+        private float lerp;
         private bool shown;
+
+        private readonly string title = Dialog.Clean("modoptions_PrideMod_GlobalPride_title");
 
         private readonly Entry[] entries = new Entry[PrideData.PrideCount];
         private readonly Preview[] previews;
@@ -83,9 +85,9 @@ namespace Celeste.Mod.PrideMod.Components {
         public override void Update() {
             base.Update();
 
-            Visible = alpha > 0;
+            Visible = lerp > 0;
 
-            alpha = Calc.Approach(alpha, shown ? 1 : 0, Engine.DeltaTime * 4);
+            lerp = Calc.Approach(lerp, shown ? 1 : 0, Engine.DeltaTime * 4);
 
             if (shown) {
                 int prev = index;
@@ -173,9 +175,11 @@ namespace Celeste.Mod.PrideMod.Components {
         }
 
         internal void Display() {
-            Vector2 mid = new(Engine.Width * 0.25f, Engine.Height * 0.5f);
+            float alphaCubed = lerp * lerp * lerp;
 
-            Draw.Rect(-10f, -10f, 1940f, 1100f, Color.Black * Ease.CubeOut(alpha) * 0.95f);
+            Vector2 mid = new(480, 540);
+
+            Draw.Rect(-10f, -10f, 1940f, 1100f, Color.Black * Ease.CubeOut(lerp) * 0.95f);
 
             Color selectedColor = Color.White;
             for (int i = 0; i < entries.Length; i++) {
@@ -198,20 +202,28 @@ namespace Celeste.Mod.PrideMod.Components {
                                 Util.MultiColorLerp(Entity.Scene.TimeActive * 10f, PrideSliderBase.DefaultHighlightColors) :
                                 Util.MultiColorPingPong(Entity.Scene.TimeActive * 2f, PrideData.PrideColors[entry.Pride]);
 
-                        GFX.Gui["dot"].DrawCentered(pos - new Vector2(halfMaxWidth, 0), color * alpha);
+                        GFX.Gui["dot_outline"].DrawCentered(pos - new Vector2(halfMaxWidth, 0), color * lerp);
 
                         selectedColor = color;
                     }
 
-                    ActiveFont.Draw(entry.Name, pos, new(0.5f, 0.5f), Vector2.One, color * alpha);
+                    ActiveFont.DrawOutline(entry.Name, pos, new(0.5f), Vector2.One, color * lerp, 2f, Color.Black * alphaCubed);
                 }
             }
 
-            GFX.Gui["dotarrow"].DrawCentered(mid + new Vector2(halfMaxWidth + 50, 0), selectedColor * alpha);
-            DrawSprites(mid + new Vector2(halfMaxWidth + 120, 0));
-        }
+            float ease = Ease.ExpoOut(lerp);
+            float w = 970f * Ease.SineOut(lerp);    
+            float atY = -10 + 200 * ease;
+            Draw.Rect(-10, -10, 1940, 200 * ease, Color.Black * lerp);
+            Draw.Rect(960 - w, atY, w * 2, 3f, Color.White * lerp);
+            ActiveFont.DrawOutline(title, new(960, 100 * ease), new(0.5f), Vector2.One * 1.5f, Color.White * lerp, 4, Color.Black * alphaCubed);
 
-        private void DrawSprites(Vector2 from) {
+            #region Sprite Preview
+
+            GFX.Gui["dotarrow_outline"].DrawCentered(mid + new Vector2(halfMaxWidth + 50, 0), selectedColor * lerp);
+
+            Vector2 from = mid + new Vector2(halfMaxWidth + 120, 0);
+
             Draw.SpriteBatch.End();
             SamplerState oldSamplerState = Draw.SpriteBatch.GraphicsDevice.SamplerStates[0];
 
@@ -220,10 +232,10 @@ namespace Celeste.Mod.PrideMod.Components {
             foreach (Preview preview in previews) {
                 Sprite sprite = preview.Sprite;
                 MTexture texture = sprite.Texture;
-                    
+
                 if (sprite != null && texture != null) {
                     Vector2 offset = new(preview.OffsetX, preview.OffsetY - previewYOffset);
-                    sprite.Texture.Draw(from + offset, Vector2.Zero, Color.White * alpha, GLOBAL_PREVIEW_UI_SCALE);
+                    sprite.Texture.Draw(from + offset, Vector2.Zero, Color.White * lerp, GLOBAL_PREVIEW_UI_SCALE);
                 }
             }
 
@@ -231,6 +243,8 @@ namespace Celeste.Mod.PrideMod.Components {
 
             Draw.SpriteBatch.GraphicsDevice.SamplerStates[0] = oldSamplerState;
             Draw.SpriteBatch.Begin();
+
+            #endregion
         }
     }
 }

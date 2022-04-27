@@ -14,6 +14,7 @@ modoptions_PrideMod_MinimalBloom_sub=Reduces the bloom level of reskinned hearts
 
 modoptions_PrideMod_GlobalPride=Set Global Pride
 modoptions_PrideMod_GlobalPride_sub=Changes the pride for all pride settings.
+modoptions_PrideMod_GlobalPride_title=Select Global Pride
 
 modoptions_PrideMod_PrideSettings=Pride Settings
 modoptions_PrideMod_PrideSettings_title=PRIDE SETTINGS
