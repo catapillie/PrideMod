@@ -68,14 +68,14 @@ namespace Celeste.Mod.PrideMod.UI {
         #region Hooks
 
         internal static void Hook() {
-            On.Celeste.TextMenu.Update += TextMenu_Update;
+            On.Celeste.TextMenu.Update += Mod_TextMenu_Update;
         }
 
         internal static void Unhook() {
-            On.Celeste.TextMenu.Update -= TextMenu_Update;
+            On.Celeste.TextMenu.Update -= Mod_TextMenu_Update;
         }
 
-        private static void TextMenu_Update(On.Celeste.TextMenu.orig_Update orig, TextMenu self) {
+        private static void Mod_TextMenu_Update(On.Celeste.TextMenu.orig_Update orig, TextMenu self) {
             orig(self);
 
             if (!Settings.Instance.DisableFlashes && self.Current is PrideSliderBase slider) {
