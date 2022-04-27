@@ -1,21 +1,29 @@
-﻿using Mono.Cecil.Cil;
+﻿using Celeste.Mod.PrideMod.Components;
+using Mono.Cecil.Cil;
+using Monocle;
 using MonoMod.Cil;
 using MonoMod.Utils;
 using System;
+using System.Reflection;
 
 namespace Celeste.Mod.PrideMod.Reskinning {
     public static class Cassettes {
+        private static readonly FieldInfo f_Cassette_P_Shine
+            = typeof(Cassette).GetField("P_Shine", BindingFlags.Static | BindingFlags.Public);
+
         private const string cassette_sprite        = "cassette";
         private const string cassetteghost_sprite   = "cassetteGhost";
 
-        private const string PrideMod_Cassette_wasReskinned = "PrideMod_Cassette_wasReskinned";
+        private const string PrideMod_Cassette_pride = "PrideMod_Cassette_pride";
 
         internal static void Hook() {
             IL.Celeste.Cassette.Added += Mod_Cassette_Added;
+            IL.Celeste.Cassette.Update += Mod_Cassette_Update;
         }
 
         internal static void Unhook() {
-            IL.Celeste.Cassette.Added += Mod_Cassette_Added;
+            IL.Celeste.Cassette.Added -= Mod_Cassette_Added;
+            IL.Celeste.Cassette.Update -= Mod_Cassette_Update;
         }
 
         private static void Mod_Cassette_Added(ILContext il) {
@@ -29,7 +37,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 if (settings.Enabled) {
                     if (settings.Cassette != PrideTypes.Default) {
                         id = settings.Cassette.GetCustomSpriteID("cassette", id);
-                        new DynData<Cassette>(cassette)[PrideMod_Cassette_wasReskinned] = true;
+                        new DynData<Cassette>(cassette)[PrideMod_Cassette_pride] = settings.Cassette;
                     }
                 }
 
@@ -44,7 +52,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 if (settings.Enabled) {
                     if (settings.GhostCassette != PrideTypes.Default) {
                         id = settings.GhostCassette.GetCustomSpriteID("cassette", id);
-                        new DynData<Cassette>(cassette)[PrideMod_Cassette_wasReskinned] = true;
+                        new DynData<Cassette>(cassette)[PrideMod_Cassette_pride] = settings.GhostCassette;
                     }
                 }
 
@@ -59,11 +67,32 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 if (settings.Enabled && settings.MinimalBloom) {
                     DynData<Cassette> data = new(cassette);
-                    if (data.Data.TryGetValue(PrideMod_Cassette_wasReskinned, out var value) && (bool)value)
-                        alpha = 0.05f;
+
+                    if (data.Data.TryGetValue(PrideMod_Cassette_pride, out var value)) {
+                        PrideTypes pride = (PrideTypes)value;
+
+                        if (pride != PrideTypes.Default) {
+                            alpha = 0.05f;
+                            cassette.Add(new CassetteParticleChanger(PrideData.PrideParticles_Cassette_P_Shine[pride]));
+                        }
+                    }
                 }
 
                 return alpha;
+            });
+        }
+
+        private static void Mod_Cassette_Update(ILContext il) {
+            ILCursor cursor = new(il);
+
+            cursor.GotoNext(MoveType.After, instr => instr.MatchLdsfld(f_Cassette_P_Shine));
+
+            cursor.Emit(OpCodes.Ldarg_0);
+            cursor.EmitDelegate<Func<ParticleType, Cassette, ParticleType>>((p, cassette) => {
+                CassetteParticleChanger component = cassette.Get<CassetteParticleChanger>();
+                if (component != null)
+                    p = component.Particle;
+                return p;
             });
         }
     }

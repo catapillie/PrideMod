@@ -165,6 +165,7 @@ namespace Celeste.Mod.PrideMod {
 
 		public static ReadOnlyDictionary<PrideTypes, ParticleType[]> PrideParticles_HeartGem_P_AnyShine { get; private set; } = null;
 		public static ReadOnlyDictionary<PrideTypes, ParticleType[]> PrideParticles_HeartGem_P_FakeShine { get; private set; } = null;
+		public static ReadOnlyDictionary<PrideTypes, ParticleType[]> PrideParticles_Cassette_P_Shine { get; private set; } = null;
 
 		public static string GetFormattedName(this PrideTypes prideType)
 			=> prideType switch {
@@ -220,6 +221,12 @@ namespace Celeste.Mod.PrideMod {
 		internal static void InitializeContent() {
 			PrideParticles_HeartGem_P_AnyShine	= BuildParticleTypes(HeartGem.P_BlueShine, (p, color) => p.Color = color);
 			PrideParticles_HeartGem_P_FakeShine	= BuildParticleTypes(HeartGem.P_FakeShine, (p, color) => p.Color = color);
+
+			PrideParticles_Cassette_P_Shine		= BuildParticleTypes(Cassette.P_Shine, (p, color) => {
+				p.Color = color;
+				p.Color2 = Color.Lerp(color, Color.White, 0.5f);
+			});
+
 		}
 
 		private static ReadOnlyDictionary<PrideTypes, ParticleType[]> BuildParticleTypes(ParticleType from, Action<ParticleType, Color> particleTypeModifier) {
