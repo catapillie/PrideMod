@@ -48,16 +48,12 @@ namespace Celeste.Mod.PrideMod.UI {
 
             if (PerformCustomRendering) {
                 Draw.SpriteBatch.End();
-                SamplerState oldSamplerState = Draw.SpriteBatch.GraphicsDevice.SamplerStates[0];
-
-                Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone);
+                Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone, null, Engine.ScreenMatrix);
 
                 CustomRender(position);
 
                 Draw.SpriteBatch.End();
-
-                Draw.SpriteBatch.GraphicsDevice.SamplerStates[0] = oldSamplerState;
-                Draw.SpriteBatch.Begin();
+                Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullNone, null, Engine.ScreenMatrix);
             }
         }
 
