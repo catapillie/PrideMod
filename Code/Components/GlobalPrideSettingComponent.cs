@@ -199,8 +199,8 @@ namespace Celeste.Mod.PrideMod.Components {
                             color = TextMenu.HighlightColorA;
                         else
                             color = entry.Pride == PrideTypes.Default ?
-                                Util.MultiColorLerp(Entity.Scene.TimeActive * 10f, PrideSliderBase.DefaultHighlightColors) :
-                                Util.MultiColorPingPong(Entity.Scene.TimeActive * 2f, PrideData.PrideColors[entry.Pride]);
+                                Util.MultiColorLerp(Entity.Scene.RawTimeActive * 10f, PrideSliderBase.DefaultHighlightColors) :
+                                Util.MultiColorPingPong(Entity.Scene.RawTimeActive * 2f, PrideData.PrideColors[entry.Pride]);
 
                         GFX.Gui["dot_outline"].DrawCentered(pos - new Vector2(halfMaxWidth, 0), color * lerp);
 

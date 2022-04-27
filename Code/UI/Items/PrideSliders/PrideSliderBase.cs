@@ -81,8 +81,8 @@ namespace Celeste.Mod.PrideMod.UI {
             if (!Settings.Instance.DisableFlashes && self.Current is PrideSliderBase slider) {
                 PrideTypes pride = slider.PrideType;
                 self.HighlightColor = pride == PrideTypes.Default ?
-                    Util.MultiColorLerp(self.Scene.TimeActive * 10f, DefaultHighlightColors) :
-                    Util.MultiColorPingPong(self.Scene.TimeActive * 2f, PrideData.PrideColors[pride]);
+                    Util.MultiColorLerp(self.Scene.RawTimeActive * 10f, DefaultHighlightColors) :
+                    Util.MultiColorPingPong(self.Scene.RawTimeActive * 2f, PrideData.PrideColors[pride]);
             }
         }
 
