@@ -29,7 +29,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
             cursor.EmitDelegate<Func<string, HeartGem, string>>((id, heartGem) => {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 if (settings.Enabled) {
-                    PrideTypes pride;
+                    Pride pride;
 
                     if (heartGem.IsGhost)
                         pride = settings.GhostCrystalHeart;
@@ -41,7 +41,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                             AreaMode.Normal => settings.ASideCrystalHeart,
                             AreaMode.BSide => settings.BSideCrystalHeart,
                             AreaMode.CSide => settings.CSideCrystalHeart,
-                            _ => PrideTypes.Default,
+                            _ => Pride.Default,
                         };
                     }
 
@@ -71,15 +71,15 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                     bool applyMinimalBloom = false;
 
                     if (heartGem.IsGhost)
-                        applyMinimalBloom = settings.GhostCrystalHeart != PrideTypes.Default;
+                        applyMinimalBloom = settings.GhostCrystalHeart != Pride.Default;
                     else if (heartGem.IsFake)
-                        applyMinimalBloom = settings.EmptyCrystalHeart != PrideTypes.Default;
+                        applyMinimalBloom = settings.EmptyCrystalHeart != Pride.Default;
                     else {
                         Level level = heartGem.SceneAs<Level>();
                         applyMinimalBloom = level.Session.Area.Mode switch {
-                            AreaMode.Normal => settings.ASideCrystalHeart != PrideTypes.Default,
-                            AreaMode.BSide => settings.BSideCrystalHeart != PrideTypes.Default,
-                            AreaMode.CSide => settings.CSideCrystalHeart != PrideTypes.Default,
+                            AreaMode.Normal => settings.ASideCrystalHeart != Pride.Default,
+                            AreaMode.BSide => settings.BSideCrystalHeart != Pride.Default,
+                            AreaMode.CSide => settings.CSideCrystalHeart != Pride.Default,
                             _ => false,
                         };
                     }

@@ -11,18 +11,18 @@ namespace Celeste.Mod.PrideMod.UI {
 
         public const int PRIDE_SETTINGS_UI_SCALE = 6;
 
-        public PrideTypes PrideType {
-            get => (PrideTypes)Index;
+        public Pride Pride {
+            get => (Pride)Index;
             set => Index = (int)value;
         }
 
         public virtual bool PerformCustomRendering => false;
 
-        public PrideSliderBase(string label, PrideTypes value)
+        public PrideSliderBase(string label, Pride value)
             : base(label) {
             int val = (int)value;
             for (int i = 0; i < PrideData.PrideCount; i++)
-                Add(((PrideTypes)i).GetFormattedName(), i, val == i);
+                Add(((Pride)i).GetFormattedName(), i, val == i);
         }
 
         public override void LeftPressed() {
@@ -75,8 +75,8 @@ namespace Celeste.Mod.PrideMod.UI {
             orig(self);
 
             if (!Settings.Instance.DisableFlashes && self.Current is PrideSliderBase slider) {
-                PrideTypes pride = slider.PrideType;
-                self.HighlightColor = pride == PrideTypes.Default ?
+                Pride pride = slider.Pride;
+                self.HighlightColor = pride == Pride.Default ?
                     Util.MultiColorLerp(self.Scene.RawTimeActive * 10f, DefaultHighlightColors) :
                     Util.MultiColorPingPong(self.Scene.RawTimeActive * 2f, PrideData.PrideColors[pride]);
             }

@@ -11,7 +11,7 @@ namespace Celeste.Mod.PrideMod.Components {
 
         private class Entry {
             public readonly int Index;
-            public readonly PrideTypes Pride;
+            public readonly Pride Pride;
             public readonly string Name;
 
             public readonly Wiggler Wiggler = Wiggler.Create(0.25f, 3f);
@@ -22,7 +22,7 @@ namespace Celeste.Mod.PrideMod.Components {
             public readonly float Width;
 
             public Entry(int i) {
-                Name = (Pride = (PrideTypes)i).GetFormattedName();
+                Name = (Pride = (Pride)i).GetFormattedName();
                 Width = ActiveFont.WidthToNextLine(Name, 0);
             }
 
@@ -138,7 +138,7 @@ namespace Celeste.Mod.PrideMod.Components {
             Hide();
 
             foreach (var info in PrideModModuleSettings.Info)
-                info.Property.SetValue(PrideModModule.Settings, (PrideTypes)index);
+                info.Property.SetValue(PrideModModule.Settings, (Pride)index);
             PrideModModule.Instance.SaveSettings();
 
             Audio.Play(SFX.ui_main_savefile_delete);
@@ -153,7 +153,7 @@ namespace Celeste.Mod.PrideMod.Components {
             float ymin = float.MaxValue;
             float ymax = float.MinValue;
 
-            PrideTypes pride = (PrideTypes)index;
+            Pride pride = (Pride)index;
             foreach (Preview preview in previews) {
                 var info = preview.SpriteInfo;
 
@@ -198,7 +198,7 @@ namespace Celeste.Mod.PrideMod.Components {
                         if (Settings.Instance.DisableFlashes)
                             color = TextMenu.HighlightColorA;
                         else
-                            color = entry.Pride == PrideTypes.Default ?
+                            color = entry.Pride == Pride.Default ?
                                 Util.MultiColorLerp(Entity.Scene.RawTimeActive * 10f, PrideSliderBase.DefaultHighlightColors) :
                                 Util.MultiColorPingPong(Entity.Scene.RawTimeActive * 2f, PrideData.PrideColors[entry.Pride]);
 

@@ -22,8 +22,8 @@
                         yOffset += subHeader.Height() + menu.ItemSpacing;
                     }
 
-                    PrideTypes value = (PrideTypes)prop.GetValue(settings);
-                    void action(PrideTypes prideType) => prop.SetValue(settings, prideType);
+                    Pride value = (Pride)prop.GetValue(settings);
+                    void action(Pride prideType) => prop.SetValue(settings, prideType);
 
                     string name = Dialog.Clean(attr.Name);
                     string desc = Dialog.Clean(attr.Name + "_sub");
@@ -36,7 +36,7 @@
                     else
                         item = new(name, value);
 
-                    item.Change(i => action((PrideTypes)i));
+                    item.Change(i => action((Pride)i));
 
                     menu.Add(item);
                     item.AddDescription(menu, desc);

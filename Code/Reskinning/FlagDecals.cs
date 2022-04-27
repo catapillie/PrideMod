@@ -56,7 +56,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
             cursor.GotoNext(MoveType.After, instr => instr.MatchLdsfld(f_SummitCheckpoint_ConfettiRenderer_confettiColors));
             cursor.EmitDelegate<Func<Color[], Color[]>>(colors => {
                 PrideModModuleSettings settings = PrideModModule.Settings;
-                return settings.Enabled && settings.Confetti != PrideTypes.Default ?
+                return settings.Enabled && settings.Confetti != Pride.Default ?
                     PrideData.PrideColors[settings.Confetti] :
                     colors;
             });

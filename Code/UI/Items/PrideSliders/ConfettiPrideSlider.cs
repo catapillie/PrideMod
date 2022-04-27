@@ -24,7 +24,7 @@ namespace Celeste.Mod.PrideMod.UI {
 		private readonly float yOffset;
 		private bool ready;
 
-		public ConfettiPrideSlider(string label, PrideTypes value, float yOffset)
+		public ConfettiPrideSlider(string label, Pride value, float yOffset)
 			: base(label, value) {
 			this.yOffset = yOffset;
 
@@ -46,7 +46,7 @@ namespace Celeste.Mod.PrideMod.UI {
 
 			for (int i = 0; i < particles.Length; i++) {
 				particles[i].Position = position + new Vector2(Calc.Random.Range(-3, 3), Calc.Random.Range(-3, 3)) * PRIDE_SETTINGS_UI_SCALE;
-				particles[i].Color = Calc.Random.Choose(PrideType == PrideTypes.Default ? defaultConfettiColors : PrideData.PrideColors[PrideType]);
+				particles[i].Color = Calc.Random.Choose(Pride == Pride.Default ? defaultConfettiColors : PrideData.PrideColors[Pride]);
 				particles[i].Timer = Calc.Random.NextFloat();
 				particles[i].Duration = Calc.Random.NextFloat(2f) + 2f;
 				particles[i].Percent = 0f;

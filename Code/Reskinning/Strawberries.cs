@@ -104,15 +104,15 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                         bool isSilverBerry = Dependencies.CollabUtils2_Loaded && CollabUtils2_Loaded_SilverBerryCheck(strawberry);
 
                         if (isGhostBerry) {
-                            applyMinimalBloom = (isSilverBerry ? settings.GhostSilverStrawberry : settings.GhostGoldenStrawberry) != PrideTypes.Default;
+                            applyMinimalBloom = (isSilverBerry ? settings.GhostSilverStrawberry : settings.GhostGoldenStrawberry) != Pride.Default;
                         } else {
-                            applyMinimalBloom = (isSilverBerry ? settings.SilverStrawberry : settings.GoldenStrawberry) != PrideTypes.Default;
+                            applyMinimalBloom = (isSilverBerry ? settings.SilverStrawberry : settings.GoldenStrawberry) != Pride.Default;
                         }
                     } else {
                         if (isGhostBerry) {
-                            applyMinimalBloom = settings.GhostStrawberry != PrideTypes.Default;
+                            applyMinimalBloom = settings.GhostStrawberry != Pride.Default;
                         } else {
-                            applyMinimalBloom = settings.Strawberry != PrideTypes.Default;
+                            applyMinimalBloom = settings.Strawberry != Pride.Default;
                         }
                     }
 
@@ -132,9 +132,9 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 DynData<Strawberry> data = new(self);
 
                 bool isGhostBerry = (bool)data["isGhostBerry"];
-                PrideTypes pride = isGhostBerry ? settings.GhostSilverStrawberry : settings.SilverStrawberry;
+                Pride pride = isGhostBerry ? settings.GhostSilverStrawberry : settings.SilverStrawberry;
 
-                if (pride != PrideTypes.Default) {
+                if (pride != Pride.Default) {
 
                     Sprite oldSprite = (Sprite)data["sprite"];
                     Sprite sprite = pride.GetCustomSprite(isGhostBerry ? "ghostsilverberry" : "silverberry", oldSprite);
@@ -160,7 +160,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 if (settings.Enabled) {
                     id = settings.Strawberry.GetCustomSpriteID("strawberryseed", id);
-                    if (settings.Strawberry != PrideTypes.Default)
+                    if (settings.Strawberry != Pride.Default)
                         new DynData<StrawberrySeed>(seed).Get<BloomPoint>("bloom").Alpha = 0.05f;
                 }
                 return id;
@@ -172,7 +172,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 if (settings.Enabled) {
                     id = settings.GoldenStrawberry.GetCustomSpriteID("goldenberryseed", id);
-                    if (settings.GoldenStrawberry != PrideTypes.Default)
+                    if (settings.GoldenStrawberry != Pride.Default)
                         new DynData<StrawberrySeed>(seed).Get<BloomPoint>("bloom").Alpha = 0.05f;
                 }
                 return id;
@@ -184,7 +184,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 PrideModModuleSettings settings = PrideModModule.Settings;
                 if (settings.Enabled) {
                     id = settings.GhostStrawberry.GetCustomSpriteID("ghostberryseed", id);
-                    if (settings.GhostStrawberry != PrideTypes.Default)
+                    if (settings.GhostStrawberry != Pride.Default)
                         new DynData<StrawberrySeed>(seed).Get<BloomPoint>("bloom").Alpha = 0.05f;
                 }
                 return id;

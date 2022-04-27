@@ -29,7 +29,7 @@ namespace Celeste.Mod.PrideMod {
     public class PrideModModuleSettings : EverestModuleSettings {
         public static readonly PrideModSettingInfo[] Info
             = typeof(PrideModModuleSettings).GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                                            .Where(p => p.PropertyType == typeof(PrideTypes))
+                                            .Where(p => p.PropertyType == typeof(Pride))
                                             .Select(p => new PrideModSettingInfo(
                                                 p, p.GetCustomAttribute<PrideSettingAttribute>(),
                                                 p.GetCustomAttributes<PreviewSpriteAttribute>(),
@@ -74,7 +74,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "heartgem0", defaultAnim: "fastspin",
             globalOffsetX: 0, globalOffsetY: 0
         )]
-        public PrideTypes ASideCrystalHeart { get; set; } = PrideTypes.Default;
+        public Pride ASideCrystalHeart { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_BSideCrystalHeart")]
@@ -83,7 +83,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "heartgem1", defaultAnim: "fastspin",
             globalOffsetX: 20, globalOffsetY: 0
         )]
-        public PrideTypes BSideCrystalHeart { get; set; } = PrideTypes.Default;
+        public Pride BSideCrystalHeart { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_CSideCrystalHeart")]
@@ -92,7 +92,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "heartgem2", defaultAnim: "fastspin",
             globalOffsetX: 40, globalOffsetY: 0
         )]
-        public PrideTypes CSideCrystalHeart { get; set; } = PrideTypes.Default;
+        public Pride CSideCrystalHeart { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_EmptyCrystalHeart")]
@@ -101,7 +101,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "heartgem3", defaultAnim: "fastspin",
             globalOffsetX: 60, globalOffsetY: 0
         )]
-        public PrideTypes EmptyCrystalHeart { get; set; } = PrideTypes.Default;
+        public Pride EmptyCrystalHeart { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_GhostCrystalHeart")]
@@ -110,7 +110,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "heartGemGhost", defaultAnim: "fastspin",
             globalOffsetX: 80, globalOffsetY: 0
         )]
-        public PrideTypes GhostCrystalHeart { get; set; } = PrideTypes.Default;
+        public Pride GhostCrystalHeart { get; set; } = Pride.Default;
 
         #endregion
 
@@ -123,7 +123,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_beginnerminiheart_default", defaultAnim: "fastspin",
             globalOffsetX: 0, globalOffsetY: 20
         )]
-        public PrideTypes BeginnerMiniHeart { get; set; } = PrideTypes.Default;
+        public Pride BeginnerMiniHeart { get; set; } = Pride.Default;
         
         [SettingIgnore]
         [CollabUtils2_PrideSetting("modoptions_PrideMod_IntermediateMiniHeart")]
@@ -132,7 +132,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_intermediateminiheart_default", defaultAnim: "fastspin",
             globalOffsetX: 20, globalOffsetY: 20
         )]
-        public PrideTypes IntermediateMiniHeart { get; set; } = PrideTypes.Default;
+        public Pride IntermediateMiniHeart { get; set; } = Pride.Default;
         
         [SettingIgnore]
         [CollabUtils2_PrideSetting("modoptions_PrideMod_AdvancedMiniHeart")]
@@ -141,7 +141,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_advancedminiheart_default", defaultAnim: "fastspin",
             globalOffsetX: 40, globalOffsetY: 20
         )]
-        public PrideTypes AdvancedMiniHeart { get; set; } = PrideTypes.Default;
+        public Pride AdvancedMiniHeart { get; set; } = Pride.Default;
         
         [SettingIgnore]
         [CollabUtils2_PrideSetting("modoptions_PrideMod_ExpertMiniHeart")]
@@ -150,7 +150,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_expertminiheart_default", defaultAnim: "fastspin",
             globalOffsetX: 60, globalOffsetY: 20
         )]
-        public PrideTypes ExpertMiniHeart { get; set; } = PrideTypes.Default;
+        public Pride ExpertMiniHeart { get; set; } = Pride.Default;
         
         [SettingIgnore]
         [CollabUtils2_PrideSetting("modoptions_PrideMod_GrandmasterMiniHeart")]
@@ -159,7 +159,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_grandmasterminiheart_default", defaultAnim: "fastspin",
             globalOffsetX: 80, globalOffsetY: 20
         )]
-        public PrideTypes GrandmasterMiniHeart { get; set; } = PrideTypes.Default;
+        public Pride GrandmasterMiniHeart { get; set; } = Pride.Default;
         
         [SettingIgnore]
         [CollabUtils2_PrideSetting("modoptions_PrideMod_GhostMiniHeart")]
@@ -168,7 +168,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_ghostminiheart_default", defaultAnim: "fastspin",
             globalOffsetX: 100, globalOffsetY: 20
         )]
-        public PrideTypes GhostMiniHeart { get; set; } = PrideTypes.Default;
+        public Pride GhostMiniHeart { get; set; } = Pride.Default;
 
         #endregion
 
@@ -187,7 +187,7 @@ namespace Celeste.Mod.PrideMod {
             globalOffsetX: 2, globalOffsetY: 58,
             individualOffset: 14
         )]
-        public PrideTypes Strawberry { get; set; } = PrideTypes.Default;
+        public Pride Strawberry { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_GhostStrawberry")]
@@ -202,7 +202,7 @@ namespace Celeste.Mod.PrideMod {
             globalOffsetX: 22, globalOffsetY: 58,
             individualOffset: 14
         )]
-        public PrideTypes GhostStrawberry { get; set; } = PrideTypes.Default;
+        public Pride GhostStrawberry { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_GoldenStrawberry")]
@@ -211,7 +211,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "goldberry", defaultAnim: "idle",
             globalOffsetX: 41, globalOffsetY: 40
         )]
-        public PrideTypes GoldenStrawberry { get; set; } = PrideTypes.Default;
+        public Pride GoldenStrawberry { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_GhostGoldenStrawberry")]
@@ -220,7 +220,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "goldghostberry", defaultAnim: "idle",
             globalOffsetX: 61, globalOffsetY: 40
         )]
-        public PrideTypes GhostGoldenStrawberry { get; set; } = PrideTypes.Default;
+        public Pride GhostGoldenStrawberry { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [CollabUtils2_PrideSetting("modoptions_PrideMod_SilverStrawberry")]
@@ -229,7 +229,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "CollabUtils2_silverBerry", defaultAnim: "idle",
             globalOffsetX: 41, globalOffsetY: 60
         )]
-        public PrideTypes SilverStrawberry { get; set; } = PrideTypes.Default;
+        public Pride SilverStrawberry { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [CollabUtils2_PrideSetting("modoptions_PrideMod_GhostSilverStrawberry")]
@@ -238,7 +238,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "CollabUtils2_ghostSilverBerry", defaultAnim: "idle",
             globalOffsetX: 61, globalOffsetY: 60
         )]
-        public PrideTypes GhostSilverStrawberry { get; set; } = PrideTypes.Default;
+        public Pride GhostSilverStrawberry { get; set; } = Pride.Default;
 
         #endregion
 
@@ -251,7 +251,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_cassette_default", defaultAnim: "fastspin",
             globalOffsetX: 84, globalOffsetY: 32
         )]
-        public PrideTypes Cassette { get; set; } = PrideTypes.Default;
+        public Pride Cassette { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_GhostCassette")]
@@ -260,7 +260,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_ghostcassette_default", defaultAnim: "fastspin",
             globalOffsetX: 84, globalOffsetY: 52
         )]
-        public PrideTypes GhostCassette { get; set; } = PrideTypes.Default;
+        public Pride GhostCassette { get; set; } = Pride.Default;
 
         #endregion
 
@@ -273,7 +273,7 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_summitflag_default", defaultAnim: "idle",
             globalOffsetX: 112, globalOffsetY: 4
         )]
-        public PrideTypes SummitFlag { get; set; } = PrideTypes.Default;
+        public Pride SummitFlag { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_FinalFlag")]
@@ -282,24 +282,24 @@ namespace Celeste.Mod.PrideMod {
             defaultSprite: "PrideMod_finalflag_default", defaultAnim: "idle",
             globalOffsetX: 148, globalOffsetY: 44
         )]
-        public PrideTypes FinalFlag { get; set; } = PrideTypes.Default;
+        public Pride FinalFlag { get; set; } = Pride.Default;
 
         [SettingIgnore]
         [PrideSetting("modoptions_PrideMod_Confetti")]
         [DoesTheConfetti]
-        public PrideTypes Confetti { get; set; } = PrideTypes.Default;
+        public Pride Confetti { get; set; } = Pride.Default;
 
         #endregion
 
         /// <summary>
         /// Checks all the pride settings and finds a common value.
         /// </summary>
-        /// <returns>The common pride setting value, or <see cref="PrideTypes.Default"/> if at least two are not equal.</returns>
-        public static PrideTypes GetGlobalPride() {
-            var prides = Info.Select(p => p.Property.GetValue(PrideModModule.Settings)).Cast<PrideTypes>();
+        /// <returns>The common pride setting value, or <see cref="Pride.Default"/> if at least two are not equal.</returns>
+        public static Pride GetGlobalPride() {
+            var prides = Info.Select(p => p.Property.GetValue(PrideModModule.Settings)).Cast<Pride>();
 
-            PrideTypes first = prides.First();
-            return prides.All(pride => pride == first) ? first : PrideTypes.Default;
+            Pride first = prides.First();
+            return prides.All(pride => pride == first) ? first : Pride.Default;
         }
     }
 

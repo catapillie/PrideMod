@@ -20,7 +20,7 @@ namespace Celeste.Mod.PrideMod.UI {
 
         private bool Selected => Container.Current == this;
 
-        internal PreviewedPrideSlider(string label, PrideTypes value, PreviewSpriteAttribute[] sprites)
+        internal PreviewedPrideSlider(string label, Pride value, PreviewSpriteAttribute[] sprites)
             : base(label, value) {
 
             previews = new Preview[sprites.Length];
@@ -43,7 +43,7 @@ namespace Celeste.Mod.PrideMod.UI {
                 string defaultAnim = info.DefaultAnim;
 
                 if (spriteType != null) {
-                    string id = PrideType.GetCustomSpriteID(spriteType, defaultSprite);
+                    string id = Pride.GetCustomSpriteID(spriteType, defaultSprite);
 
                     (previews[i].Sprite = GFX.SpriteBank.Create(id))
                         .Play(id == defaultSprite ? defaultAnim : anim);

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace Celeste.Mod.PrideMod {
-    public enum PrideTypes {
+    public enum Pride {
 		Default,
 		Agender,
 		Aromantic,
@@ -31,29 +31,29 @@ namespace Celeste.Mod.PrideMod {
 	}
 
 	public static class PrideData {
-		public static readonly int PrideCount = Enum.GetNames(typeof(PrideTypes)).Length;
+		public static readonly int PrideCount = Enum.GetNames(typeof(Pride)).Length;
 
-		public static readonly ReadOnlyDictionary<PrideTypes, Color[]> PrideColors = new(new Dictionary<PrideTypes, Color[]> {
-			{ PrideTypes.Agender, new[] {
+		public static readonly ReadOnlyDictionary<Pride, Color[]> PrideColors = new(new Dictionary<Pride, Color[]> {
+			{ Pride.Agender, new[] {
 				Calc.HexToColor("3f3f3f"),
 				Calc.HexToColor("969696"),
 				Calc.HexToColor("f0f0f0"),
 				Calc.HexToColor("c7ff9a"),
 			} },
-			{ PrideTypes.Aromantic, new[] {
+			{ Pride.Aromantic, new[] {
 				Calc.HexToColor("4dcc53"),
 				Calc.HexToColor("c7ff9a"),
 				Calc.HexToColor("f0f0f0"),
 				Calc.HexToColor("969696"),
 				Calc.HexToColor("3f3f3f"),
 			} },
-			{ PrideTypes.Asexual, new[] {
+			{ Pride.Asexual, new[] {
 				Calc.HexToColor("3f3f3f"),
 				Calc.HexToColor("969696"),
 				Calc.HexToColor("f0f0f0"),
 				Calc.HexToColor("b900b9"),
 			} },
-			{ PrideTypes.Bigender, new[] {
+			{ Pride.Bigender, new[] {
 				Calc.HexToColor("e5a9c8"),
 				Calc.HexToColor("fbc4e1"),
 				Calc.HexToColor("e3cfff"),
@@ -61,36 +61,36 @@ namespace Celeste.Mod.PrideMod {
 				Calc.HexToColor("b1deff"),
 				Calc.HexToColor("829df5"),
 			} },
-			{ PrideTypes.Bisexual, new[] {
+			{ Pride.Bisexual, new[] {
 				Calc.HexToColor("ff0099"),
 				Calc.HexToColor("da48ff"),
 				Calc.HexToColor("2c7ffb"),
 			} },
-			{ PrideTypes.Demiboy, new[] {
+			{ Pride.Demiboy, new[] {
 				Calc.HexToColor("706f6f"),
 				Calc.HexToColor("969696"),
 				Calc.HexToColor("9ad6ff"),
 				Calc.HexToColor("f0f0f0"),
 			} },
-			{ PrideTypes.Demigirl, new[] {
+			{ Pride.Demigirl, new[] {
 				Calc.HexToColor("706f6f"),
 				Calc.HexToColor("969696"),
 				Calc.HexToColor("ffabff"),
 				Calc.HexToColor("f0f0f0"),
 			} },
-			{ PrideTypes.Deminonbinary, new[] {
+			{ Pride.Deminonbinary, new[] {
 				Calc.HexToColor("706f6f"),
 				Calc.HexToColor("969696"),
 				Calc.HexToColor("fff5a1"),
 				Calc.HexToColor("f0f0f0"),
 			} },
-			{ PrideTypes.Demisexual, new[] {
+			{ Pride.Demisexual, new[] {
 				Calc.HexToColor("f0f0f0"),
 				Calc.HexToColor("3f3f3f"),
 				Calc.HexToColor("790c7d"),
 				Calc.HexToColor("dddddd"),
 			} },
-			{ PrideTypes.Gay, new[] {
+			{ Pride.Gay, new[] {
 				Calc.HexToColor("ff2457"),
 				Calc.HexToColor("ff8524"),
 				Calc.HexToColor("ffc824"),
@@ -98,123 +98,123 @@ namespace Celeste.Mod.PrideMod {
 				Calc.HexToColor("24bbff"),
 				Calc.HexToColor("b824ff"),
 			} },
-			{ PrideTypes.Genderfluid, new[] {
+			{ Pride.Genderfluid, new[] {
 				Calc.HexToColor("ff84ba"),
 				Calc.HexToColor("f0f0f0"),
 				Calc.HexToColor("e045f5"),
 				Calc.HexToColor("3f3f3f"),
 				Calc.HexToColor("4e5be8"),
 			} },
-			{ PrideTypes.Genderqueer, new[] {
+			{ Pride.Genderqueer, new[] {
 				Calc.HexToColor("d092fd"),
 				Calc.HexToColor("f0f0f0"),
 				Calc.HexToColor("6ebb37"),
 			} },
-			{ PrideTypes.Intersex, new[] {
+			{ Pride.Intersex, new[] {
 				Calc.HexToColor("f4e742"),
 				Calc.HexToColor("ab00f1"),
 			} },
-			{ PrideTypes.Lesbian, new[] {
+			{ Pride.Lesbian, new[] {
 				Calc.HexToColor("d62e02"),
 				Calc.HexToColor("ff9b58"),
 				Calc.HexToColor("f0f0f0"),
 				Calc.HexToColor("d161a2"),
 				Calc.HexToColor("ca0077"),
 			} },
-			{ PrideTypes.NonBinary, new[] {
+			{ Pride.NonBinary, new[] {
 				Calc.HexToColor("fef333"),
 				Calc.HexToColor("f0f0f0"),
 				Calc.HexToColor("9b59d0"),
 				Calc.HexToColor("3f3f3f"),
 			} },
-			{ PrideTypes.Omnisexual, new[] {
+			{ Pride.Omnisexual, new[] {
 				Calc.HexToColor("ffbdde"),
 				Calc.HexToColor("ff9fdb"),
 				Calc.HexToColor("532679"),
 				Calc.HexToColor("9d98ff"),
 				Calc.HexToColor("bdccff"),
 			} },
-			{ PrideTypes.Pansexual, new[] {
+			{ Pride.Pansexual, new[] {
 				Calc.HexToColor("ff00aa"),
 				Calc.HexToColor("ffe100"),
 				Calc.HexToColor("00c9ff"),
 			} },
-			{ PrideTypes.Plural, new[] {
+			{ Pride.Plural, new[] {
 				Calc.HexToColor("ff00b4"),
 				Calc.HexToColor("f8e423"),
 				Calc.HexToColor("63ff48"),
 				Calc.HexToColor("154fa5"),
 			} },
-			{ PrideTypes.Polyamorous, new[] {
+			{ Pride.Polyamorous, new[] {
 				Calc.HexToColor("2446de"),
 				Calc.HexToColor("f8e423"),
 				Calc.HexToColor("dc2d2d"),
 				Calc.HexToColor("3f3f3f"),
 			} },
-			{ PrideTypes.Polysexual, new[] {
+			{ Pride.Polysexual, new[] {
 				Calc.HexToColor("ff4bcf"),
 				Calc.HexToColor("13ff86"),
 				Calc.HexToColor("3eaaff"),
 			} },
-			{ PrideTypes.Transgender, new[] {
+			{ Pride.Transgender, new[] {
 				Calc.HexToColor("67d1f8"),
 				Calc.HexToColor("ffa2b7"),
 				Calc.HexToColor("f0f0f0"),
 			} },
 		});
 
-		public static ReadOnlyDictionary<PrideTypes, ParticleType[]> PrideParticles_HeartGem_P_AnyShine { get; private set; } = null;
-		public static ReadOnlyDictionary<PrideTypes, ParticleType[]> PrideParticles_HeartGem_P_FakeShine { get; private set; } = null;
-		public static ReadOnlyDictionary<PrideTypes, ParticleType[]> PrideParticles_Cassette_P_Shine { get; private set; } = null;
+		public static ReadOnlyDictionary<Pride, ParticleType[]> PrideParticles_HeartGem_P_AnyShine { get; private set; } = null;
+		public static ReadOnlyDictionary<Pride, ParticleType[]> PrideParticles_HeartGem_P_FakeShine { get; private set; } = null;
+		public static ReadOnlyDictionary<Pride, ParticleType[]> PrideParticles_Cassette_P_Shine { get; private set; } = null;
 
-		public static string GetFormattedName(this PrideTypes prideType)
+		public static string GetFormattedName(this Pride prideType)
 			=> prideType switch {
-				PrideTypes.Agender => "Agender",
-				PrideTypes.Aromantic => "Aromantic",
-				PrideTypes.Asexual => "Asexual",
-				PrideTypes.Bigender => "Bigender",
-				PrideTypes.Bisexual => "Bisexual",
-				PrideTypes.Demiboy => "Demiboy",
-				PrideTypes.Demigirl => "Demigirl",
-				PrideTypes.Deminonbinary => "Deminonbinary",
-				PrideTypes.Demisexual => "Demisexual",
-				PrideTypes.Gay => "Gay",
-				PrideTypes.Genderfluid => "Genderfluid",
-				PrideTypes.Genderqueer => "Genderqueer",
-				PrideTypes.Intersex => "Intersex",
-				PrideTypes.Lesbian => "Lesbian",
-				PrideTypes.NonBinary => "Non-Binary",
-				PrideTypes.Omnisexual => "Omnisexual",
-				PrideTypes.Pansexual => "Pansexual",
-				PrideTypes.Plural => "Plural",
-				PrideTypes.Polyamorous => "Polyamorous",
-				PrideTypes.Polysexual => "Polysexual",
-				PrideTypes.Transgender => "Transgender",
+				Pride.Agender => "Agender",
+				Pride.Aromantic => "Aromantic",
+				Pride.Asexual => "Asexual",
+				Pride.Bigender => "Bigender",
+				Pride.Bisexual => "Bisexual",
+				Pride.Demiboy => "Demiboy",
+				Pride.Demigirl => "Demigirl",
+				Pride.Deminonbinary => "Deminonbinary",
+				Pride.Demisexual => "Demisexual",
+				Pride.Gay => "Gay",
+				Pride.Genderfluid => "Genderfluid",
+				Pride.Genderqueer => "Genderqueer",
+				Pride.Intersex => "Intersex",
+				Pride.Lesbian => "Lesbian",
+				Pride.NonBinary => "Non-Binary",
+				Pride.Omnisexual => "Omnisexual",
+				Pride.Pansexual => "Pansexual",
+				Pride.Plural => "Plural",
+				Pride.Polyamorous => "Polyamorous",
+				Pride.Polysexual => "Polysexual",
+				Pride.Transgender => "Transgender",
 				_ => "Default",
 			};
 
-		public static string GetCustomTexturePath(this PrideTypes prideType, string spriteType, string frame, string originalID)
-			=> prideType == PrideTypes.Default ?
+		public static string GetCustomTexturePath(this Pride prideType, string spriteType, string frame, string originalID)
+			=> prideType == Pride.Default ?
 				originalID :
 				$"PrideMod/{spriteType}/{prideType.ToString().ToLower()}/{frame}";
 
-		public static string GetCustomSpriteID(this PrideTypes prideType, string spriteType, string originalID)
-			=> prideType == PrideTypes.Default ?
+		public static string GetCustomSpriteID(this Pride prideType, string spriteType, string originalID)
+			=> prideType == Pride.Default ?
 				originalID :
 				$"PrideMod_{spriteType}_{prideType.ToString().ToLower()}";
 
-		public static Sprite GetCustomSprite(this PrideTypes prideType, string spriteType, Sprite originalSprite)
-			=> prideType == PrideTypes.Default ?
+		public static Sprite GetCustomSprite(this Pride prideType, string spriteType, Sprite originalSprite)
+			=> prideType == Pride.Default ?
 				originalSprite :
 				GFX.SpriteBank.Create($"PrideMod_{spriteType}_{prideType.ToString().ToLower()}");
 
-		public static string GetCustomSummitFlagDecalPath(this PrideTypes prideType, string originalPath)
-			=> prideType == PrideTypes.Default ?
+		public static string GetCustomSummitFlagDecalPath(this Pride prideType, string originalPath)
+			=> prideType == Pride.Default ?
 				originalPath :
 				$"PrideMod/summitflag/{prideType.ToString().ToLower()}/SummitFlag";
 
-		public static string GetCustomFinalFlagDecalPath(this PrideTypes prideType, string originalPath)
-			=> prideType == PrideTypes.Default ?
+		public static string GetCustomFinalFlagDecalPath(this Pride prideType, string originalPath)
+			=> prideType == Pride.Default ?
 				originalPath :
 				$"PrideMod/finalflag/{prideType.ToString().ToLower()}/finalflag";
 
@@ -229,8 +229,8 @@ namespace Celeste.Mod.PrideMod {
 
 		}
 
-		private static ReadOnlyDictionary<PrideTypes, ParticleType[]> BuildParticleTypes(ParticleType from, Action<ParticleType, Color> particleTypeModifier) {
-			Dictionary<PrideTypes, ParticleType[]> prideParticleTypes = new();
+		private static ReadOnlyDictionary<Pride, ParticleType[]> BuildParticleTypes(ParticleType from, Action<ParticleType, Color> particleTypeModifier) {
+			Dictionary<Pride, ParticleType[]> prideParticleTypes = new();
 
 			foreach (var kv in PrideColors) {
 				ParticleType[] particleTypes = new ParticleType[kv.Value.Length];

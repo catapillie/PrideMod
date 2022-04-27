@@ -52,7 +52,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 if (settings.Enabled) {
                     DynData<AbstractMiniHeart> data = new(miniHeart);
 
-                    PrideTypes pride = PrideTypes.Default;
+                    Pride pride = Pride.Default;
 
                     Sprite sprite = (Sprite)data["sprite"];
                     Sprite newSprite = sprite.Path switch {
