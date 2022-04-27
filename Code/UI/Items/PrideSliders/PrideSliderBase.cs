@@ -4,6 +4,8 @@ using Monocle;
 
 namespace Celeste.Mod.PrideMod.UI {
     public class PrideSliderBase : TextMenu.Option<int> {
+        public const int PRIDE_SETTINGS_UI_SCALE = 6;
+
         public PrideTypes PrideType {
             get => (PrideTypes)Index;
             set => Index = (int)value;

@@ -185,7 +185,7 @@ namespace Celeste.Mod.PrideMod {
             spriteType: "strawberryseed", anim: "idle",
             defaultSprite: "strawberrySeed", defaultAnim: "idle",
             globalOffsetX: 2, globalOffsetY: 58,
-            offset: 14 * 6
+            individualOffset: 14
         )]
         public PrideTypes Strawberry { get; set; } = PrideTypes.Default;
 
@@ -200,7 +200,7 @@ namespace Celeste.Mod.PrideMod {
             spriteType: "ghostberryseed", anim: "idle",
             defaultSprite: "ghostberrySeed", defaultAnim: "idle",
             globalOffsetX: 22, globalOffsetY: 58,
-            offset: 14 * 6
+            individualOffset: 14
         )]
         public PrideTypes GhostStrawberry { get; set; } = PrideTypes.Default;
 
@@ -305,21 +305,21 @@ namespace Celeste.Mod.PrideMod {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
     public class PreviewSpriteAttribute : Attribute {
         public readonly string SpriteType, Anim, DefaultSprite, DefaultAnim;
-        public readonly float Offset;
+        public readonly float IndividualOffset;
         public readonly float GlobalOffsetX;
         public readonly float GlobalOffsetY;
 
         public PreviewSpriteAttribute(string spriteType, string anim,
                                       string defaultSprite, string defaultAnim,
                                       float globalOffsetX, float globalOffsetY,
-                                      float offset = 0f) {
+                                      float individualOffset = 0f) {
             SpriteType = spriteType;
             Anim = anim;
             DefaultSprite = defaultSprite;
             DefaultAnim = defaultAnim;
             GlobalOffsetX = globalOffsetX;
             GlobalOffsetY = globalOffsetY;
-            Offset = offset;
+            IndividualOffset = individualOffset;
         }
     }
 

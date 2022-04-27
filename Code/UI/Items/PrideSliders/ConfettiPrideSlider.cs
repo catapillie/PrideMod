@@ -45,7 +45,7 @@ namespace Celeste.Mod.PrideMod.UI {
 			);
 
 			for (int i = 0; i < particles.Length; i++) {
-				particles[i].Position = position + new Vector2(Calc.Random.Range(-18, 18), Calc.Random.Range(-18, 18));
+				particles[i].Position = position + new Vector2(Calc.Random.Range(-3, 3), Calc.Random.Range(-3, 3)) * PRIDE_SETTINGS_UI_SCALE;
 				particles[i].Color = Calc.Random.Choose(PrideType == PrideTypes.Default ? defaultConfettiColors : PrideData.PrideColors[PrideType]);
 				particles[i].Timer = Calc.Random.NextFloat();
 				particles[i].Duration = Calc.Random.NextFloat(2f) + 2f;
@@ -66,7 +66,7 @@ namespace Celeste.Mod.PrideMod.UI {
 
 			if (ready) {
 				for (int i = 0; i < particles.Length; i++) {
-					particles[i].Position += particles[i].Speed * 6 * Engine.DeltaTime;
+					particles[i].Position += particles[i].Speed * PRIDE_SETTINGS_UI_SCALE * Engine.DeltaTime;
 					particles[i].Speed.X = Calc.Approach(particles[i].Speed.X, 0f, 80f * Engine.DeltaTime);
 					particles[i].Speed.Y = Calc.Approach(particles[i].Speed.Y, 20f, 500f * Engine.DeltaTime);
 					particles[i].Timer += Engine.DeltaTime;
@@ -91,9 +91,9 @@ namespace Celeste.Mod.PrideMod.UI {
                     particlePos += Calc.AngleToVector((float)Math.PI / 2f + rotation, p.Approach);
 				}
 
-				particlePos = Calc.Round(particlePos / 6f) * 6f;
+				particlePos = Calc.Round(particlePos / PRIDE_SETTINGS_UI_SCALE) * PRIDE_SETTINGS_UI_SCALE;
 				MTexture tex = confettiTextures[Util.Mod((int)Math.Round(rotation / MathHelper.TwoPi * 23f), 23)];
-				tex.DrawCentered(particlePos, p.Color * p.Alpha, 6f);
+				tex.DrawCentered(particlePos, p.Color * p.Alpha, PRIDE_SETTINGS_UI_SCALE);
 			}
 		}
 
