@@ -10,10 +10,11 @@ modoptions_PrideMod_MinimalBloom=Minimal Bloom
 modoptions_PrideMod_MinimalBloom_sub=Reduces the bloom level of reskinned entities.
 
 modoptions_PrideMod_GlobalPride=Set Global Pride
-modoptions_PrideMod_GlobalPride_sub=Changes the pride for all pride settings.
+modoptions_PrideMod_GlobalPride_sub=Change the pride for all pride settings.
 modoptions_PrideMod_GlobalPride_title=Select Global Pride
 
 modoptions_PrideMod_PrideSettings=Pride Settings
+modoptions_PrideMod_PrideSettings_sub=Configure the prides for entities and decals.
 modoptions_PrideMod_PrideSettings_title=PRIDE SETTINGS
 
 

@@ -55,14 +55,14 @@ namespace Celeste.Mod.PrideMod {
         [YamlIgnore]
         public int PrideSettings { get; private set; } = 0;
         public void CreatePrideSettingsEntry(TextMenu menu, bool inGame) {
-            menu.Add(
-                AbstractSubmenu.BuildOpenMenuButton<OuiPrideSettings>(
-                    menu,
-                    inGame,
-                    () => OuiModOptions.Instance.Overworld.Goto<OuiModOptions>(),
-                    new object[0]
-                )
-            );
+            var item = AbstractSubmenu.BuildOpenMenuButton<OuiPrideSettings>(
+                menu,
+                inGame,
+                () => OuiModOptions.Instance.Overworld.Goto<OuiModOptions>(),
+                new object[0]
+            ); // :>
+            menu.Add(item);
+            item.AddDescription(menu, Dialog.Clean("modoptions_PrideMod_PrideSettings_sub"));
         }
 
         #region Crystal Hearts
