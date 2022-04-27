@@ -30,15 +30,13 @@ namespace Celeste.Mod.PrideMod.Reskinning {
         internal static void Hook() {
             IL.Celeste.Strawberry.Added += Mod_Strawberry_Added;
             IL.Celeste.StrawberrySeed.Awake += Mod_StrawberrySeed_Awake;
-            On.Monocle.SpriteBank.Create += Mod_SpriteBank_Create;
         }
 
         internal static void Unhook() {
             IL.Celeste.Strawberry.Added -= Mod_Strawberry_Added;
             IL.Celeste.StrawberrySeed.Awake -= Mod_StrawberrySeed_Awake;
-            On.Monocle.SpriteBank.Create -= Mod_SpriteBank_Create;
         }
-        
+
         internal static void Hook_CollabUtils2() {
             Type t_CollabUtils2_RainbowBerryUnlockCutscene
                 = Dependencies.CollabUtils2_Module
@@ -50,10 +48,14 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 = t_CollabUtils2_RainbowBerryUnlockCutscene.GetMethod("Cutscene", BindingFlags.Instance | BindingFlags.NonPublic).GetStateMachineTarget();
 
             IL_RainbowBerryUnlockCutscene_Cutscene = new ILHook(m_RainbowBerryUnlockCutscene_Cutscene, Mod_RainbowBerryUnlockCutscene_Cutscene);
+
+            On.Celeste.Strawberry.Added += Mod_Strawberry_Added;
         }
 
         internal static void Unhook_CollabUtils2() {
             IL_RainbowBerryUnlockCutscene_Cutscene.Dispose();
+
+            On.Celeste.Strawberry.Added -= Mod_Strawberry_Added;
         }
 
         private static bool CollabUtils2_Loaded_SilverBerryCheck(Strawberry strawberry)
@@ -122,6 +124,33 @@ namespace Celeste.Mod.PrideMod.Reskinning {
             cursor.Emit(OpCodes.Ldc_R4, 12f);
         }
 
+        private static void Mod_Strawberry_Added(On.Celeste.Strawberry.orig_Added orig, Strawberry self, Scene scene) {
+            orig(self, scene);
+
+            PrideModModuleSettings settings = PrideModModule.Settings;
+            if (settings.Enabled && self is SilverBerry) {
+                DynData<Strawberry> data = new(self);
+
+                bool isGhostBerry = (bool)data["isGhostBerry"];
+                PrideTypes pride = isGhostBerry ? settings.GhostSilverStrawberry : settings.SilverStrawberry;
+
+                if (pride != PrideTypes.Default) {
+
+                    Sprite oldSprite = (Sprite)data["sprite"];
+                    Sprite sprite = pride.GetCustomSprite(isGhostBerry ? "ghostsilverberry" : "silverberry", oldSprite);
+
+                    self.Remove(oldSprite);
+                    self.Add(sprite);
+
+                    if (self.Winged)
+                        sprite.Play("flap");
+                    sprite.OnFrameChange = oldSprite.OnFrameChange;
+
+                    data["sprite"] = sprite;
+                }
+            }
+        }
+
         private static void Mod_StrawberrySeed_Awake(ILContext il) {
             ILCursor cursor = new(il);
 
@@ -160,19 +189,6 @@ namespace Celeste.Mod.PrideMod.Reskinning {
                 }
                 return id;
             });
-        }
-
-        private static Sprite Mod_SpriteBank_Create(On.Monocle.SpriteBank.orig_Create orig, SpriteBank self, string id) {
-            PrideModModuleSettings settings = PrideModModule.Settings;
-            if (settings.Enabled) {
-                id = id switch {
-                    collabutils2_ghostsilverberry_sprite => settings.GhostSilverStrawberry.GetCustomSpriteID("ghostsilverberry", id),
-                    collabutils2_silverberry_sprite => settings.SilverStrawberry.GetCustomSpriteID("silverberry", id),
-                    _ => id,
-                };
-            }
-
-            return orig(self, id);
         }
 
         private static void Mod_RainbowBerryUnlockCutscene_Cutscene(ILContext il) {
