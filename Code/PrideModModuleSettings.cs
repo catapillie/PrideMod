@@ -71,7 +71,8 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_ASideCrystalHeart", header: "modoptions_PrideMod_header_CrystalHearts")]
         [PreviewSprite(
             spriteType: "crystalheart", anim: "fastspin",
-            defaultSprite: "heartgem0", defaultAnim: "fastspin"
+            defaultSprite: "heartgem0", defaultAnim: "fastspin",
+            globalOffsetX: 0, globalOffsetY: 0
         )]
         public PrideTypes ASideCrystalHeart { get; set; } = PrideTypes.Default;
 
@@ -79,7 +80,8 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_BSideCrystalHeart")]
         [PreviewSprite(
             spriteType: "crystalheart", anim: "fastspin",
-            defaultSprite: "heartgem1", defaultAnim: "fastspin"
+            defaultSprite: "heartgem1", defaultAnim: "fastspin",
+            globalOffsetX: 20, globalOffsetY: 0
         )]
         public PrideTypes BSideCrystalHeart { get; set; } = PrideTypes.Default;
 
@@ -87,7 +89,8 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_CSideCrystalHeart")]
         [PreviewSprite(
             spriteType: "crystalheart", anim: "fastspin",
-            defaultSprite: "heartgem2", defaultAnim: "fastspin"
+            defaultSprite: "heartgem2", defaultAnim: "fastspin",
+            globalOffsetX: 40, globalOffsetY: 0
         )]
         public PrideTypes CSideCrystalHeart { get; set; } = PrideTypes.Default;
 
@@ -95,7 +98,8 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_EmptyCrystalHeart")]
         [PreviewSprite(
             spriteType: "crystalheart", anim: "fastspin",
-            defaultSprite: "heartgem3", defaultAnim: "fastspin"
+            defaultSprite: "heartgem3", defaultAnim: "fastspin",
+            globalOffsetX: 60, globalOffsetY: 0
         )]
         public PrideTypes EmptyCrystalHeart { get; set; } = PrideTypes.Default;
 
@@ -103,7 +107,8 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_GhostCrystalHeart")]
         [PreviewSprite(
             spriteType: "crystalheart", anim: "fastspin",
-            defaultSprite: "heartGemGhost", defaultAnim: "fastspin"
+            defaultSprite: "heartGemGhost", defaultAnim: "fastspin",
+            globalOffsetX: 80, globalOffsetY: 0
         )]
         public PrideTypes GhostCrystalHeart { get; set; } = PrideTypes.Default;
 
@@ -115,7 +120,8 @@ namespace Celeste.Mod.PrideMod {
         [CollabUtils2_PrideSetting("modoptions_PrideMod_BeginnerMiniHeart", header: "modoptions_PrideMod_header_MiniHearts")]
         [PreviewSprite(
             spriteType: "miniheart", anim: "fastspin",
-            defaultSprite: "PrideMod_beginnerminiheart_default", defaultAnim: "fastspin"
+            defaultSprite: "PrideMod_beginnerminiheart_default", defaultAnim: "fastspin",
+            globalOffsetX: 0, globalOffsetY: 20
         )]
         public PrideTypes BeginnerMiniHeart { get; set; } = PrideTypes.Default;
         
@@ -123,7 +129,8 @@ namespace Celeste.Mod.PrideMod {
         [CollabUtils2_PrideSetting("modoptions_PrideMod_IntermediateMiniHeart")]
         [PreviewSprite(
             spriteType: "miniheart", anim: "fastspin",
-            defaultSprite: "PrideMod_intermediateminiheart_default", defaultAnim: "fastspin"
+            defaultSprite: "PrideMod_intermediateminiheart_default", defaultAnim: "fastspin",
+            globalOffsetX: 20, globalOffsetY: 20
         )]
         public PrideTypes IntermediateMiniHeart { get; set; } = PrideTypes.Default;
         
@@ -131,7 +138,8 @@ namespace Celeste.Mod.PrideMod {
         [CollabUtils2_PrideSetting("modoptions_PrideMod_AdvancedMiniHeart")]
         [PreviewSprite(
             spriteType: "miniheart", anim: "fastspin",
-            defaultSprite: "PrideMod_advancedminiheart_default", defaultAnim: "fastspin"
+            defaultSprite: "PrideMod_advancedminiheart_default", defaultAnim: "fastspin",
+            globalOffsetX: 40, globalOffsetY: 20
         )]
         public PrideTypes AdvancedMiniHeart { get; set; } = PrideTypes.Default;
         
@@ -139,7 +147,8 @@ namespace Celeste.Mod.PrideMod {
         [CollabUtils2_PrideSetting("modoptions_PrideMod_ExpertMiniHeart")]
         [PreviewSprite(
             spriteType: "miniheart", anim: "fastspin",
-            defaultSprite: "PrideMod_expertminiheart_default", defaultAnim: "fastspin"
+            defaultSprite: "PrideMod_expertminiheart_default", defaultAnim: "fastspin",
+            globalOffsetX: 60, globalOffsetY: 20
         )]
         public PrideTypes ExpertMiniHeart { get; set; } = PrideTypes.Default;
         
@@ -147,7 +156,8 @@ namespace Celeste.Mod.PrideMod {
         [CollabUtils2_PrideSetting("modoptions_PrideMod_GrandmasterMiniHeart")]
         [PreviewSprite(
             spriteType: "miniheart", anim: "fastspin",
-            defaultSprite: "PrideMod_grandmasterminiheart_default", defaultAnim: "fastspin"
+            defaultSprite: "PrideMod_grandmasterminiheart_default", defaultAnim: "fastspin",
+            globalOffsetX: 80, globalOffsetY: 20
         )]
         public PrideTypes GrandmasterMiniHeart { get; set; } = PrideTypes.Default;
         
@@ -155,7 +165,8 @@ namespace Celeste.Mod.PrideMod {
         [CollabUtils2_PrideSetting("modoptions_PrideMod_GhostMiniHeart")]
         [PreviewSprite(
             spriteType: "miniheart", anim: "fastspin",
-            defaultSprite: "PrideMod_ghostminiheart_default", defaultAnim: "fastspin"
+            defaultSprite: "PrideMod_ghostminiheart_default", defaultAnim: "fastspin",
+            globalOffsetX: 100, globalOffsetY: 20
         )]
         public PrideTypes GhostMiniHeart { get; set; } = PrideTypes.Default;
 
@@ -167,11 +178,13 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_Strawberry", header: "modoptions_PrideMod_header_Strawberries")]
         [PreviewSprite(
             spriteType: "strawberry", anim: "idle",
-            defaultSprite: "strawberry", defaultAnim: "idle"
+            defaultSprite: "strawberry", defaultAnim: "idle",
+            globalOffsetX: 1, globalOffsetY: 40
         )]
         [PreviewSprite(
             spriteType: "strawberryseed", anim: "idle",
             defaultSprite: "strawberrySeed", defaultAnim: "idle",
+            globalOffsetX: 2, globalOffsetY: 58,
             offset: 14 * 6
         )]
         public PrideTypes Strawberry { get; set; } = PrideTypes.Default;
@@ -180,11 +193,13 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_GhostStrawberry")]
         [PreviewSprite(
             spriteType: "ghostberry", anim: "idle",
-            defaultSprite: "ghostberry", defaultAnim: "idle"
+            defaultSprite: "ghostberry", defaultAnim: "idle",
+            globalOffsetX: 21, globalOffsetY: 40
         )]
         [PreviewSprite(
             spriteType: "ghostberryseed", anim: "idle",
             defaultSprite: "ghostberrySeed", defaultAnim: "idle",
+            globalOffsetX: 22, globalOffsetY: 58,
             offset: 14 * 6
         )]
         public PrideTypes GhostStrawberry { get; set; } = PrideTypes.Default;
@@ -193,7 +208,8 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_GoldenStrawberry")]
         [PreviewSprite(
             spriteType: "goldenberry", anim: "idle",
-            defaultSprite: "goldberry", defaultAnim: "idle"
+            defaultSprite: "goldberry", defaultAnim: "idle",
+            globalOffsetX: 41, globalOffsetY: 40
         )]
         public PrideTypes GoldenStrawberry { get; set; } = PrideTypes.Default;
 
@@ -201,7 +217,8 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_GhostGoldenStrawberry")]
         [PreviewSprite(
             spriteType: "ghostgoldenberry", anim: "idle",
-            defaultSprite: "goldghostberry", defaultAnim: "idle"
+            defaultSprite: "goldghostberry", defaultAnim: "idle",
+            globalOffsetX: 61, globalOffsetY: 40
         )]
         public PrideTypes GhostGoldenStrawberry { get; set; } = PrideTypes.Default;
 
@@ -209,7 +226,8 @@ namespace Celeste.Mod.PrideMod {
         [CollabUtils2_PrideSetting("modoptions_PrideMod_SilverStrawberry")]
         [PreviewSprite(
             spriteType: "silverberry", anim: "idle",
-            defaultSprite: "CollabUtils2_silverBerry", defaultAnim: "idle"
+            defaultSprite: "CollabUtils2_silverBerry", defaultAnim: "idle",
+            globalOffsetX: 41, globalOffsetY: 60
         )]
         public PrideTypes SilverStrawberry { get; set; } = PrideTypes.Default;
 
@@ -217,7 +235,8 @@ namespace Celeste.Mod.PrideMod {
         [CollabUtils2_PrideSetting("modoptions_PrideMod_GhostSilverStrawberry")]
         [PreviewSprite(
             spriteType: "ghostsilverberry", anim: "idle",
-            defaultSprite: "CollabUtils2_ghostSilverBerry", defaultAnim: "idle"
+            defaultSprite: "CollabUtils2_ghostSilverBerry", defaultAnim: "idle",
+            globalOffsetX: 61, globalOffsetY: 60
         )]
         public PrideTypes GhostSilverStrawberry { get; set; } = PrideTypes.Default;
 
@@ -229,7 +248,8 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_SummitFlag", header: "modoptions_PrideMod_header_Flags")]
         [PreviewSprite(
             spriteType: "summitflag", anim: "idle",
-            defaultSprite: "PrideMod_summitflag_default", defaultAnim: "idle"
+            defaultSprite: "PrideMod_summitflag_default", defaultAnim: "idle",
+            globalOffsetX: 112, globalOffsetY: 4
         )]
         public PrideTypes SummitFlag { get; set; } = PrideTypes.Default;
 
@@ -237,7 +257,8 @@ namespace Celeste.Mod.PrideMod {
         [PrideSetting("modoptions_PrideMod_FinalFlag")]
         [PreviewSprite(
             spriteType: "finalflag", anim: "idle",
-            defaultSprite: "PrideMod_finalflag_default", defaultAnim: "idle"
+            defaultSprite: "PrideMod_finalflag_default", defaultAnim: "idle",
+            globalOffsetX: 148, globalOffsetY: 44
         )]
         public PrideTypes FinalFlag { get; set; } = PrideTypes.Default;
 
@@ -285,12 +306,19 @@ namespace Celeste.Mod.PrideMod {
     public class PreviewSpriteAttribute : Attribute {
         public readonly string SpriteType, Anim, DefaultSprite, DefaultAnim;
         public readonly float Offset;
+        public readonly float GlobalOffsetX;
+        public readonly float GlobalOffsetY;
 
-        public PreviewSpriteAttribute(string spriteType, string anim, string defaultSprite, string defaultAnim, float offset = 0f) {
+        public PreviewSpriteAttribute(string spriteType, string anim,
+                                      string defaultSprite, string defaultAnim,
+                                      float globalOffsetX, float globalOffsetY,
+                                      float offset = 0f) {
             SpriteType = spriteType;
             Anim = anim;
             DefaultSprite = defaultSprite;
             DefaultAnim = defaultAnim;
+            GlobalOffsetX = globalOffsetX;
+            GlobalOffsetY = globalOffsetY;
             Offset = offset;
         }
     }

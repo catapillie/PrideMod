@@ -28,7 +28,6 @@ namespace Celeste.Mod.PrideMod.UI {
                     component.Confirm();
                 else if (Input.MenuCancel.Pressed)
                     component.Cancel();
-                
             }
         }
 
@@ -46,7 +45,7 @@ namespace Celeste.Mod.PrideMod.UI {
             orig(self);
 
             GlobalPrideSettingComponent component = self.Get<GlobalPrideSettingComponent>();
-            if (component != null)
+            if (component != null && component.Visible)
                 component.Display();
         }
 

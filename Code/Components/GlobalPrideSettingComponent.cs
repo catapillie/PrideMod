@@ -1,10 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Monocle;
 using System;
+using System.Linq;
 
 namespace Celeste.Mod.PrideMod.Components {
     public class GlobalPrideSettingComponent : Component {
-        public class Entry {
+        public const int GLOBAL_PREVIEW_UI_SCALE = 5;
+
+        private class Entry {
             public readonly int Index;
             public readonly PrideTypes Pride;
             public readonly string Name;
@@ -29,15 +33,29 @@ namespace Celeste.Mod.PrideMod.Components {
             }
         }
 
+        private class Preview {
+            public Sprite Sprite;
+            public readonly PreviewSpriteAttribute SpriteInfo;
+            public readonly float OffsetX, OffsetY;
+
+            public Preview(PreviewSpriteAttribute spriteInfo) {
+                SpriteInfo = spriteInfo;
+                OffsetX = spriteInfo.GlobalOffsetX * GLOBAL_PREVIEW_UI_SCALE;
+                OffsetY = spriteInfo.GlobalOffsetY * GLOBAL_PREVIEW_UI_SCALE;
+            }
+        }
+
         private static readonly Color[] defaultHighlightColors = new[] {
-                TextMenu.HighlightColorA,
-                TextMenu.HighlightColorB
-            };
+            TextMenu.HighlightColorA,
+            TextMenu.HighlightColorB,
+        };
 
         private float alpha;
         private bool shown;
 
         private readonly Entry[] entries = new Entry[PrideData.PrideCount];
+        private readonly Preview[] previews;
+        private float previewYOffset;
 
         private int index;
 
@@ -59,6 +77,11 @@ namespace Celeste.Mod.PrideMod.Components {
             halfMaxWidth = halfMaxWidth / 2f + 30;
 
             this.menu = menu;
+
+            previews = PrideModModuleSettings.Info.Where(info => info.Attribute.Shown())
+                                                  .SelectMany(info => info.PreviewSpritesAttributes)
+                                                  .Select(spriteInfo => new Preview(spriteInfo))
+                                                  .ToArray();
         }
 
         public override void Update() {
@@ -86,6 +109,9 @@ namespace Celeste.Mod.PrideMod.Components {
 
                 foreach (Entry entry in entries)
                     entry.Update(entry.Index == index);
+
+                foreach (Preview preview in previews)
+                    preview.Sprite?.Update();
             }
         }
 
@@ -94,6 +120,8 @@ namespace Celeste.Mod.PrideMod.Components {
             index = (int)PrideModModuleSettings.GetGlobalPride();
             y = TargetY;
             menu.Focused = false;
+
+            RecreateSprites();
         }
 
         public void Hide() {
@@ -102,6 +130,8 @@ namespace Celeste.Mod.PrideMod.Components {
         }
 
         private void SelectedDifferentValue(bool down) {
+            RecreateSprites();
+
             entries[index].Wiggler.Start();
             Audio.Play(down ? SFX.ui_main_roll_down : SFX.ui_main_roll_up);
         }
@@ -121,11 +151,37 @@ namespace Celeste.Mod.PrideMod.Components {
             Audio.Play(SFX.ui_main_button_back);
         }
 
+        private void RecreateSprites() {
+            float ymin = float.MaxValue;
+            float ymax = float.MinValue;
+
+            PrideTypes pride = (PrideTypes)index;
+            foreach (Preview preview in previews) {
+                var info = preview.SpriteInfo;
+
+                string id = pride.GetCustomSpriteID(info.SpriteType, info.DefaultSprite);
+                string anim = id == info.DefaultSprite ? info.DefaultAnim : info.Anim;
+
+                (preview.Sprite = GFX.SpriteBank.Create(id))
+                    .Play(anim);
+
+                if (preview.OffsetY < ymin)
+                    ymin = preview.OffsetY;
+
+                float bottom = preview.OffsetY + preview.Sprite.Texture.Height * GLOBAL_PREVIEW_UI_SCALE;
+                if (bottom > ymax)
+                    ymax = bottom;
+            }
+
+            previewYOffset = (ymin + ymax) / 2f;
+        }
+
         internal void Display() {
-            Vector2 mid = new(Engine.Width * 0.5f, Engine.Height * 0.5f);
+            Vector2 mid = new(Engine.Width * 0.25f, Engine.Height * 0.5f);
 
             Draw.Rect(-10f, -10f, 1940f, 1100f, Color.Black * Ease.CubeOut(alpha) * 0.95f);
 
+            Color selectedColor = Color.White;
             for (int i = 0; i < entries.Length; i++) {
                 Entry entry = entries[i];
 
@@ -146,14 +202,39 @@ namespace Celeste.Mod.PrideMod.Components {
                                 Util.MultiColorLerp(Entity.Scene.TimeActive * 10f, defaultHighlightColors) :
                                 Util.MultiColorPingPong(Entity.Scene.TimeActive * 2f, PrideData.PrideColors[entry.Pride]);
 
-                        MTexture dot = GFX.Gui["dot"];
-                        dot.DrawCentered(pos - new Vector2(halfMaxWidth, 0), color * alpha);
-                        dot.DrawCentered(pos + new Vector2(halfMaxWidth, 0), color * alpha);
+                        GFX.Gui["dot"].DrawCentered(pos - new Vector2(halfMaxWidth, 0), color * alpha);
+
+                        selectedColor = color;
                     }
 
                     ActiveFont.Draw(entry.Name, pos, new(0.5f, 0.5f), Vector2.One, color * alpha);
                 }
             }
+
+            GFX.Gui["dotarrow"].DrawCentered(mid + new Vector2(halfMaxWidth + 50, 0), selectedColor * alpha);
+            DrawSprites(mid + new Vector2(halfMaxWidth + 120, 0));
+        }
+
+        private void DrawSprites(Vector2 from) {
+            Draw.SpriteBatch.End();
+            SamplerState oldSamplerState = Draw.SpriteBatch.GraphicsDevice.SamplerStates[0];
+
+            Draw.SpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone);
+
+            foreach (Preview preview in previews) {
+                Sprite sprite = preview.Sprite;
+                MTexture texture = sprite.Texture;
+                    
+                if (sprite != null && texture != null) {
+                    Vector2 offset = new(preview.OffsetX, preview.OffsetY - previewYOffset);
+                    sprite.Texture.Draw(from + offset, Vector2.Zero, Color.White * alpha, GLOBAL_PREVIEW_UI_SCALE);
+                }
+            }
+
+            Draw.SpriteBatch.End();
+
+            Draw.SpriteBatch.GraphicsDevice.SamplerStates[0] = oldSamplerState;
+            Draw.SpriteBatch.Begin();
         }
     }
 }
