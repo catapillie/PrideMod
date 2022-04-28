@@ -58,7 +58,8 @@ namespace Celeste.Mod.PrideMod.UI {
 
 			ready = true;
 
-			Audio.Play(SFX.game_07_checkpointconfetti);
+			if (Engine.Scene is not Level)
+				Audio.Play(SFX.game_07_checkpointconfetti);
 		}
 
 		public override void Update() {
