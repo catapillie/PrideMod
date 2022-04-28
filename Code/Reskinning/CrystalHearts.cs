@@ -93,7 +93,7 @@ namespace Celeste.Mod.PrideMod.Reskinning {
         }
 
         private static void Mod_HeartGem_Collect(On.Celeste.HeartGem.orig_Collect orig, HeartGem self, Player player) {
-            self.Get<CrystalHeartParticleChanger>().RemoveSelf();
+            self.Get<CrystalHeartParticleChanger>()?.RemoveSelf();
             orig(self, player);
         }
     }
