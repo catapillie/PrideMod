@@ -4,7 +4,7 @@ namespace Celeste.Mod.PrideMod.UI {
     public class GlobalPrideButton : TextMenu.Button {
         private GlobalPrideSettingComponent component;
 
-        private bool Opened => !Container.Focused && Container.Current == this;
+        private bool Opened => !Container.Focused && Container.Current == this && component != null;
 
         public GlobalPrideButton()
             : base(Dialog.Clean("modoptions_PrideMod_GlobalPride")) {
