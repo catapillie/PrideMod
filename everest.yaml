@@ -1,9 +1,9 @@
 - Name: PrideHearts
-  Version: 1.4.2
+  Version: 1.4.3
   DLL: Code/bin/Debug/net452/PrideMod.dll
   Dependencies:
     - Name: Everest
       Version: 1.3324.0
   OptionalDependencies:
     - Name: CollabUtils2
-      Version: 1.6.10
+      Version: 1.6.21
