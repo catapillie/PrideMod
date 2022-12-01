@@ -19,24 +19,24 @@ namespace Celeste.Mod.PrideMod.Reskinning {
 
         private const string PrideMod_AbstractMiniHeart_wasReskinned = "PrideMod_AbstractMiniHeart_wasReskinned";
 
-        private static ILHook IL_AbstractMiniHeart_Awake;
+        private static ILHook IL_AbstractMiniHeart_Added;
 
         internal static void Hook() { }
 
         internal static void Unhook() { }
 
         internal static void Hook_CollabUtils2() {
-            MethodInfo m_AbstractMiniHeart_Awake
-                = typeof(AbstractMiniHeart).GetMethod("Awake", BindingFlags.Instance | BindingFlags.Public);
+            MethodInfo m_AbstractMiniHeart_Added
+                = typeof(AbstractMiniHeart).GetMethod("Added", BindingFlags.Instance | BindingFlags.Public);
 
-            IL_AbstractMiniHeart_Awake = new ILHook(m_AbstractMiniHeart_Awake, Mod_AbstractMiniHeart_Awake);
+            IL_AbstractMiniHeart_Added = new ILHook(m_AbstractMiniHeart_Added, Mod_AbstractMiniHeart_Added);
         }
 
         internal static void Unhook_CollabUtils2() {
-            IL_AbstractMiniHeart_Awake.Dispose();
+            IL_AbstractMiniHeart_Added.Dispose();
         }
 
-        private static void Mod_AbstractMiniHeart_Awake(ILContext il) {
+        private static void Mod_AbstractMiniHeart_Added(ILContext il) {
             MethodInfo m_Image_CenterOrigin
                 = typeof(Image).GetMethod("CenterOrigin", BindingFlags.Instance | BindingFlags.Public);
 
