@@ -200,7 +200,7 @@ namespace Celeste.Mod.PrideMod
 				Pride.Intersex => "intersex",
 				Pride.Lesbian => "lesbian",
 				Pride.MenLovingMen => "mlm",
-				Pride.NonBinary => "Non-nonbinary",
+				Pride.NonBinary => "nonbinary",
 				Pride.Omnisexual => "omnisexual",
 				Pride.Pansexual => "pansexual",
 				Pride.Plural => "plural",
