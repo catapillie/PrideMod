@@ -17,6 +17,7 @@ public enum Pride
 	Genderqueer,
 	Intersex,
 	Lesbian,
+	MenLovingMen,
 	NonBinary,
 	Omnisexual,
 	Pansexual,

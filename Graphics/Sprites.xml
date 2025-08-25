@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <Sprites>
 
@@ -15,7 +15,8 @@
 
     <!-- Default Intermediate Mini Heart -->
 
-    <PrideMod_intermediateminiheart_default path="CollabUtils2/miniheart/intermediate/" start="fastspin">
+    <PrideMod_intermediateminiheart_default path="CollabUtils2/miniheart/intermediate/"
+        start="fastspin">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13" delay="0.1" />
@@ -42,7 +43,8 @@
 
     <!-- Default Grandmaster Mini Heart -->
 
-    <PrideMod_grandmasterminiheart_default path="CollabUtils2/miniheart/grandmaster/" start="fastspin">
+    <PrideMod_grandmasterminiheart_default path="CollabUtils2/miniheart/grandmaster/"
+        start="fastspin">
         <Center />
 
         <Loop id="idle" path="" frames="0*10,1-13" delay="0.1" />
@@ -63,9 +65,9 @@
     <PrideMod_cassette_default path="collectables/cassette/" start="idle">
         <Center />
 
-        <Anim id="idle" path="idle" delay="0.07" frames="0-12,0*30" goto="pulse"/>
-        <Anim id="spin" path="idle" delay="0.07" frames="0-12" goto="spin"/>
-        <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="idle"/>
+        <Anim id="idle" path="idle" delay="0.07" frames="0-12,0*30" goto="pulse" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12" goto="spin" />
+        <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="idle" />
         <Loop id="fastspin" path="idle" delay="0.07" />
     </PrideMod_cassette_default>
 
@@ -74,9 +76,9 @@
     <PrideMod_ghostcassette_default path="collectables/cassette/" start="idle">
         <Center />
 
-        <Anim id="idle" path="ghost" delay="0.07" frames="0-12,0*30" goto="pulse"/>
-        <Anim id="spin" path="ghost" delay="0.07" frames="0-12" goto="spin"/>
-        <Anim id="pulse" path="ghost" delay="0.04" frames="13-18" goto="idle"/>
+        <Anim id="idle" path="ghost" delay="0.07" frames="0-12,0*30" goto="pulse" />
+        <Anim id="spin" path="ghost" delay="0.07" frames="0-12" goto="spin" />
+        <Anim id="pulse" path="ghost" delay="0.04" frames="13-18" goto="idle" />
         <Loop id="fastspin" path="ghost" delay="0.07" />
     </PrideMod_ghostcassette_default>
 
@@ -132,7 +134,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="28-30,30*10,31-34" />
         <Anim id="fade3" path="normal" delay=".07" frames="36-38,38*10,39-42" />
         <Anim id="fade4" path="normal" delay=".07" frames="44-46,46*10,47-50" />
-        <Anim id="fade5" path="normal" delay=".07" frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_agender>
 
@@ -274,7 +277,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_aromantic>
 
@@ -418,7 +422,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_asexual>
 
@@ -562,7 +567,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_bigender>
 
@@ -706,7 +712,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_bisexual>
 
@@ -850,7 +857,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="28-30,30*10,31-34" />
         <Anim id="fade3" path="normal" delay=".07" frames="36-38,38*10,39-42" />
         <Anim id="fade4" path="normal" delay=".07" frames="44-46,46*10,47-50" />
-        <Anim id="fade5" path="normal" delay=".07" frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_demiboy>
 
@@ -992,7 +1000,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="28-30,30*10,31-34" />
         <Anim id="fade3" path="normal" delay=".07" frames="36-38,38*10,39-42" />
         <Anim id="fade4" path="normal" delay=".07" frames="44-46,46*10,47-50" />
-        <Anim id="fade5" path="normal" delay=".07" frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_demigirl>
 
@@ -1134,7 +1143,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="28-30,30*10,31-34" />
         <Anim id="fade3" path="normal" delay=".07" frames="36-38,38*10,39-42" />
         <Anim id="fade4" path="normal" delay=".07" frames="44-46,46*10,47-50" />
-        <Anim id="fade5" path="normal" delay=".07" frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_deminonbinary>
 
@@ -1187,7 +1197,8 @@
 
     <!-- Deminonbinary Ghost Golden Strawberry -->
 
-    <PrideMod_ghostgoldenberry_deminonbinary path="PrideMod/ghostgoldenberry/deminonbinary/" start="idle">
+    <PrideMod_ghostgoldenberry_deminonbinary path="PrideMod/ghostgoldenberry/deminonbinary/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-6,0-6,0-6,0-6,0-7" />
@@ -1206,7 +1217,8 @@
 
     <!-- Deminonbinary Ghost Silver Strawberry -->
 
-    <PrideMod_ghostsilverberry_deminonbinary path="PrideMod/ghostsilverberry/deminonbinary/" start="idle">
+    <PrideMod_ghostsilverberry_deminonbinary path="PrideMod/ghostsilverberry/deminonbinary/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-5,0-5,0-5,0-5,0-7" />
@@ -1276,7 +1288,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_demisexual>
 
@@ -1420,7 +1433,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_gay>
 
@@ -1564,7 +1578,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_genderfluid>
 
@@ -1617,7 +1632,8 @@
 
     <!-- Genderfluid Ghost Golden Strawberry -->
 
-    <PrideMod_ghostgoldenberry_genderfluid path="PrideMod/ghostgoldenberry/genderfluid/" start="idle">
+    <PrideMod_ghostgoldenberry_genderfluid path="PrideMod/ghostgoldenberry/genderfluid/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-14" />
@@ -1636,7 +1652,8 @@
 
     <!-- Genderfluid Ghost Silver Strawberry -->
 
-    <PrideMod_ghostsilverberry_genderfluid path="PrideMod/ghostsilverberry/genderfluid/" start="idle">
+    <PrideMod_ghostsilverberry_genderfluid path="PrideMod/ghostsilverberry/genderfluid/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
@@ -1708,7 +1725,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_genderqueer>
 
@@ -1761,7 +1779,8 @@
 
     <!-- Genderqueer Ghost Golden Strawberry -->
 
-    <PrideMod_ghostgoldenberry_genderqueer path="PrideMod/ghostgoldenberry/genderqueer/" start="idle">
+    <PrideMod_ghostgoldenberry_genderqueer path="PrideMod/ghostgoldenberry/genderqueer/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-14" />
@@ -1780,7 +1799,8 @@
 
     <!-- Genderqueer Ghost Silver Strawberry -->
 
-    <PrideMod_ghostsilverberry_genderqueer path="PrideMod/ghostsilverberry/genderqueer/" start="idle">
+    <PrideMod_ghostsilverberry_genderqueer path="PrideMod/ghostsilverberry/genderqueer/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
@@ -1852,7 +1872,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="28-30,30*10,31-34" />
         <Anim id="fade3" path="normal" delay=".07" frames="36-38,38*10,39-42" />
         <Anim id="fade4" path="normal" delay=".07" frames="44-46,46*10,47-50" />
-        <Anim id="fade5" path="normal" delay=".07" frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_intersex>
 
@@ -1994,7 +2015,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_lesbian>
 
@@ -2102,6 +2124,151 @@
         <Loop id="idle" path="finalflag" delay="0.167" />
     </PrideMod_finalflag_lesbian>
 
+    <!-- MLM -->
+
+    <!-- MLM Crystal Heart -->
+
+    <PrideMod_crystalheart_mlm path="PrideMod/crystalheart/mlm/">
+        <Center />
+
+        <Loop id="idle" path="" frames="0" />
+        <Loop id="spin" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
+        <Loop id="fastspin" path="" delay="0.1" />
+    </PrideMod_crystalheart_mlm>
+
+    <!-- MLM Mini Heart -->
+
+    <PrideMod_miniheart_mlm path="PrideMod/miniheart/mlm/" start="idle">
+        <Center />
+
+        <Loop id="idle" path="" frames="0*10,1-13,14*10,15-27" delay="0.1" />
+        <Loop id="fastspin" path="" frames="0-27" delay="0.1" />
+    </PrideMod_miniheart_mlm>
+
+    <!-- MLM Strawberry -->
+
+    <PrideMod_strawberry_mlm path="PrideMod/strawberry/mlm/" start="idle">
+        <Center />
+
+        <Loop id="idle" path="normal" delay=".1" frames="0-13,0-13,0-13,0-13,0-14" />
+        <Loop id="noFlash" path="normal" delay=".1" frames="0-13" />
+        <Anim id="collect" path="normal" delay=".07" frames="14-18" />
+        <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+
+        <Anim id="fade0" path="normal" delay=".08" frames="19-21,21*10,22-26" />
+        <Anim id="fade1" path="normal" delay=".07" frames="27-29,29*10,30-33" />
+        <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
+        <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
+        <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
+    </PrideMod_strawberry_mlm>
+
+    <!-- MLM Strawberry Seed -->
+
+    <PrideMod_strawberryseed_mlm path="PrideMod/strawberry/mlm/">
+        <Center />
+
+        <Loop id="idle" path="seed" frames="0*19,1" delay="0.1" />
+        <Loop id="noFlash" path="seed" frames="0" />
+    </PrideMod_strawberryseed_mlm>
+
+    <!-- MLM Ghost Strawberry -->
+
+    <PrideMod_ghostberry_mlm path="PrideMod/ghostberry/mlm/" start="idle">
+        <Center />
+
+        <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-14" />
+        <Anim id="collect" path="idle" delay=".07" frames="14-18" />
+        <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+    </PrideMod_ghostberry_mlm>
+
+    <!-- MLM Ghost Strawberry Seed -->
+
+    <PrideMod_ghostberryseed_mlm path="PrideMod/ghostberry/mlm/">
+        <Center />
+
+        <Loop id="idle" path="seed" frames="0*19,1" delay="0.1" />
+        <Loop id="noFlash" path="seed" frames="0" />
+    </PrideMod_ghostberryseed_mlm>
+
+    <!-- MLM Golden Strawberry -->
+
+    <PrideMod_goldenberry_mlm path="PrideMod/goldenberry/mlm/" start="idle">
+        <Center />
+
+        <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
+        <Anim id="collect" path="idle" delay=".07" frames="15-19" />
+        <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+    </PrideMod_goldenberry_mlm>
+
+    <!-- MLM Golden Strawberry Seed -->
+
+    <PrideMod_goldenberryseed_mlm path="PrideMod/goldenberry/mlm/">
+        <Center />
+
+        <Loop id="idle" path="seed" frames="0*19,1" delay="0.1" />
+        <Loop id="noFlash" path="seed" frames="0" />
+    </PrideMod_goldenberryseed_mlm>
+
+    <!-- MLM Ghost Golden Strawberry -->
+
+    <PrideMod_ghostgoldenberry_mlm path="PrideMod/ghostgoldenberry/mlm/" start="idle">
+        <Center />
+
+        <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-14" />
+        <Anim id="collect" path="idle" delay=".07" frames="14-18" />
+        <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+    </PrideMod_ghostgoldenberry_mlm>
+
+    <!-- MLM Silver Strawberry -->
+
+    <PrideMod_silverberry_mlm path="PrideMod/silverberry/mlm/" start="idle">
+        <Center />
+
+        <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
+        <Anim id="collect" path="idle" delay=".07" frames="15-19" />
+    </PrideMod_silverberry_mlm>
+
+    <!-- MLM Ghost Silver Strawberry -->
+
+    <PrideMod_ghostsilverberry_mlm path="PrideMod/ghostsilverberry/mlm/" start="idle">
+        <Center />
+
+        <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
+        <Anim id="collect" path="idle" delay=".07" frames="15-19" />
+    </PrideMod_ghostsilverberry_mlm>
+
+    <!-- MLM Cassette -->
+
+    <PrideMod_cassette_mlm path="PrideMod/cassette/mlm/" start="idle">
+        <Center />
+
+        <Anim id="idle" path="idle" delay="0.07" frames="0-12,12*30" goto="pulse" />
+        <Anim id="reverseidle" path="idle" delay="0.07" frames="19-31,31*30" goto="reversepulse" />
+        <Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="reverseidle" />
+        <Anim id="reversepulse" path="idle" delay="0.04" frames="32-37" goto="idle" />
+        <Anim id="spin" path="idle" delay="0.07" frames="0-12,19-31" goto="spin" />
+        <Loop id="fastspin" path="idle" delay="0.07" />
+    </PrideMod_cassette_mlm>
+
+    <!-- MLM Summit Flag -->
+
+    <PrideMod_summitflag_mlm path="PrideMod/summitflag/mlm/" start="idle">
+        <Justify x="0.32" y="0.6" />
+
+        <Loop id="idle" path="SummitFlag" delay="0.083" />
+    </PrideMod_summitflag_mlm>
+
+    <!-- MLM Final Flag -->
+
+    <PrideMod_finalflag_mlm path="PrideMod/finalflag/mlm/" start="idle">
+        <Justify x="0.3" y="0.65" />
+
+        <Loop id="idle" path="finalflag" delay="0.167" />
+    </PrideMod_finalflag_mlm>
+
     <!-- Non-Binary -->
 
     <!-- Non-Binary Crystal Heart -->
@@ -2138,7 +2305,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_nonbinary>
 
@@ -2282,7 +2450,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_omnisexual>
 
@@ -2426,7 +2595,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_pansexual>
 
@@ -2570,7 +2740,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_plural>
 
@@ -2714,7 +2885,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_polyamorous>
 
@@ -2767,7 +2939,8 @@
 
     <!-- Polyamorous Ghost Golden Strawberry -->
 
-    <PrideMod_ghostgoldenberry_polyamorous path="PrideMod/ghostgoldenberry/polyamorous/" start="idle">
+    <PrideMod_ghostgoldenberry_polyamorous path="PrideMod/ghostgoldenberry/polyamorous/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-14" />
@@ -2786,7 +2959,8 @@
 
     <!-- Polyamorous Ghost Silver Strawberry -->
 
-    <PrideMod_ghostsilverberry_polyamorous path="PrideMod/ghostsilverberry/polyamorous/" start="idle">
+    <PrideMod_ghostsilverberry_polyamorous path="PrideMod/ghostsilverberry/polyamorous/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-13,0-13,0-13,0-13,0-15" />
@@ -2858,7 +3032,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="35-37,37*10,38-41" />
         <Anim id="fade3" path="normal" delay=".07" frames="43-45,45*10,46-49" />
         <Anim id="fade4" path="normal" delay=".07" frames="51-53,53*10,54-57" />
-        <Anim id="fade5" path="normal" delay=".07" frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="59,61,61,60,61,60,61,60,61,60,61,60,61-66" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_polysexual>
 
@@ -3002,7 +3177,8 @@
         <Anim id="fade2" path="normal" delay=".07" frames="28-30,30*10,31-34" />
         <Anim id="fade3" path="normal" delay=".07" frames="36-38,38*10,39-42" />
         <Anim id="fade4" path="normal" delay=".07" frames="44-46,46*10,47-50" />
-        <Anim id="fade5" path="normal" delay=".07" frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
+        <Anim id="fade5" path="normal" delay=".07"
+            frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59" />
         <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66" />
     </PrideMod_strawberry_transgender>
 
@@ -3055,7 +3231,8 @@
 
     <!-- Transgender Ghost Golden Strawberry -->
 
-    <PrideMod_ghostgoldenberry_transgender path="PrideMod/ghostgoldenberry/transgender/" start="idle">
+    <PrideMod_ghostgoldenberry_transgender path="PrideMod/ghostgoldenberry/transgender/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-6,0-6,0-6,0-6,0-7" />
@@ -3074,7 +3251,8 @@
 
     <!-- Transgender Ghost Silver Strawberry -->
 
-    <PrideMod_ghostsilverberry_transgender path="PrideMod/ghostsilverberry/transgender/" start="idle">
+    <PrideMod_ghostsilverberry_transgender path="PrideMod/ghostsilverberry/transgender/"
+        start="idle">
         <Center />
 
         <Loop id="idle" path="idle" delay=".08" frames="0-5,0-5,0-5,0-5,0-7" />

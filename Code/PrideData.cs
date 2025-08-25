@@ -99,6 +99,13 @@ namespace Celeste.Mod.PrideMod
 				Calc.HexToColor("d161a2"),
 				Calc.HexToColor("ca0077"),
 			} },
+			{ Pride.MenLovingMen, new[] {
+				Calc.HexToColor("018e71"),
+				Calc.HexToColor("99e9c2"),
+				Calc.HexToColor("ffffff"),
+				Calc.HexToColor("7cafe3"),
+				Calc.HexToColor("3b1379"),
+			} },
 			{ Pride.NonBinary, new[] {
 				Calc.HexToColor("fef333"),
 				Calc.HexToColor("f0f0f0"),
@@ -163,6 +170,7 @@ namespace Celeste.Mod.PrideMod
 				Pride.Genderqueer => "Genderqueer",
 				Pride.Intersex => "Intersex",
 				Pride.Lesbian => "Lesbian",
+				Pride.MenLovingMen => "Men-loving-men",
 				Pride.NonBinary => "Non-Binary",
 				Pride.Omnisexual => "Omnisexual",
 				Pride.Pansexual => "Pansexual",
@@ -173,39 +181,68 @@ namespace Celeste.Mod.PrideMod
 				_ => throw new ArgumentOutOfRangeException(nameof(pride)),
 			};
 
+		public static string GetInternalName(this Pride pride)
+			=> pride switch
+			{
+				Pride.Default => "default",
+				Pride.Agender => "agender",
+				Pride.Aromantic => "aromantic",
+				Pride.Asexual => "asexual",
+				Pride.Bigender => "bigender",
+				Pride.Bisexual => "bisexual",
+				Pride.Demiboy => "demiboy",
+				Pride.Demigirl => "demigirl",
+				Pride.Deminonbinary => "deminonbinary",
+				Pride.Demisexual => "demisexual",
+				Pride.Gay => "gay",
+				Pride.Genderfluid => "genderfluid",
+				Pride.Genderqueer => "genderqueer",
+				Pride.Intersex => "intersex",
+				Pride.Lesbian => "lesbian",
+				Pride.MenLovingMen => "mlm",
+				Pride.NonBinary => "Non-nonbinary",
+				Pride.Omnisexual => "omnisexual",
+				Pride.Pansexual => "pansexual",
+				Pride.Plural => "plural",
+				Pride.Polyamorous => "polyamorous",
+				Pride.Polysexual => "polysexual",
+				Pride.Transgender => "transgender",
+				_ => throw new ArgumentOutOfRangeException(nameof(pride)),
+			};
+
 		public static string GetCustomTexturePath(this Pride pride, string spriteType, string frame, string originalID)
 			=> pride == Pride.Default ?
 				originalID :
-				$"PrideMod/{spriteType}/{pride.ToString().ToLower()}/{frame}";
+				$"PrideMod/{spriteType}/{pride.GetInternalName()}/{frame}";
 
 		public static string GetCustomTexturePath(this Pride pride, string spriteType, string frame)
-			=> $"PrideMod/{spriteType}/{pride.ToString().ToLower()}/{frame}";
+			=> $"PrideMod/{spriteType}/{pride.GetInternalName()}/{frame}";
 
 		public static string GetCustomSpriteID(this Pride pride, string spriteType, string originalID)
 			=> pride == Pride.Default ?
 				originalID :
-				$"PrideMod_{spriteType}_{pride.ToString().ToLower()}";
+				$"PrideMod_{spriteType}_{pride.GetInternalName()}";
 
 		public static string GetCustomSpriteID(this Pride pride, string spriteType)
-			=> $"PrideMod_{spriteType}_{pride.ToString().ToLower()}";
+			=> $"PrideMod_{spriteType}_{pride.GetInternalName()}";
 
 		public static Sprite GetCustomSprite(this Pride pride, string spriteType, Sprite originalSprite)
 			=> pride == Pride.Default ?
 				originalSprite :
-				GFX.SpriteBank.Create($"PrideMod_{spriteType}_{pride.ToString().ToLower()}");
+				GFX.SpriteBank.Create($"PrideMod_{spriteType}_{pride.GetInternalName()}");
 
 		public static Sprite GetCustomSprite(this Pride pride, string spriteType)
-			=> GFX.SpriteBank.Create($"PrideMod_{spriteType}_{pride.ToString().ToLower()}");
+			=> GFX.SpriteBank.Create($"PrideMod_{spriteType}_{pride.GetInternalName()}");
 
 		public static string GetCustomSummitFlagDecalPath(this Pride pride, string originalPath)
 			=> pride == Pride.Default ?
 				originalPath :
-				$"PrideMod/summitflag/{pride.ToString().ToLower()}/SummitFlag";
+				$"PrideMod/summitflag/{pride.GetInternalName()}/SummitFlag";
 
 		public static string GetCustomFinalFlagDecalPath(this Pride pride, string originalPath)
 			=> pride == Pride.Default ?
 				originalPath :
-				$"PrideMod/finalflag/{pride.ToString().ToLower()}/finalflag";
+				$"PrideMod/finalflag/{pride.GetInternalName()}/finalflag";
 
 		public static Color[] GetColors(this Pride pride) => prideColors[pride];
 
