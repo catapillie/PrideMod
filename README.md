@@ -1,13 +1,21 @@
 # Pride Mod
 
-Pride Mod was almost entirely sprited by Lily and coded by catapillie, with additional spriting help from ReaverOfSouls and Stotch.
+## Credits
+Pride Mod was almost entirely sprited by Xavier Shrier and entirely coded by catapillie.
 
-To use this mod, go into your mod settings and change the setting of each collectable or decal to the pride you want, then press F5 or Retry from the pause menu.
+Thank you to the following people for their additional contributions over the years:
+ * __maddie480__: Additional support with CollabUtils2 integration
+ * __Reaver of Souls__: Assistance with the symbol-based flags
+ * __Viv__: Programmed the old version, Pride Hearts
+ * __st0tch__: Provided bases for some of the Summit Flags
+ * __Tarte__: Added the MLM flag
 
-Note that this mod also integrates with CollabUtils2 by maddie480 to allow you to customise Silver Berries if you have it installed.
+## Instructions
+To use this mod, go into your mod settings and change the setting of each collectable or decal to the flag you want, then press F5 or Retry from the pause menu.
 
-If you have any questions, would like to suggest a new pride, or need to report a bug or issue, join the [Pride Mod Discord](https://discord.gg/fPkfJdFdyq). 
+This mod also integrates with [`CollabUtils2`](https://github.com/EverestAPI/CelesteCollabUtils2) by maddie480 to allow you to customise Mini Hearts and Silver Berries.
 
-You may also just send a direct message to Lilium#0864 on Discord for suggestions and catapillie#1927 for bugs.
+For questions and suggestions, please reach out to @xaviershrier on Discord.
+To report a bug or other breakage, please reach out to `@catapillie` on Discord.
 
-If you want to use one of the flags in your own map, **do not depend on Pride Mod** - instead please DM Lilium#0864 on Discord for permission to directly use the files.
+If you would like to use one of the flags in your own map, **please do not depend on Pride Mod** - instead please DM `@xaviershrier` on Discord for permission to directly use the files.
