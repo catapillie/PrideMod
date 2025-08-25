@@ -13,14 +13,10 @@ public class GlobalPrideSettingComponent : Component
 
     private class Entry
     {
-        public readonly int Index;
         public readonly Pride Pride;
         public readonly string Name;
 
         public readonly Wiggler Wiggler = Wiggler.Create(0.25f, 3f);
-
-        private float l;
-        public float Lerp { get; private set; }
 
         public readonly float Width;
 
@@ -30,12 +26,9 @@ public class GlobalPrideSettingComponent : Component
             Width = ActiveFont.WidthToNextLine(Name, 0);
         }
 
-        public void Update(bool selected)
+        public void Update()
         {
             Wiggler.Update();
-
-            l = Calc.Approach(l, selected ? 1 : 0, Engine.DeltaTime * 4f);
-            Lerp = Ease.QuadInOut(l);
         }
     }
 
@@ -118,7 +111,7 @@ public class GlobalPrideSettingComponent : Component
             y += (TargetY - y) * (1f - (float)Math.Pow(0.0099999997764825821, Engine.RawDeltaTime));
 
             foreach (Entry entry in entries)
-                entry.Update(entry.Index == index);
+                entry.Update();
 
             foreach (Preview preview in previews)
                 preview.Sprite?.Update();
