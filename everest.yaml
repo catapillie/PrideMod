@@ -1,6 +1,6 @@
 - Name: PrideHearts
   Version: 1.5.0
-  DLL: Code/bin/Debug/net452/PrideMod.dll
+  DLL: Code/bin/Debug/net8.0/PrideMod.dll
   Dependencies:
     - Name: Everest
       Version: 1.5752.0

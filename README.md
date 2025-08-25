@@ -4,7 +4,7 @@ Pride Mod was almost entirely sprited by Lily and coded by catapillie, with addi
 
 To use this mod, go into your mod settings and change the setting of each collectable or decal to the pride you want, then press F5 or Retry from the pause menu.
 
-Note that this mod also integrates with CollabUtils2 by max480 to allow you to customise Silver Berries if you have it installed.
+Note that this mod also integrates with CollabUtils2 by maddie480 to allow you to customise Silver Berries if you have it installed.
 
 If you have any questions, would like to suggest a new pride, or need to report a bug or issue, join the [Pride Mod Discord](https://discord.gg/fPkfJdFdyq). 
 

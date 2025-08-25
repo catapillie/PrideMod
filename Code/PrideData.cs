@@ -4,11 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Celeste.Mod.PrideMod {
-    public static class PrideData {
-		public static readonly int PrideCount = Enum.GetNames(typeof(Pride)).Length;
+namespace Celeste.Mod.PrideMod;
 
-		private static readonly ReadOnlyDictionary<Pride, Color[]> prideColors = new(new Dictionary<Pride, Color[]> {
+public static class PrideData
+{
+	public static readonly int PrideCount = Enum.GetNames(typeof(Pride)).Length;
+
+	private static readonly ReadOnlyDictionary<Pride, Color[]> prideColors = new(new Dictionary<Pride, Color[]> {
 			{ Pride.Default, null },
 			{ Pride.Agender, new[] {
 				Calc.HexToColor("3f3f3f"),
@@ -139,96 +141,101 @@ namespace Celeste.Mod.PrideMod {
 			} },
 		});
 
-		public static ReadOnlyDictionary<Pride, ParticleType[]> PrideParticles_HeartGem_P_AnyShine { get; private set; } = null;
-		public static ReadOnlyDictionary<Pride, ParticleType[]> PrideParticles_HeartGem_P_FakeShine { get; private set; } = null;
-		public static ReadOnlyDictionary<Pride, ParticleType[]> PrideParticles_Cassette_P_Shine { get; private set; } = null;
+	public static ReadOnlyDictionary<Pride, ParticleType[]> PrideParticles_HeartGem_P_AnyShine { get; private set; } = null;
+	public static ReadOnlyDictionary<Pride, ParticleType[]> PrideParticles_HeartGem_P_FakeShine { get; private set; } = null;
+	public static ReadOnlyDictionary<Pride, ParticleType[]> PrideParticles_Cassette_P_Shine { get; private set; } = null;
 
-		public static string GetFormattedName(this Pride pride)
-			=> pride switch {
-				Pride.Agender => "Agender",
-				Pride.Aromantic => "Aromantic",
-				Pride.Asexual => "Asexual",
-				Pride.Bigender => "Bigender",
-				Pride.Bisexual => "Bisexual",
-				Pride.Demiboy => "Demiboy",
-				Pride.Demigirl => "Demigirl",
-				Pride.Deminonbinary => "Deminonbinary",
-				Pride.Demisexual => "Demisexual",
-				Pride.Gay => "Gay",
-				Pride.Genderfluid => "Genderfluid",
-				Pride.Genderqueer => "Genderqueer",
-				Pride.Intersex => "Intersex",
-				Pride.Lesbian => "Lesbian",
-				Pride.NonBinary => "Non-Binary",
-				Pride.Omnisexual => "Omnisexual",
-				Pride.Pansexual => "Pansexual",
-				Pride.Plural => "Plural",
-				Pride.Polyamorous => "Polyamorous",
-				Pride.Polysexual => "Polysexual",
-				Pride.Transgender => "Transgender",
-				_ => "Default",
-			};
+	public static string GetFormattedName(this Pride pride)
+		=> pride switch
+		{
+			Pride.Agender => "Agender",
+			Pride.Aromantic => "Aromantic",
+			Pride.Asexual => "Asexual",
+			Pride.Bigender => "Bigender",
+			Pride.Bisexual => "Bisexual",
+			Pride.Demiboy => "Demiboy",
+			Pride.Demigirl => "Demigirl",
+			Pride.Deminonbinary => "Deminonbinary",
+			Pride.Demisexual => "Demisexual",
+			Pride.Gay => "Gay",
+			Pride.Genderfluid => "Genderfluid",
+			Pride.Genderqueer => "Genderqueer",
+			Pride.Intersex => "Intersex",
+			Pride.Lesbian => "Lesbian",
+			Pride.NonBinary => "Non-Binary",
+			Pride.Omnisexual => "Omnisexual",
+			Pride.Pansexual => "Pansexual",
+			Pride.Plural => "Plural",
+			Pride.Polyamorous => "Polyamorous",
+			Pride.Polysexual => "Polysexual",
+			Pride.Transgender => "Transgender",
+			_ => "Default",
+		};
 
-		public static string GetCustomTexturePath(this Pride pride, string spriteType, string frame, string originalID)
-			=> pride == Pride.Default ?
-				originalID :
-				$"PrideMod/{spriteType}/{pride.ToString().ToLower()}/{frame}";
+	public static string GetCustomTexturePath(this Pride pride, string spriteType, string frame, string originalID)
+		=> pride == Pride.Default ?
+			originalID :
+			$"PrideMod/{spriteType}/{pride.ToString().ToLower()}/{frame}";
 
-		public static string GetCustomTexturePath(this Pride pride, string spriteType, string frame)
-			=> $"PrideMod/{spriteType}/{pride.ToString().ToLower()}/{frame}";
+	public static string GetCustomTexturePath(this Pride pride, string spriteType, string frame)
+		=> $"PrideMod/{spriteType}/{pride.ToString().ToLower()}/{frame}";
 
-		public static string GetCustomSpriteID(this Pride pride, string spriteType, string originalID)
-			=> pride == Pride.Default ?
-				originalID :
-				$"PrideMod_{spriteType}_{pride.ToString().ToLower()}";
+	public static string GetCustomSpriteID(this Pride pride, string spriteType, string originalID)
+		=> pride == Pride.Default ?
+			originalID :
+			$"PrideMod_{spriteType}_{pride.ToString().ToLower()}";
 
-		public static string GetCustomSpriteID(this Pride pride, string spriteType)
-			=> $"PrideMod_{spriteType}_{pride.ToString().ToLower()}";
+	public static string GetCustomSpriteID(this Pride pride, string spriteType)
+		=> $"PrideMod_{spriteType}_{pride.ToString().ToLower()}";
 
-		public static Sprite GetCustomSprite(this Pride pride, string spriteType, Sprite originalSprite)
-			=> pride == Pride.Default ?
-				originalSprite :
-				GFX.SpriteBank.Create($"PrideMod_{spriteType}_{pride.ToString().ToLower()}");
+	public static Sprite GetCustomSprite(this Pride pride, string spriteType, Sprite originalSprite)
+		=> pride == Pride.Default ?
+			originalSprite :
+			GFX.SpriteBank.Create($"PrideMod_{spriteType}_{pride.ToString().ToLower()}");
 
-		public static Sprite GetCustomSprite(this Pride pride, string spriteType)
-			=> GFX.SpriteBank.Create($"PrideMod_{spriteType}_{pride.ToString().ToLower()}");
+	public static Sprite GetCustomSprite(this Pride pride, string spriteType)
+		=> GFX.SpriteBank.Create($"PrideMod_{spriteType}_{pride.ToString().ToLower()}");
 
-		public static string GetCustomSummitFlagDecalPath(this Pride pride, string originalPath)
-			=> pride == Pride.Default ?
-				originalPath :
-				$"PrideMod/summitflag/{pride.ToString().ToLower()}/SummitFlag";
+	public static string GetCustomSummitFlagDecalPath(this Pride pride, string originalPath)
+		=> pride == Pride.Default ?
+			originalPath :
+			$"PrideMod/summitflag/{pride.ToString().ToLower()}/SummitFlag";
 
-		public static string GetCustomFinalFlagDecalPath(this Pride pride, string originalPath)
-			=> pride == Pride.Default ?
-				originalPath :
-				$"PrideMod/finalflag/{pride.ToString().ToLower()}/finalflag";
+	public static string GetCustomFinalFlagDecalPath(this Pride pride, string originalPath)
+		=> pride == Pride.Default ?
+			originalPath :
+			$"PrideMod/finalflag/{pride.ToString().ToLower()}/finalflag";
 
-		public static Color[] GetColors(this Pride pride) => prideColors[pride];
+	public static Color[] GetColors(this Pride pride) => prideColors[pride];
 
-		internal static void InitializeContent() {
-			PrideParticles_HeartGem_P_AnyShine	= BuildParticleTypes(HeartGem.P_BlueShine, (p, color) => p.Color = color);
-			PrideParticles_HeartGem_P_FakeShine	= BuildParticleTypes(HeartGem.P_FakeShine, (p, color) => p.Color = color);
+	internal static void InitializeContent()
+	{
+		PrideParticles_HeartGem_P_AnyShine = BuildParticleTypes(HeartGem.P_BlueShine, (p, color) => p.Color = color);
+		PrideParticles_HeartGem_P_FakeShine = BuildParticleTypes(HeartGem.P_FakeShine, (p, color) => p.Color = color);
 
-			PrideParticles_Cassette_P_Shine		= BuildParticleTypes(Cassette.P_Shine, (p, color) => {
-				p.Color = color;
-				p.Color2 = Color.Lerp(color, Color.White, 0.5f);
-			});
-		}
+		PrideParticles_Cassette_P_Shine = BuildParticleTypes(Cassette.P_Shine, (p, color) =>
+		{
+			p.Color = color;
+			p.Color2 = Color.Lerp(color, Color.White, 0.5f);
+		});
+	}
 
-		private static ReadOnlyDictionary<Pride, ParticleType[]> BuildParticleTypes(ParticleType from, Action<ParticleType, Color> particleTypeModifier) {
-			Dictionary<Pride, ParticleType[]> prideParticleTypes = new();
+	private static ReadOnlyDictionary<Pride, ParticleType[]> BuildParticleTypes(ParticleType from, Action<ParticleType, Color> particleTypeModifier)
+	{
+		Dictionary<Pride, ParticleType[]> prideParticleTypes = new();
 
-			foreach (var kv in prideColors) {
-				if (kv.Key != Pride.Default) {
-					ParticleType[] particleTypes = new ParticleType[kv.Value.Length];
-					for (int i = 0; i < particleTypes.Length; i++)
-						particleTypeModifier(particleTypes[i] = new ParticleType(from), kv.Value[i]);
+		foreach (var kv in prideColors)
+		{
+			if (kv.Key != Pride.Default)
+			{
+				ParticleType[] particleTypes = new ParticleType[kv.Value.Length];
+				for (int i = 0; i < particleTypes.Length; i++)
+					particleTypeModifier(particleTypes[i] = new ParticleType(from), kv.Value[i]);
 
-					prideParticleTypes[kv.Key] = particleTypes;
-				}
+				prideParticleTypes[kv.Key] = particleTypes;
 			}
-
-			return new(prideParticleTypes);
 		}
+
+		return new(prideParticleTypes);
 	}
 }

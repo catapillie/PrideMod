@@ -5,242 +5,266 @@ using Monocle;
 using System;
 using System.Linq;
 
-namespace Celeste.Mod.PrideMod.Components {
-    public class GlobalPrideSettingComponent : Component {
-        public const int GLOBAL_PREVIEW_UI_SCALE = 5;
+namespace Celeste.Mod.PrideMod.Components;
 
-        private class Entry {
-            public readonly int Index;
-            public readonly Pride Pride;
-            public readonly string Name;
+public class GlobalPrideSettingComponent : Component
+{
+    public const int GLOBAL_PREVIEW_UI_SCALE = 5;
 
-            public readonly Wiggler Wiggler = Wiggler.Create(0.25f, 3f);
+    private class Entry
+    {
+        public readonly int Index;
+        public readonly Pride Pride;
+        public readonly string Name;
 
-            private float l;
-            public float Lerp { get; private set; }
+        public readonly Wiggler Wiggler = Wiggler.Create(0.25f, 3f);
 
-            public readonly float Width;
+        private float l;
+        public float Lerp { get; private set; }
 
-            public Entry(int i) {
-                Name = (Pride = (Pride)i).GetFormattedName();
-                Width = ActiveFont.WidthToNextLine(Name, 0);
-            }
+        public readonly float Width;
 
-            public void Update(bool selected) {
-                Wiggler.Update();
-
-                l = Calc.Approach(l, selected ? 1 : 0, Engine.DeltaTime * 4f);
-                Lerp = Ease.QuadInOut(l);
-            }
+        public Entry(int i)
+        {
+            Name = (Pride = (Pride)i).GetFormattedName();
+            Width = ActiveFont.WidthToNextLine(Name, 0);
         }
 
-        private class Preview {
-            public Sprite Sprite;
-            public readonly PreviewSpriteAttribute SpriteInfo;
-            public readonly float OffsetX, OffsetY;
+        public void Update(bool selected)
+        {
+            Wiggler.Update();
 
-            public Preview(PreviewSpriteAttribute spriteInfo) {
-                SpriteInfo = spriteInfo;
-                OffsetX = spriteInfo.GlobalOffsetX * GLOBAL_PREVIEW_UI_SCALE;
-                OffsetY = spriteInfo.GlobalOffsetY * GLOBAL_PREVIEW_UI_SCALE;
-            }
+            l = Calc.Approach(l, selected ? 1 : 0, Engine.DeltaTime * 4f);
+            Lerp = Ease.QuadInOut(l);
+        }
+    }
+
+    private class Preview
+    {
+        public Sprite Sprite;
+        public readonly PreviewSpriteAttribute SpriteInfo;
+        public readonly float OffsetX, OffsetY;
+
+        public Preview(PreviewSpriteAttribute spriteInfo)
+        {
+            SpriteInfo = spriteInfo;
+            OffsetX = spriteInfo.GlobalOffsetX * GLOBAL_PREVIEW_UI_SCALE;
+            OffsetY = spriteInfo.GlobalOffsetY * GLOBAL_PREVIEW_UI_SCALE;
+        }
+    }
+
+    private float lerp;
+    private bool shown;
+
+    private readonly string title = Dialog.Clean("modoptions_PrideMod_GlobalPride_title");
+
+    private readonly Entry[] entries = new Entry[PrideData.PrideCount];
+    private readonly Preview[] previews;
+    private float previewYOffset;
+
+    private int index;
+
+    private float y;
+    private float TargetY => index * ActiveFont.LineHeight;
+
+    private readonly float halfMaxWidth;
+
+    private readonly TextMenu menu;
+
+    public GlobalPrideSettingComponent(TextMenu menu)
+        : base(active: true, visible: true)
+    {
+        for (int i = 0; i < entries.Length; i++)
+        {
+            Entry entry = entries[i] = new(i);
+            if (halfMaxWidth < entry.Width)
+                halfMaxWidth = entry.Width;
         }
 
-        private float lerp;
-        private bool shown;
+        halfMaxWidth = halfMaxWidth / 2f + 30;
 
-        private readonly string title = Dialog.Clean("modoptions_PrideMod_GlobalPride_title");
+        this.menu = menu;
 
-        private readonly Entry[] entries = new Entry[PrideData.PrideCount];
-        private readonly Preview[] previews;
-        private float previewYOffset;
+        previews = PrideModModuleSettings.Info.Where(info => info.Attribute.Shown())
+                                              .SelectMany(info => info.PreviewSpritesAttributes)
+                                              .Select(spriteInfo => new Preview(spriteInfo))
+                                              .ToArray();
+    }
 
-        private int index;
+    public override void Update()
+    {
+        base.Update();
 
-        private float y;
-        private float TargetY => index * ActiveFont.LineHeight;
+        Visible = lerp > 0;
 
-        private readonly float halfMaxWidth;
+        lerp = Calc.Approach(lerp, shown ? 1 : 0, Engine.DeltaTime * 4);
 
-        private readonly TextMenu menu;
+        if (shown)
+        {
+            int prev = index;
+            bool down;
+            if (down = Input.MenuDown.Pressed)
+                ++index;
+            else if (Input.MenuUp.Pressed)
+                --index;
+            index = Util.Mod(index, PrideData.PrideCount);
 
-        public GlobalPrideSettingComponent(TextMenu menu)
-            : base(active: true, visible: true) {
-            for (int i = 0; i < entries.Length; i++) {
-                Entry entry = entries[i] = new(i);
-                if (halfMaxWidth < entry.Width)
-                    halfMaxWidth = entry.Width;
-            }
-
-            halfMaxWidth = halfMaxWidth / 2f + 30;
-
-            this.menu = menu;
-
-            previews = PrideModModuleSettings.Info.Where(info => info.Attribute.Shown())
-                                                  .SelectMany(info => info.PreviewSpritesAttributes)
-                                                  .Select(spriteInfo => new Preview(spriteInfo))
-                                                  .ToArray();
+            if (index != prev)
+                SelectedDifferentValue(down);
         }
 
-        public override void Update() {
-            base.Update();
+        if (Visible)
+        {
+            y += (TargetY - y) * (1f - (float)Math.Pow(0.0099999997764825821, Engine.RawDeltaTime));
 
-            Visible = lerp > 0;
+            foreach (Entry entry in entries)
+                entry.Update(entry.Index == index);
 
-            lerp = Calc.Approach(lerp, shown ? 1 : 0, Engine.DeltaTime * 4);
+            foreach (Preview preview in previews)
+                preview.Sprite?.Update();
+        }
+    }
 
-            if (shown) {
-                int prev = index;
-                bool down;
-                if (down = Input.MenuDown.Pressed)
-                    ++index;
-                else if (Input.MenuUp.Pressed)
-                    --index;
-                index = Util.Mod(index, PrideData.PrideCount);
+    public void Show()
+    {
+        shown = true;
+        index = (int)PrideModModuleSettings.GetGlobalPride();
+        y = TargetY;
+        menu.Focused = false;
 
-                if (index != prev)
-                    SelectedDifferentValue(down);
-            }
+        RecreateSprites();
+    }
 
-            if (Visible) {
-                y += (TargetY - y) * (1f - (float)Math.Pow(0.0099999997764825821, Engine.RawDeltaTime));
+    public void Hide()
+    {
+        shown = false;
+        menu.Focused = true;
+    }
 
-                foreach (Entry entry in entries)
-                    entry.Update(entry.Index == index);
+    private void SelectedDifferentValue(bool down)
+    {
+        RecreateSprites();
 
-                foreach (Preview preview in previews)
-                    preview.Sprite?.Update();
-            }
+        entries[index].Wiggler.Start();
+        Audio.Play(down ? SFX.ui_main_roll_down : SFX.ui_main_roll_up);
+    }
+
+    public void Confirm()
+    {
+        Hide();
+
+        foreach (var info in PrideModModuleSettings.Info)
+            info.Property.SetValue(PrideModModule.Settings, (Pride)index);
+        PrideModModule.Instance.SaveSettings();
+
+        Audio.Play(SFX.ui_main_savefile_delete);
+    }
+
+    public void Cancel()
+    {
+        Hide();
+        Audio.Play(SFX.ui_main_button_back);
+    }
+
+    private void RecreateSprites()
+    {
+        float ymin = float.MaxValue;
+        float ymax = float.MinValue;
+
+        Pride pride = (Pride)index;
+        foreach (Preview preview in previews)
+        {
+            var info = preview.SpriteInfo;
+
+            string id = pride.GetCustomSpriteID(info.SpriteType, info.DefaultSprite);
+            string anim = id == info.DefaultSprite ? info.DefaultAnim : info.Anim;
+
+            (preview.Sprite = GFX.SpriteBank.Create(id))
+                .Play(anim);
+
+            if (preview.OffsetY < ymin)
+                ymin = preview.OffsetY;
+
+            float bottom = preview.OffsetY + preview.Sprite.Texture.Height * GLOBAL_PREVIEW_UI_SCALE;
+            if (bottom > ymax)
+                ymax = bottom;
         }
 
-        public void Show() {
-            shown = true;
-            index = (int)PrideModModuleSettings.GetGlobalPride();
-            y = TargetY;
-            menu.Focused = false;
+        previewYOffset = (ymin + ymax) / 2f;
+    }
 
-            RecreateSprites();
-        }
+    internal void Display()
+    {
+        float alphaCubed = lerp * lerp * lerp;
 
-        public void Hide() {
-            shown = false;
-            menu.Focused = true;
-        }
+        Vector2 mid = new(480, 540);
 
-        private void SelectedDifferentValue(bool down) {
-            RecreateSprites();
+        Draw.Rect(-10f, -10f, 1940f, 1100f, Color.Black * Ease.CubeOut(lerp) * 0.95f);
 
-            entries[index].Wiggler.Start();
-            Audio.Play(down ? SFX.ui_main_roll_down : SFX.ui_main_roll_up);
-        }
+        Color selectedColor = Color.White;
+        for (int i = 0; i < entries.Length; i++)
+        {
+            Entry entry = entries[i];
 
-        public void Confirm() {
-            Hide();
+            float wiggle = entry.Wiggler.Value * 8f;
+            Vector2 pos = mid + new Vector2(0, i * ActiveFont.LineHeight - y + wiggle);
 
-            foreach (var info in PrideModModuleSettings.Info)
-                info.Property.SetValue(PrideModModule.Settings, (Pride)index);
-            PrideModModule.Instance.SaveSettings();
+            float top = pos.Y - ActiveFont.LineHeight / 2f;
+            float bottom = pos.Y + ActiveFont.LineHeight / 2f;
 
-            Audio.Play(SFX.ui_main_savefile_delete);
-        }
+            if (bottom > 0f && top < Engine.Height)
+            {
+                Color color = Color.White;
 
-        public void Cancel() {
-            Hide();
-            Audio.Play(SFX.ui_main_button_back);
-        }
+                if (i == index)
+                {
+                    if (Settings.Instance.DisableFlashes)
+                        color = TextMenu.HighlightColorA;
+                    else
+                        color = entry.Pride == Pride.Default ?
+                            Util.MultiColorLerp(Entity.Scene.RawTimeActive * 10f, PrideSliderBase.DefaultHighlightColors) :
+                            Util.MultiColorPingPong(Entity.Scene.RawTimeActive * 2f, entry.Pride.GetColors());
 
-        private void RecreateSprites() {
-            float ymin = float.MaxValue;
-            float ymax = float.MinValue;
+                    GFX.Gui["dot_outline"].DrawCentered(pos - new Vector2(halfMaxWidth, 0), color * lerp);
 
-            Pride pride = (Pride)index;
-            foreach (Preview preview in previews) {
-                var info = preview.SpriteInfo;
-
-                string id = pride.GetCustomSpriteID(info.SpriteType, info.DefaultSprite);
-                string anim = id == info.DefaultSprite ? info.DefaultAnim : info.Anim;
-
-                (preview.Sprite = GFX.SpriteBank.Create(id))
-                    .Play(anim);
-
-                if (preview.OffsetY < ymin)
-                    ymin = preview.OffsetY;
-
-                float bottom = preview.OffsetY + preview.Sprite.Texture.Height * GLOBAL_PREVIEW_UI_SCALE;
-                if (bottom > ymax)
-                    ymax = bottom;
-            }
-
-            previewYOffset = (ymin + ymax) / 2f;
-        }
-
-        internal void Display() {
-            float alphaCubed = lerp * lerp * lerp;
-
-            Vector2 mid = new(480, 540);
-
-            Draw.Rect(-10f, -10f, 1940f, 1100f, Color.Black * Ease.CubeOut(lerp) * 0.95f);
-
-            Color selectedColor = Color.White;
-            for (int i = 0; i < entries.Length; i++) {
-                Entry entry = entries[i];
-
-                float wiggle = entry.Wiggler.Value * 8f;
-                Vector2 pos = mid + new Vector2(0, i * ActiveFont.LineHeight - y + wiggle);
-
-                float top = pos.Y - ActiveFont.LineHeight / 2f;
-                float bottom = pos.Y + ActiveFont.LineHeight / 2f;
-
-                if (bottom > 0f && top < Engine.Height) {
-                    Color color = Color.White;
-
-                    if (i == index) {
-                        if (Settings.Instance.DisableFlashes)
-                            color = TextMenu.HighlightColorA;
-                        else
-                            color = entry.Pride == Pride.Default ?
-                                Util.MultiColorLerp(Entity.Scene.RawTimeActive * 10f, PrideSliderBase.DefaultHighlightColors) :
-                                Util.MultiColorPingPong(Entity.Scene.RawTimeActive * 2f, entry.Pride.GetColors());
-
-                        GFX.Gui["dot_outline"].DrawCentered(pos - new Vector2(halfMaxWidth, 0), color * lerp);
-
-                        selectedColor = color;
-                    }
-
-                    ActiveFont.DrawOutline(entry.Name, pos, new(0.5f), Vector2.One, color * lerp, 2f, Color.Black * alphaCubed);
+                    selectedColor = color;
                 }
+
+                ActiveFont.DrawOutline(entry.Name, pos, new(0.5f), Vector2.One, color * lerp, 2f, Color.Black * alphaCubed);
             }
-
-            float ease = Ease.ExpoOut(lerp);
-            float w = 970f * Ease.SineOut(lerp);    
-            float atY = -10 + 200 * ease;
-            Draw.Rect(-10, -10, 1940, 200 * ease, Color.Black * lerp);
-            Draw.Rect(960 - w, atY, w * 2, 3f, Color.White * lerp);
-            ActiveFont.DrawOutline(title, new(960, 100 * ease), new(0.5f), Vector2.One * 1.5f, Color.White * lerp, 4, Color.Black * alphaCubed);
-
-            #region Sprite Preview
-
-            GFX.Gui["dotarrow_outline"].DrawCentered(mid + new Vector2(halfMaxWidth + 50, 0), selectedColor * lerp);
-
-            Vector2 from = mid + new Vector2(halfMaxWidth + 120, 0);
-
-            HiresRenderer.EndRender();
-            HiresRenderer.BeginRender(sampler: SamplerState.PointClamp);
-
-            foreach (Preview preview in previews) {
-                Sprite sprite = preview.Sprite;
-                MTexture texture = sprite.Texture;
-
-                if (sprite != null && texture != null) {
-                    Vector2 offset = new(preview.OffsetX, preview.OffsetY - previewYOffset);
-                    sprite.Texture.Draw(from + offset, Vector2.Zero, Color.White * lerp, GLOBAL_PREVIEW_UI_SCALE);
-                }
-            }
-
-            HiresRenderer.EndRender();
-            HiresRenderer.BeginRender();
-
-            #endregion
         }
+
+        float ease = Ease.ExpoOut(lerp);
+        float w = 970f * Ease.SineOut(lerp);
+        float atY = -10 + 200 * ease;
+        Draw.Rect(-10, -10, 1940, 200 * ease, Color.Black * lerp);
+        Draw.Rect(960 - w, atY, w * 2, 3f, Color.White * lerp);
+        ActiveFont.DrawOutline(title, new(960, 100 * ease), new(0.5f), Vector2.One * 1.5f, Color.White * lerp, 4, Color.Black * alphaCubed);
+
+        #region Sprite Preview
+
+        GFX.Gui["dotarrow_outline"].DrawCentered(mid + new Vector2(halfMaxWidth + 50, 0), selectedColor * lerp);
+
+        Vector2 from = mid + new Vector2(halfMaxWidth + 120, 0);
+
+        HiresRenderer.EndRender();
+        HiresRenderer.BeginRender(sampler: SamplerState.PointClamp);
+
+        foreach (Preview preview in previews)
+        {
+            Sprite sprite = preview.Sprite;
+            MTexture texture = sprite.Texture;
+
+            if (sprite != null && texture != null)
+            {
+                Vector2 offset = new(preview.OffsetX, preview.OffsetY - previewYOffset);
+                sprite.Texture.Draw(from + offset, Vector2.Zero, Color.White * lerp, GLOBAL_PREVIEW_UI_SCALE);
+            }
+        }
+
+        HiresRenderer.EndRender();
+        HiresRenderer.BeginRender();
+
+        #endregion
     }
 }
